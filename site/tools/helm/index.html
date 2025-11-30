@@ -1,0 +1,3782 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive guide for DevOps tools, commands, and installation.">
+      
+      
+        <meta name="author" content="DevOps Learner">
+      
+      
+        <link rel="canonical" href="https://ashishpatel26.github.io/devops-guide/tools/helm/">
+      
+      
+        <link rel="prev" href="../kubernetes/">
+      
+      
+        <link rel="next" href="../jenkins/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Helm - DevOps Master Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#helm-complete-master-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="DevOps Master Guide" class="md-header__button md-logo" aria-label="DevOps Master Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.95 13.5h-.23c-.18.11-.26.32-.18.5l.86 2.11c.83-.53 1.46-1.32 1.79-2.25l-2.23-.36zm-3.45.29a.415.415 0 0 0-.38-.29h-.08l-2.22.37c.33.92.96 1.7 1.79 2.23l.85-2.07V14c.04-.05.04-.14.04-.21m1.83.81a.38.38 0 0 0-.51-.15c-.07.05-.12.08-.15.15h-.01l-1.09 1.97c.78.26 1.62.31 2.43.12.14-.03.29-.07.43-.12l-1.09-1.97zm3.45-4.57L14.1 11.5l.01.03a.37.37 0 0 0-.04.53q.075.09.18.12l.01.01 2.17.62c.07-.97-.14-1.95-.65-2.78m-3.11.16c.01.21.18.37.39.36.08 0 .15-.02.21-.05h.01l1.83-1.31a4.45 4.45 0 0 0-2.57-1.24zm-1.94.31c.17.11.4.08.52-.09.05-.06.07-.13.08-.21h.01l.12-2.25c-.15.02-.3.05-.46.08-.8.18-1.54.58-2.12 1.16l1.84 1.31zm-.99 1.69c.2-.05.32-.26.26-.46 0-.08-.05-.14-.11-.19v-.01L8.21 10c-.52.86-.74 1.84-.63 2.82l2.16-.62zm1.64.66.62.3.62-.3.15-.67-.43-.53h-.69l-.43.53zm10.89 1.32L20.5 6.5c-.09-.42-.37-.76-.74-.94l-7.17-3.43c-.37-.17-.81-.17-1.19 0L4.24 5.56c-.37.18-.65.52-.74.94l-1.77 7.67c-.05.2-.05.4 0 .59.01.06.03.12.05.18.03.09.08.19.13.27.03.04.05.08.09.11l4.95 6.18c.02 0 .05.04.05.06.1.09.19.16.28.22.12.08.26.14.4.17.11.05.23.05.32.05h8.12c.07 0 .14-.03.2-.05.05-.01.1-.03.14-.04.04-.02.07-.03.11-.05.05-.02.1-.05.15-.08.12-.08.23-.18.33-.28l.15-.2 4.8-5.98c.1-.12.17-.25.22-.38.02-.06.04-.12.05-.18.05-.19.05-.4 0-.59m-7.43 2.99c.02.06.04.12.07.17-.04.08-.06.17-.03.26.12.24.23.46.38.68.08.11.16.23.24.34 0 .03.03.08.04.12.12.2.06.46-.15.59s-.47.05-.59-.15c-.01-.03-.02-.05-.03-.08-.02-.03-.04-.09-.06-.09-.05-.15-.09-.28-.12-.41-.09-.25-.17-.49-.3-.72a.38.38 0 0 0-.21-.14l-.08-.16c-1.29.48-2.7.48-3.97-.01l-.1.18c-.07.01-.14.04-.19.09-.14.24-.24.49-.33.77-.03.13-.07.26-.12.4-.02 0-.04.07-.06.1a.43.43 0 0 1-.81-.29c.01-.03.03-.05.04-.08.04-.03.04-.08.04-.11.09-.12.16-.23.24-.35.16-.21.29-.45.39-.69a.54.54 0 0 0-.03-.25l.07-.18a5.6 5.6 0 0 1-2.47-3.09l-.2.03a.4.4 0 0 0-.23-.09c-.27.05-.51.13-.77.22-.11.06-.24.11-.37.15-.03.01-.07.02-.13.03a.44.44 0 0 1-.54-.27c-.07-.23.04-.47.28-.55.02 0 .05-.01.08-.01v-.01h.01l.11-.02c.14-.04.28-.04.41-.04.26 0 .52-.06.77-.12.08-.05.14-.11.19-.19l.19-.05c-.21-1.36.1-2.73.86-3.87l-.14-.12c0-.09-.03-.18-.08-.25-.2-.17-.41-.32-.64-.45q-.18-.09-.36-.21c-.02-.02-.06-.05-.08-.07l-.01-.01c-.2-.16-.25-.42-.11-.63.09-.1.21-.15.35-.15q.165.015.3.12l.09.07c.1.09.19.2.28.3.18.19.37.37.58.52.08.04.17.05.26.03l.15.11c.75-.8 1.73-1.36 2.8-1.6.25-.06.52-.1.78-.12l.01-.18a.45.45 0 0 0 .14-.23c.01-.26-.01-.52-.05-.77-.03-.13-.05-.27-.06-.41V5.1c-.02-.24.15-.45.39-.48s.44.15.47.38v.22c-.01.14-.03.28-.06.41-.04.25-.06.51-.05.77.02.1.07.17.14.22l.01.19c1.36.12 2.62.73 3.56 1.72l.16-.12c.09.02.18.01.26-.03.21-.15.41-.33.58-.52.09-.1.18-.2.28-.3.03-.02.07-.06.1-.06.17-.18.44-.18.59 0 .19.16.18.43 0 .6 0 .02-.03.04-.06.06a2.495 2.495 0 0 1-.44.28c-.23.13-.45.28-.64.45-.06.07-.09.15-.08.24l-.16.14a5.44 5.44 0 0 1 .88 3.86l.19.05c.04.08.11.14.19.18.25.07.51.11.77.14h.41c.03.03.08.04.12.05.24.03.4.25.37.49-.05.23-.24.4-.48.37-.03-.01-.07-.01-.07-.02v-.01c-.06 0-.1-.01-.14-.02q-.195-.06-.36-.15c-.26-.1-.5-.17-.77-.21-.09 0-.17 0-.23.08-.07-.01-.13-.02-.19-.03-.41 1.31-1.31 2.41-2.47 3.11"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DevOps Master Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Helm
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ashishpatel26/devops-guide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ashishpatel26/devops-guide
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../learning-path/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Learning Path
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../installation/" class="md-tabs__link">
+          
+  
+  
+  Installation Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../git/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Git
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../docker/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Docker
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kubernetes/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kubernetes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Helm
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../jenkins/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Jenkins
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../terraform/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Terraform
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ansible/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Ansible
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../aws/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  AWS
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../jenkins/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Jenkins
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../terraform/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Terraform
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ansible/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Ansible
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../aws/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  AWS
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DevOps Master Guide" class="md-nav__button md-logo" aria-label="DevOps Master Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.95 13.5h-.23c-.18.11-.26.32-.18.5l.86 2.11c.83-.53 1.46-1.32 1.79-2.25l-2.23-.36zm-3.45.29a.415.415 0 0 0-.38-.29h-.08l-2.22.37c.33.92.96 1.7 1.79 2.23l.85-2.07V14c.04-.05.04-.14.04-.21m1.83.81a.38.38 0 0 0-.51-.15c-.07.05-.12.08-.15.15h-.01l-1.09 1.97c.78.26 1.62.31 2.43.12.14-.03.29-.07.43-.12l-1.09-1.97zm3.45-4.57L14.1 11.5l.01.03a.37.37 0 0 0-.04.53q.075.09.18.12l.01.01 2.17.62c.07-.97-.14-1.95-.65-2.78m-3.11.16c.01.21.18.37.39.36.08 0 .15-.02.21-.05h.01l1.83-1.31a4.45 4.45 0 0 0-2.57-1.24zm-1.94.31c.17.11.4.08.52-.09.05-.06.07-.13.08-.21h.01l.12-2.25c-.15.02-.3.05-.46.08-.8.18-1.54.58-2.12 1.16l1.84 1.31zm-.99 1.69c.2-.05.32-.26.26-.46 0-.08-.05-.14-.11-.19v-.01L8.21 10c-.52.86-.74 1.84-.63 2.82l2.16-.62zm1.64.66.62.3.62-.3.15-.67-.43-.53h-.69l-.43.53zm10.89 1.32L20.5 6.5c-.09-.42-.37-.76-.74-.94l-7.17-3.43c-.37-.17-.81-.17-1.19 0L4.24 5.56c-.37.18-.65.52-.74.94l-1.77 7.67c-.05.2-.05.4 0 .59.01.06.03.12.05.18.03.09.08.19.13.27.03.04.05.08.09.11l4.95 6.18c.02 0 .05.04.05.06.1.09.19.16.28.22.12.08.26.14.4.17.11.05.23.05.32.05h8.12c.07 0 .14-.03.2-.05.05-.01.1-.03.14-.04.04-.02.07-.03.11-.05.05-.02.1-.05.15-.08.12-.08.23-.18.33-.28l.15-.2 4.8-5.98c.1-.12.17-.25.22-.38.02-.06.04-.12.05-.18.05-.19.05-.4 0-.59m-7.43 2.99c.02.06.04.12.07.17-.04.08-.06.17-.03.26.12.24.23.46.38.68.08.11.16.23.24.34 0 .03.03.08.04.12.12.2.06.46-.15.59s-.47.05-.59-.15c-.01-.03-.02-.05-.03-.08-.02-.03-.04-.09-.06-.09-.05-.15-.09-.28-.12-.41-.09-.25-.17-.49-.3-.72a.38.38 0 0 0-.21-.14l-.08-.16c-1.29.48-2.7.48-3.97-.01l-.1.18c-.07.01-.14.04-.19.09-.14.24-.24.49-.33.77-.03.13-.07.26-.12.4-.02 0-.04.07-.06.1a.43.43 0 0 1-.81-.29c.01-.03.03-.05.04-.08.04-.03.04-.08.04-.11.09-.12.16-.23.24-.35.16-.21.29-.45.39-.69a.54.54 0 0 0-.03-.25l.07-.18a5.6 5.6 0 0 1-2.47-3.09l-.2.03a.4.4 0 0 0-.23-.09c-.27.05-.51.13-.77.22-.11.06-.24.11-.37.15-.03.01-.07.02-.13.03a.44.44 0 0 1-.54-.27c-.07-.23.04-.47.28-.55.02 0 .05-.01.08-.01v-.01h.01l.11-.02c.14-.04.28-.04.41-.04.26 0 .52-.06.77-.12.08-.05.14-.11.19-.19l.19-.05c-.21-1.36.1-2.73.86-3.87l-.14-.12c0-.09-.03-.18-.08-.25-.2-.17-.41-.32-.64-.45q-.18-.09-.36-.21c-.02-.02-.06-.05-.08-.07l-.01-.01c-.2-.16-.25-.42-.11-.63.09-.1.21-.15.35-.15q.165.015.3.12l.09.07c.1.09.19.2.28.3.18.19.37.37.58.52.08.04.17.05.26.03l.15.11c.75-.8 1.73-1.36 2.8-1.6.25-.06.52-.1.78-.12l.01-.18a.45.45 0 0 0 .14-.23c.01-.26-.01-.52-.05-.77-.03-.13-.05-.27-.06-.41V5.1c-.02-.24.15-.45.39-.48s.44.15.47.38v.22c-.01.14-.03.28-.06.41-.04.25-.06.51-.05.77.02.1.07.17.14.22l.01.19c1.36.12 2.62.73 3.56 1.72l.16-.12c.09.02.18.01.26-.03.21-.15.41-.33.58-.52.09-.1.18-.2.28-.3.03-.02.07-.06.1-.06.17-.18.44-.18.59 0 .19.16.18.43 0 .6 0 .02-.03.04-.06.06a2.495 2.495 0 0 1-.44.28c-.23.13-.45.28-.64.45-.06.07-.09.15-.08.24l-.16.14a5.44 5.44 0 0 1 .88 3.86l.19.05c.04.08.11.14.19.18.25.07.51.11.77.14h.41c.03.03.08.04.12.05.24.03.4.25.37.49-.05.23-.24.4-.48.37-.03-.01-.07-.01-.07-.02v-.01c-.06 0-.1-.01-.14-.02q-.195-.06-.36-.15c-.26-.1-.5-.17-.77-.21-.09 0-.17 0-.23.08-.07-.01-.13-.02-.19-.03-.41 1.31-1.31 2.41-2.47 3.11"/></svg>
+
+    </a>
+    DevOps Master Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ashishpatel26/devops-guide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ashishpatel26/devops-guide
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Path
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation Guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Installation Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windows 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/macos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    macOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubernetes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kubernetes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Helm
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Helm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation Guide
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        macOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beginner-level-first-steps-with-helm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BEGINNER LEVEL: First Steps with Helm
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BEGINNER LEVEL: First Steps with Helm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-installing-your-first-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 1: Installing Your First Chart
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-creating-your-first-helm-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 2: Creating Your First Helm Chart
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-understanding-values-overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 3: Understanding Values &amp; Overrides
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-4-template-functions-pipelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 4: Template Functions &amp; Pipelines
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-5-conditional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 5: Conditional Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-6-chart-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 6: Chart Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-7-upgrading-and-rolling-back" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 7: Upgrading and Rolling Back
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-8-helm-hooks-lifecycle-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 8: Helm Hooks &amp; Lifecycle Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-9-chart-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 9: Chart Testing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intermediate-level-advanced-templating-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        INTERMEDIATE LEVEL: Advanced Templating &amp; Patterns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="INTERMEDIATE LEVEL: Advanced Templating &amp; Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-10-range-loops-conditionals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 10: Range Loops &amp; Conditionals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-11-named-templates-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 11: Named Templates &amp; Blocks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-level-production-ready-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADVANCED LEVEL: Production-Ready Patterns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ADVANCED LEVEL: Production-Ready Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-12-secrets-management-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 12: Secrets Management &amp; Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-13-release-management-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 13: Release Management Strategies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-14-advanced-chart-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 14: Advanced Chart Patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-15-oci-registry-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 15: OCI Registry Support
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-16-chart-debugging-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 16: Chart Debugging &amp; Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-essential-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Reference: Essential Commands
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pro-tips-for-all-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pro Tips for All Levels
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jenkins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jenkins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terraform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terraform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ansible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ansible
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aws/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jenkins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jenkins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terraform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terraform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ansible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ansible
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aws/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="helm-complete-master-guide">Helm Complete Master Guide<a class="headerlink" href="#helm-complete-master-guide" title="Permanent link">&para;</a></h1>
+<p>Helm is the package manager for Kubernetes, allowing you to define, install, and upgrade complex K8s applications using reusable charts.</p>
+<hr />
+<h2 id="installation-guide">Installation Guide<a class="headerlink" href="#installation-guide" title="Permanent link">&para;</a></h2>
+<h3 id="windows"><strong>Windows</strong><a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Using Chocolatey</span>
+choco<span class="w"> </span>install<span class="w"> </span>kubernetes-helm
+
+<span class="c1"># Using Scoop</span>
+scoop<span class="w"> </span>install<span class="w"> </span>helm
+
+<span class="c1"># Or download directly from GitHub</span>
+<span class="c1"># Visit https://github.com/helm/helm/releases</span>
+</code></pre></div>
+<h3 id="macos"><strong>macOS</strong><a class="headerlink" href="#macos" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Using Homebrew</span>
+brew<span class="w"> </span>install<span class="w"> </span>helm
+
+<span class="c1"># Using MacPorts</span>
+sudo<span class="w"> </span>port<span class="w"> </span>install<span class="w"> </span>helm
+</code></pre></div>
+<h3 id="linux"><strong>Linux</strong><a class="headerlink" href="#linux" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Download and install</span>
+curl<span class="w"> </span>https://baltocdn.com/helm/signing.asc<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>apt-key<span class="w"> </span>add<span class="w"> </span>-
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb https://baltocdn.com/helm/stable/debian/ all main&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/helm-stable-debian.list
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>helm
+
+<span class="c1"># Or use installation script</span>
+curl<span class="w"> </span>-fsSL<span class="w"> </span>-o<span class="w"> </span>get_helm.sh<span class="w"> </span>https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod<span class="w"> </span><span class="m">700</span><span class="w"> </span>get_helm.sh
+./get_helm.sh
+</code></pre></div>
+<h3 id="verify-installation"><strong>Verify Installation</strong><a class="headerlink" href="#verify-installation" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>helm<span class="w"> </span>version<span class="w"> </span>--short
+helm<span class="w"> </span>completion<span class="w"> </span>bash<span class="w">  </span><span class="c1"># Enable shell autocompletion</span>
+</code></pre></div>
+<hr />
+<h2 id="beginner-level-first-steps-with-helm">BEGINNER LEVEL: First Steps with Helm<a class="headerlink" href="#beginner-level-first-steps-with-helm" title="Permanent link">&para;</a></h2>
+<h3 id="scenario-1-installing-your-first-chart"><strong>Scenario 1: Installing Your First Chart</strong><a class="headerlink" href="#scenario-1-installing-your-first-chart" title="Permanent link">&para;</a></h3>
+<p><em>Deploying an application from Helm Hub</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User as Developer
+    participant Helm as Helm CLI
+    participant Repo as Helm Repository
+    participant K8s as Kubernetes
+    participant Chart as Nginx Chart
+    participant Pod as Running Pod
+    User-&gt;&gt;Helm: helm repo add bitnami https://charts.bitnami.com/bitnami
+    Helm-&gt;&gt;Repo: Register repository
+    Repo--&gt;&gt;Helm: Repository added
+    User-&gt;&gt;Helm: helm install my-nginx bitnami/nginx
+    Helm-&gt;&gt;Repo: Fetch nginx chart
+    Repo--&gt;&gt;Helm: Return chart package
+    Helm-&gt;&gt;Chart: Render templates with defaults
+    Chart-&gt;&gt;K8s: Create Deployment, Service
+    K8s-&gt;&gt;Pod: Start nginx pod
+    Pod--&gt;&gt;User: Nginx deployed successfully!
+    Note over User: No manual YAML writing!</code></pre>
+<p><strong>Code:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Add a Helm chart repository</span>
+helm<span class="w"> </span>repo<span class="w"> </span>add<span class="w"> </span>bitnami<span class="w"> </span>https://charts.bitnami.com/bitnami
+helm<span class="w"> </span>repo<span class="w"> </span>add<span class="w"> </span>stable<span class="w"> </span>https://charts.helm.sh/stable
+
+<span class="c1"># Update repository index</span>
+helm<span class="w"> </span>repo<span class="w"> </span>update
+
+<span class="c1"># Search for charts</span>
+helm<span class="w"> </span>search<span class="w"> </span>repo<span class="w"> </span>nginx
+
+<span class="c1"># Install a chart (creates a &quot;release&quot;)</span>
+helm<span class="w"> </span>install<span class="w"> </span>my-nginx<span class="w"> </span>bitnami/nginx
+
+<span class="c1"># List installed releases</span>
+helm<span class="w"> </span>list
+<span class="c1"># OR</span>
+helm<span class="w"> </span>ls
+
+<span class="c1"># Check release status</span>
+helm<span class="w"> </span>status<span class="w"> </span>my-nginx
+
+<span class="c1"># View release history</span>
+helm<span class="w"> </span><span class="nb">history</span><span class="w"> </span>my-nginx
+
+<span class="c1"># Uninstall the release</span>
+helm<span class="w"> </span>uninstall<span class="w"> </span>my-nginx
+
+<span class="c1"># Add multiple repositories</span>
+helm<span class="w"> </span>repo<span class="w"> </span>add<span class="w"> </span>jetstack<span class="w"> </span>https://charts.jetstack.io
+helm<span class="w"> </span>repo<span class="w"> </span>add<span class="w"> </span>prometheus-community<span class="w"> </span>https://prometheus-community.github.io/helm-charts
+
+<span class="c1"># View repositories</span>
+helm<span class="w"> </span>repo<span class="w"> </span>list
+
+<span class="c1"># Remove a repository</span>
+helm<span class="w"> </span>repo<span class="w"> </span>remove<span class="w"> </span>stable
+</code></pre></div>
+<hr />
+<h3 id="scenario-2-creating-your-first-helm-chart"><strong>Scenario 2: Creating Your First Helm Chart</strong><a class="headerlink" href="#scenario-2-creating-your-first-helm-chart" title="Permanent link">&para;</a></h3>
+<p><em>Scaffolding a new chart from scratch</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User as Developer
+    participant Helm as Helm CLI
+    participant Chart as Chart Directory
+    participant Templates as Template Files
+    participant Values as values.yaml
+    participant K8s as Kubernetes
+    User-&gt;&gt;Helm: helm create my-chart
+    Helm-&gt;&gt;Chart: Create directory structure
+    Chart-&gt;&gt;Templates: Generate deployment.yaml
+    Chart-&gt;&gt;Templates: Generate service.yaml
+    Chart-&gt;&gt;Templates: Generate _helpers.tpl
+    Chart-&gt;&gt;Values: Create values.yaml
+    User-&gt;&gt;Values: Edit configuration
+    User-&gt;&gt;Helm: helm install my-release ./my-chart
+    Helm-&gt;&gt;Templates: Render with values
+    Templates-&gt;&gt;K8s: Generate manifests
+    K8s-&gt;&gt;User: Application deployed!</code></pre>
+<p><strong>Code:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create a new Helm chart</span>
+helm<span class="w"> </span>create<span class="w"> </span>my-first-chart
+
+<span class="c1"># Explore the directory structure</span>
+tree<span class="w"> </span>my-first-chart
+<span class="c1"># Output:</span>
+<span class="c1"># my-first-chart/</span>
+<span class="c1"># ├── Chart.yaml          # Chart metadata</span>
+<span class="c1"># ├── values.yaml         # Default configuration values</span>
+<span class="c1"># ├── charts/            # Dependencies</span>
+<span class="c1"># └── templates/         # Manifest templates</span>
+<span class="c1">#     ├── NOTES.txt      # Post-install notes</span>
+<span class="c1">#     ├── _helpers.tpl   # Template helpers</span>
+<span class="c1">#     ├── deployment.yaml</span>
+<span class="c1">#     ├── service.yaml</span>
+<span class="c1">#     ├── ingress.yaml</span>
+<span class="c1">#     └── tests/         # Test files</span>
+
+<span class="c1"># View the generated Chart.yaml</span>
+cat<span class="w"> </span>my-first-chart/Chart.yaml
+<span class="c1"># apiVersion: v2</span>
+<span class="c1"># name: my-first-chart</span>
+<span class="c1"># description: A Helm chart for Kubernetes</span>
+<span class="c1"># type: application</span>
+<span class="c1"># version: 0.1.0</span>
+<span class="c1"># appVersion: &quot;1.16.0&quot;</span>
+
+<span class="c1"># View default values</span>
+cat<span class="w"> </span>my-first-chart/values.yaml
+
+<span class="c1"># Deploy your new chart</span>
+helm<span class="w"> </span>install<span class="w"> </span>my-app<span class="w"> </span>./my-first-chart
+
+<span class="c1"># Check what was created</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>pods,svc,deploy<span class="w"> </span>-l<span class="w"> </span>app.kubernetes.io/name<span class="o">=</span>my-first-chart
+
+<span class="c1"># Clean up</span>
+helm<span class="w"> </span>uninstall<span class="w"> </span>my-app
+</code></pre></div>
+<hr />
+<h3 id="scenario-3-understanding-values-overrides"><strong>Scenario 3: Understanding Values &amp; Overrides</strong><a class="headerlink" href="#scenario-3-understanding-values-overrides" title="Permanent link">&para;</a></h3>
+<p><em>Customizing chart behavior without modifying templates</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User as Developer
+    participant CLI as Helm CLI
+    participant Values as values.yaml
+    participant Override as --set values
+    participant File as custom-values.yaml
+    participant Templates as Go Templates
+    participant K8s as Kubernetes
+    User-&gt;&gt;Values: Default values in chart
+    User-&gt;&gt;CLI: helm install --set replicaCount=3
+    CLI-&gt;&gt;Override: Override specific values
+    User-&gt;&gt;CLI: helm install -f custom.yaml
+    CLI-&gt;&gt;File: Load custom values file
+    CLI-&gt;&gt;Templates: Merge all values
+    Templates-&gt;&gt;Templates: Render templates
+    Templates-&gt;&gt;K8s: Generate manifests
+    K8s-&gt;&gt;User: Deployed with custom config
+    Note over User: Values override priority: --set &gt; -f &gt; defaults</code></pre>
+<p><strong>Code:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># View chart&#39;s default values</span>
+helm<span class="w"> </span>show<span class="w"> </span>values<span class="w"> </span>bitnami/nginx
+
+<span class="c1"># Install with --set overrides</span>
+helm<span class="w"> </span>install<span class="w"> </span>my-nginx<span class="w"> </span>bitnami/nginx<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--set<span class="w"> </span><span class="nv">replicaCount</span><span class="o">=</span><span class="m">3</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--set<span class="w"> </span>service.type<span class="o">=</span>NodePort<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--set<span class="w"> </span>service.nodePort<span class="o">=</span><span class="m">30080</span>
+
+<span class="c1"># Install with multiple --set (comma separated)</span>
+helm<span class="w"> </span>install<span class="w"> </span>my-nginx<span class="w"> </span>bitnami/nginx<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--set<span class="w"> </span><span class="nv">replicaCount</span><span class="o">=</span><span class="m">3</span>,service.type<span class="o">=</span>LoadBalancer,image.tag<span class="o">=</span><span class="m">1</span>.25
+
+<span class="c1"># Create custom values file</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>my-values.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">replicaCount: 5</span>
+<span class="s">service:</span>
+<span class="s">  type: LoadBalancer</span>
+<span class="s">  port: 80</span>
+<span class="s">  annotations:</span>
+<span class="s">    service.beta.kubernetes.io/aws-load-balancer-type: nlb</span>
+<span class="s">ingress:</span>
+<span class="s">  enabled: true</span>
+<span class="s">  hostname: myapp.example.com</span>
+<span class="s">resources:</span>
+<span class="s">  limits:</span>
+<span class="s">    cpu: 500m</span>
+<span class="s">    memory: 512Mi</span>
+<span class="s">  requests:</span>
+<span class="s">    cpu: 250m</span>
+<span class="s">    memory: 256Mi</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Install with custom values file</span>
+helm<span class="w"> </span>install<span class="w"> </span>my-nginx<span class="w"> </span>bitnami/nginx<span class="w"> </span>-f<span class="w"> </span>my-values.yaml
+
+<span class="c1"># Upgrade with new values</span>
+helm<span class="w"> </span>upgrade<span class="w"> </span>my-nginx<span class="w"> </span>bitnami/nginx<span class="w"> </span>-f<span class="w"> </span>new-values.yaml
+
+<span class="c1"># Get computed values for a release</span>
+helm<span class="w"> </span>get<span class="w"> </span>values<span class="w"> </span>my-nginx
+
+<span class="c1"># Get all values (including defaults)</span>
+helm<span class="w"> </span>get<span class="w"> </span>values<span class="w"> </span>my-nginx<span class="w"> </span>--all
+
+<span class="c1"># Override nested values</span>
+helm<span class="w"> </span>install<span class="w"> </span>my-nginx<span class="w"> </span>bitnami/nginx<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--set<span class="w"> </span><span class="s2">&quot;ingress.annotations.kubernetes\.io/ingress\.class=nginx&quot;</span>
+
+<span class="c1"># Set array values</span>
+helm<span class="w"> </span>install<span class="w"> </span>my-app<span class="w"> </span>./my-chart<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--set<span class="w"> </span><span class="s2">&quot;env[0].name=ENV1,env[0].value=test&quot;</span>
+</code></pre></div>
+<hr />
+<h3 id="scenario-4-template-functions-pipelines"><strong>Scenario 4: Template Functions &amp; Pipelines</strong><a class="headerlink" href="#scenario-4-template-functions-pipelines" title="Permanent link">&para;</a></h3>
+<p><em>Using Helm's built-in functions to create dynamic templates</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Dev as Developer
+    participant Values as values.yaml
+    participant Tpl as _helpers.tpl
+    participant Func as Template Functions
+    participant Render as Rendering Engine
+    participant K8s as Kubernetes Manifest
+    Dev-&gt;&gt;Values: Define app.name=my-app
+    Dev-&gt;&gt;Values: Define environment=prod
+    Dev-&gt;&gt;Tpl: Define helper template
+    Tpl-&gt;&gt;Func: {{ include "my-app.fullname" . }}
+    Func-&gt;&gt;Func: tolower, trunc, trimSuffix
+    Render-&gt;&gt;Func: Call helper with values
+    Func-&gt;&gt;Render: Return "my-app-prod"
+    Render-&gt;&gt;K8s: Generate resource names
+    K8s-&gt;&gt;Dev: Dynamic manifests created!
+    Note over Dev: Reusable template logic</code></pre>
+<p><strong>Code:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create a chart with template helpers</span>
+helm<span class="w"> </span>create<span class="w"> </span>template-demo
+
+<span class="c1"># Edit templates/_helpers.tpl</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>template-demo/templates/_helpers.tpl<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">{{/*</span>
+<span class="s">Expand the name of the chart.</span>
+<span class="s">*/}}</span>
+<span class="s">{{- define &quot;template-demo.name&quot; -}}</span>
+<span class="s">{{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix &quot;-&quot; }}</span>
+<span class="s">{{- end }}</span>
+
+<span class="s">{{/*</span>
+<span class="s">Create a default fully qualified app name.</span>
+<span class="s">*/}}</span>
+<span class="s">{{- define &quot;template-demo.fullname&quot; -}}</span>
+<span class="s">{{- if .Values.fullnameOverride }}</span>
+<span class="s">{{- .Values.fullnameOverride | trunc 63 | trimSuffix &quot;-&quot; }}</span>
+<span class="s">{{- else }}</span>
+<span class="s">{{- $name := default .Chart.Name .Values.nameOverride }}</span>
+<span class="s">{{- if contains $name .Release.Name }}</span>
+<span class="s">{{- .Release.Name | trunc 63 | trimSuffix &quot;-&quot; }}</span>
+<span class="s">{{- else }}</span>
+<span class="s">{{- printf &quot;%s-%s&quot; .Release.Name $name | trunc 63 | trimSuffix &quot;-&quot; }}</span>
+<span class="s">{{- end }}</span>
+<span class="s">{{- end }}</span>
+<span class="s">{{- end }}</span>
+
+<span class="s">{{/*</span>
+<span class="s">Create chart name and version as used by the chart label.</span>
+<span class="s">*/}}</span>
+<span class="s">{{- define &quot;template-demo.chart&quot; -}}</span>
+<span class="s">{{- printf &quot;%s-%s&quot; .Chart.Name .Chart.Version | replace &quot;+&quot; &quot;_&quot; | trunc 63 | trimSuffix &quot;-&quot; }}</span>
+<span class="s">{{- end }}</span>
+
+<span class="s">{{/*</span>
+<span class="s">Common labels</span>
+<span class="s">*/}}</span>
+<span class="s">{{- define &quot;template-demo.labels&quot; -}}</span>
+<span class="s">helm.sh/chart: {{ include &quot;template-demo.chart&quot; . }}</span>
+<span class="s">{{ include &quot;template-demo.selectorLabels&quot; . }}</span>
+<span class="s">{{- if .Chart.AppVersion }}</span>
+<span class="s">app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}</span>
+<span class="s">{{- end }}</span>
+<span class="s">app.kubernetes.io/managed-by: {{ .Release.Service }}</span>
+<span class="s">{{- end }}</span>
+
+<span class="s">{{/*</span>
+<span class="s">Selector labels</span>
+<span class="s">*/}}</span>
+<span class="s">{{- define &quot;template-demo.selectorLabels&quot; -}}</span>
+<span class="s">app.kubernetes.io/name: {{ include &quot;template-demo.name&quot; . }}</span>
+<span class="s">app.kubernetes.io/instance: {{ .Release.Name }}</span>
+<span class="s">{{- end }}</span>
+
+<span class="s">{{/*</span>
+<span class="s">Create the name of the service account to use</span>
+<span class="s">*/}}</span>
+<span class="s">{{- define &quot;template-demo.serviceAccountName&quot; -}}</span>
+<span class="s">{{- if .Values.serviceAccount.create }}</span>
+<span class="s">{{- default (include &quot;template-demo.fullname&quot; .) .Values.serviceAccount.name }}</span>
+<span class="s">{{- else }}</span>
+<span class="s">{{- default &quot;default&quot; .Values.serviceAccount.name }}</span>
+<span class="s">{{- end }}</span>
+<span class="s">{{- end }}</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Use helpers in deployment.yaml</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>template-demo/templates/deployment.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">apiVersion: apps/v1</span>
+<span class="s">kind: Deployment</span>
+<span class="s">metadata:</span>
+<span class="s">  name: {{ include &quot;template-demo.fullname&quot; . }}</span>
+<span class="s">  labels:</span>
+<span class="s">    {{- include &quot;template-demo.labels&quot; . | nindent 4 }}</span>
+<span class="s">spec:</span>
+<span class="s">  replicas: {{ .Values.replicaCount }}</span>
+<span class="s">  selector:</span>
+<span class="s">    matchLabels:</span>
+<span class="s">      {{- include &quot;template-demo.selectorLabels&quot; . | nindent 6 }}</span>
+<span class="s">  template:</span>
+<span class="s">    metadata:</span>
+<span class="s">      labels:</span>
+<span class="s">        {{- include &quot;template-demo.selectorLabels&quot; . | nindent 8 }}</span>
+<span class="s">    spec:</span>
+<span class="s">      containers:</span>
+<span class="s">      - name: {{ .Chart.Name }}</span>
+<span class="s">        image: &quot;{{ .Values.image.repository }}:{{ .Values.image.tag }}&quot;</span>
+<span class="s">        imagePullPolicy: {{ .Values.image.pullPolicy }}</span>
+<span class="s">        env:</span>
+<span class="s">        - name: POD_NAME</span>
+<span class="s">          valueFrom:</span>
+<span class="s">            fieldRef:</span>
+<span class="s">              fieldPath: metadata.name</span>
+<span class="s">        - name: NAMESPACE</span>
+<span class="s">          valueFrom:</span>
+<span class="s">            fieldRef:</span>
+<span class="s">              fieldPath: metadata.namespace</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Deploy the chart</span>
+helm<span class="w"> </span>install<span class="w"> </span>template-test<span class="w"> </span>./template-demo
+
+<span class="c1"># View rendered templates without installing</span>
+helm<span class="w"> </span>template<span class="w"> </span>test-release<span class="w"> </span>./template-demo
+
+<span class="c1"># View a specific template</span>
+helm<span class="w"> </span>template<span class="w"> </span>test-release<span class="w"> </span>./template-demo<span class="w"> </span>--show-only<span class="w"> </span>templates/deployment.yaml
+
+<span class="c1"># Debug template rendering</span>
+helm<span class="w"> </span>install<span class="w"> </span>debug-test<span class="w"> </span>./template-demo<span class="w"> </span>--dry-run<span class="w"> </span>--debug
+</code></pre></div>
+<hr />
+<h3 id="scenario-5-conditional-resources"><strong>Scenario 5: Conditional Resources</strong><a class="headerlink" href="#scenario-5-conditional-resources" title="Permanent link">&para;</a></h3>
+<p><em>Creating optional components based on values</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User as Developer
+    participant Values as values.yaml
+    participant Tpl as Template Engine
+    participant Cond as Conditional Block
+    participant K8s as Kubernetes
+    User-&gt;&gt;Values: ingress.enabled=true
+    User-&gt;&gt;Values: persistence.enabled=false
+    User-&gt;&gt;Values: monitoring.enabled=true
+    Tpl-&gt;&gt;Cond: {{ if .Values.ingress.enabled }}
+    Cond-&gt;&gt;K8s: Generate Ingress manifest
+    Tpl-&gt;&gt;Cond: {{ if .Values.persistence.enabled }}
+    Cond-&gt;&gt;K8s: Skip PVC manifest
+    Tpl-&gt;&gt;Cond: {{ if .Values.monitoring.enabled }}
+    Cond-&gt;&gt;K8s: Generate ServiceMonitor
+    Tpl-&gt;&gt;K8s: Render only enabled resources
+    K8s-&gt;&gt;User: Deploy selected components
+    Note over User: Flexible, modular deployments</code></pre>
+<p><strong>Code:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create chart with conditional resources</span>
+helm<span class="w"> </span>create<span class="w"> </span>conditional-chart
+
+<span class="c1"># Edit values.yaml</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>conditional-chart/values.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">replicaCount: 1</span>
+<span class="s">image:</span>
+<span class="s">  repository: nginx</span>
+<span class="s">  tag: stable</span>
+<span class="s">  pullPolicy: IfNotPresent</span>
+
+<span class="s">service:</span>
+<span class="s">  type: ClusterIP</span>
+<span class="s">  port: 80</span>
+
+<span class="s">ingress:</span>
+<span class="s">  enabled: false</span>
+<span class="s">  className: nginx</span>
+<span class="s">  hosts:</span>
+<span class="s">    - host: chart-example.local</span>
+<span class="s">      paths:</span>
+<span class="s">        - path: /</span>
+<span class="s">          pathType: Prefix</span>
+
+<span class="s">persistence:</span>
+<span class="s">  enabled: true</span>
+<span class="s">  size: 10Gi</span>
+
+<span class="s">monitoring:</span>
+<span class="s">  enabled: false</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Create conditional ingress template</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>conditional-chart/templates/ingress.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">{{- if .Values.ingress.enabled -}}</span>
+<span class="s">{{- $fullName := include &quot;conditional-chart.fullname&quot; . -}}</span>
+<span class="s">{{- $svcPort := .Values.service.port -}}</span>
+<span class="s">apiVersion: networking.k8s.io/v1</span>
+<span class="s">kind: Ingress</span>
+<span class="s">metadata:</span>
+<span class="s">  name: {{ $fullName }}</span>
+<span class="s">  labels:</span>
+<span class="s">    {{- include &quot;conditional-chart.labels&quot; . | nindent 4 }}</span>
+<span class="s">  {{- if .Values.ingress.annotations }}</span>
+<span class="s">  annotations:</span>
+<span class="s">    {{- toYaml .Values.ingress.annotations | nindent 4 }}</span>
+<span class="s">  {{- end }}</span>
+<span class="s">spec:</span>
+<span class="s">  {{- if .Values.ingress.className }}</span>
+<span class="s">  ingressClassName: {{ .Values.ingress.className }}</span>
+<span class="s">  {{- end }}</span>
+<span class="s">  rules:</span>
+<span class="s">    {{- range .Values.ingress.hosts }}</span>
+<span class="s">    - host: {{ .host | quote }}</span>
+<span class="s">      http:</span>
+<span class="s">        paths:</span>
+<span class="s">          {{- range .paths }}</span>
+<span class="s">          - path: {{ .path }}</span>
+<span class="s">            pathType: {{ .pathType }}</span>
+<span class="s">            backend:</span>
+<span class="s">              service:</span>
+<span class="s">                name: {{ $fullName }}</span>
+<span class="s">                port:</span>
+<span class="s">                  number: {{ $svcPort }}</span>
+<span class="s">          {{- end }}</span>
+<span class="s">    {{- end }}</span>
+<span class="s">{{- end }}</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Create conditional PVC template</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>conditional-chart/templates/pvc.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">{{- if .Values.persistence.enabled }}</span>
+<span class="s">apiVersion: v1</span>
+<span class="s">kind: PersistentVolumeClaim</span>
+<span class="s">metadata:</span>
+<span class="s">  name: {{ include &quot;conditional-chart.fullname&quot; . }}-pvc</span>
+<span class="s">spec:</span>
+<span class="s">  accessModes:</span>
+<span class="s">    - ReadWriteOnce</span>
+<span class="s">  resources:</span>
+<span class="s">    requests:</span>
+<span class="s">      storage: {{ .Values.persistence.size }}</span>
+<span class="s">{{- end }}</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Create optional ServiceMonitor</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>conditional-chart/templates/servicemonitor.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">{{- if .Values.monitoring.enabled }}</span>
+<span class="s">apiVersion: monitoring.coreos.com/v1</span>
+<span class="s">kind: ServiceMonitor</span>
+<span class="s">metadata:</span>
+<span class="s">  name: {{ include &quot;conditional-chart.fullname&quot; . }}</span>
+<span class="s">spec:</span>
+<span class="s">  selector:</span>
+<span class="s">    matchLabels:</span>
+<span class="s">      {{- include &quot;conditional-chart.selectorLabels&quot; . | nindent 6 }}</span>
+<span class="s">  endpoints:</span>
+<span class="s">  - port: metrics</span>
+<span class="s">{{- end }}</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Test with different value combinations</span>
+helm<span class="w"> </span>template<span class="w"> </span><span class="nb">test</span><span class="w"> </span>./conditional-chart<span class="w"> </span>--set<span class="w"> </span>ingress.enabled<span class="o">=</span><span class="nb">true</span>
+helm<span class="w"> </span>template<span class="w"> </span><span class="nb">test</span><span class="w"> </span>./conditional-chart<span class="w"> </span>--set<span class="w"> </span>persistence.enabled<span class="o">=</span><span class="nb">false</span>
+helm<span class="w"> </span>install<span class="w"> </span>conditional-test<span class="w"> </span>./conditional-chart<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--set<span class="w"> </span>ingress.enabled<span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--set<span class="w"> </span>monitoring.enabled<span class="o">=</span><span class="nb">true</span>
+
+<span class="c1"># Clean up</span>
+helm<span class="w"> </span>uninstall<span class="w"> </span>conditional-test
+</code></pre></div>
+<hr />
+<h3 id="scenario-6-chart-dependencies"><strong>Scenario 6: Chart Dependencies</strong><a class="headerlink" href="#scenario-6-chart-dependencies" title="Permanent link">&para;</a></h3>
+<p><em>Managing applications that require other services</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Dev as Developer
+    participant Chart as MyApp Chart
+    participant Deps as Chart.yaml (dependencies)
+    participant DB as PostgreSQL Chart
+    participant Cache as Redis Chart
+    participant Monitor as Prometheus Chart
+    participant Helm as Helm CLI
+    participant K8s as Kubernetes
+    Dev-&gt;&gt;Deps: Define dependencies: postgres, redis
+    Helm-&gt;&gt;DB: Download dependency charts
+    Helm-&gt;&gt;Cache: Download dependency charts
+    Helm-&gt;&gt;Monitor: Download dependency charts
+    Chart-&gt;&gt;DB: Pass values to postgres
+    Chart-&gt;&gt;Cache: Pass values to redis
+    Chart-&gt;&gt;Monitor: Pass values to prometheus
+    Helm-&gt;&gt;K8s: Deploy all components
+    K8s-&gt;&gt;DB: Start PostgreSQL
+    K8s-&gt;&gt;Cache: Start Redis
+    K8s-&gt;&gt;Monitor: Start Prometheus
+    K8s-&gt;&gt;Chart: Start MyApp
+    Chart-&gt;&gt;K8s: All services running!
+    Note over Dev: Manage entire stack as one unit</code></pre>
+<p><strong>Code:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create a chart with dependencies</span>
+helm<span class="w"> </span>create<span class="w"> </span>app-stack
+
+<span class="c1"># Edit Chart.yaml to add dependencies</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>app-stack/Chart.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">apiVersion: v2</span>
+<span class="s">name: app-stack</span>
+<span class="s">description: A full application stack with PostgreSQL and Redis</span>
+<span class="s">type: application</span>
+<span class="s">version: 0.1.0</span>
+<span class="s">appVersion: &quot;1.16.0&quot;</span>
+
+<span class="s">dependencies:</span>
+<span class="s">- name: postgresql</span>
+<span class="s">  version: &quot;12.1.2&quot;</span>
+<span class="s">  repository: &quot;https://charts.bitnami.com/bitnami&quot;</span>
+<span class="s">  condition: postgresql.enabled</span>
+<span class="s">  tags:</span>
+<span class="s">    - database</span>
+<span class="s">- name: redis</span>
+<span class="s">  version: &quot;17.4.3&quot;</span>
+<span class="s">  repository: &quot;https://charts.bitnami.com/bitnami&quot;</span>
+<span class="s">  condition: redis.enabled</span>
+<span class="s">- name: common</span>
+<span class="s">  version: &quot;2.2.0&quot;</span>
+<span class="s">  repository: &quot;https://charts.bitnami.com/bitnami&quot;</span>
+<span class="s">  tags:</span>
+<span class="s">    - bitnami-common</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Update dependencies (downloads charts)</span>
+helm<span class="w"> </span>dependency<span class="w"> </span>update<span class="w"> </span>./app-stack
+
+<span class="c1"># View dependency tree</span>
+helm<span class="w"> </span>dependency<span class="w"> </span>list<span class="w"> </span>./app-stack
+
+<span class="c1"># Build dependencies (creates charts/ directory)</span>
+helm<span class="w"> </span>dependency<span class="w"> </span>build<span class="w"> </span>./app-stack
+
+<span class="c1"># Create values file for dependencies</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>app-stack/values.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s"># Application configuration</span>
+<span class="s">replicaCount: 2</span>
+<span class="s">image:</span>
+<span class="s">  repository: my-app</span>
+<span class="s">  tag: latest</span>
+
+<span class="s"># PostgreSQL dependency configuration</span>
+<span class="s">postgresql:</span>
+<span class="s">  enabled: true</span>
+<span class="s">  auth:</span>
+<span class="s">    username: myuser</span>
+<span class="s">    password: mypassword</span>
+<span class="s">    database: myappdb</span>
+<span class="s">  persistence:</span>
+<span class="s">    size: 10Gi</span>
+
+<span class="s"># Redis dependency configuration</span>
+<span class="s">redis:</span>
+<span class="s">  enabled: true</span>
+<span class="s">  auth:</span>
+<span class="s">    enabled: true</span>
+<span class="s">    password: redispassword</span>
+<span class="s">  master:</span>
+<span class="s">    persistence:</span>
+<span class="s">      enabled: true</span>
+<span class="s">      size: 8Gi</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Install with dependencies</span>
+helm<span class="w"> </span>install<span class="w"> </span>full-stack<span class="w"> </span>./app-stack
+
+<span class="c1"># Check all resources</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>pods
+
+<span class="c1"># Uninstall everything</span>
+helm<span class="w"> </span>uninstall<span class="w"> </span>full-stack
+
+<span class="c1"># Skip dependencies during install</span>
+helm<span class="w"> </span>install<span class="w"> </span>app-only<span class="w"> </span>./app-stack<span class="w"> </span>--skip-dependencies
+
+<span class="c1"># Add alias for dependency</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>app-stack/Chart.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">dependencies:</span>
+<span class="s">- name: postgresql</span>
+<span class="s">  version: &quot;12.1.2&quot;</span>
+<span class="s">  repository: &quot;https://charts.bitnami.com/bitnami&quot;</span>
+<span class="s">  alias: primarydb</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Reference aliased dependency</span>
+helm<span class="w"> </span>template<span class="w"> </span><span class="nb">test</span><span class="w"> </span>./app-stack<span class="w"> </span>--set<span class="w"> </span>primarydb.auth.password<span class="o">=</span>secret
+</code></pre></div>
+<hr />
+<h3 id="scenario-7-upgrading-and-rolling-back"><strong>Scenario 7: Upgrading and Rolling Back</strong><a class="headerlink" href="#scenario-7-upgrading-and-rolling-back" title="Permanent link">&para;</a></h3>
+<p><em>Managing chart updates safely</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User as Developer
+    participant Helm as Helm CLI
+    participant Release as Helm Release
+    participant Rev1 as Revision 1 (v1.0)
+    participant Rev2 as Revision 2 (v1.1)
+    participant Rev3 as Revision 3 (v1.2)
+    participant K8s as Kubernetes
+    User-&gt;&gt;Helm: helm upgrade my-app ./chart --set image.tag=v1.1
+    Helm-&gt;&gt;K8s: Update deployment to v1.1
+    K8s-&gt;&gt;Release: Create revision 2
+    Release-&gt;&gt;Rev2: Store v1.1 configuration
+    User-&gt;&gt;Helm: helm upgrade my-app ./chart --set image.tag=v1.2
+    Helm-&gt;&gt;K8s: Update deployment to v1.2
+    K8s-&gt;&gt;Release: Create revision 3
+    Release-&gt;&gt;Rev3: Store v1.2 configuration
+    Note over Release: 3 successful revisions
+    User-&gt;&gt;User: "v1.2 has bugs!"
+    User-&gt;&gt;Helm: helm rollback my-app 2
+    Helm-&gt;&gt;Rev2: Retrieve revision 2 config
+    Helm-&gt;&gt;K8s: Apply v1.1 configuration
+    K8s-&gt;&gt;Release: Create revision 4 (copy of rev 2)
+    Release-&gt;&gt;User: Rolled back to v1.1!
+    Note over Helm: Zero-downtime rollback</code></pre>
+<p><strong>Code:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install initial version</span>
+helm<span class="w"> </span>install<span class="w"> </span>my-app<span class="w"> </span>./my-chart<span class="w"> </span>--set<span class="w"> </span>image.tag<span class="o">=</span>v1.0
+
+<span class="c1"># Check release history</span>
+helm<span class="w"> </span><span class="nb">history</span><span class="w"> </span>my-app
+
+<span class="c1"># Upgrade to new version</span>
+helm<span class="w"> </span>upgrade<span class="w"> </span>my-app<span class="w"> </span>./my-chart<span class="w"> </span>--set<span class="w"> </span>image.tag<span class="o">=</span>v1.1
+
+<span class="c1"># Check the rollout status</span>
+helm<span class="w"> </span>status<span class="w"> </span>my-app
+
+<span class="c1"># View all revisions</span>
+helm<span class="w"> </span><span class="nb">history</span><span class="w"> </span>my-app
+<span class="c1"># Output shows:</span>
+<span class="c1"># REVISION  UPDATED                     STATUS      CHART               APP VERSION DESCRIPTION</span>
+<span class="c1"># 1        Thu Nov 30 10:00:00 2024 deployed    my-chart-0.1.0      1.16.0      Install complete</span>
+<span class="c1"># 2        Thu Nov 30 10:15:00 2024 superseded  my-chart-0.1.0      1.16.0      Upgrade complete</span>
+
+<span class="c1"># Upgrade with values file</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;image:\n  tag: v1.2&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>upgrade-values.yaml
+helm<span class="w"> </span>upgrade<span class="w"> </span>my-app<span class="w"> </span>./my-chart<span class="w"> </span>-f<span class="w"> </span>upgrade-values.yaml
+
+<span class="c1"># Simulate a failed upgrade with --wait</span>
+helm<span class="w"> </span>upgrade<span class="w"> </span>my-app<span class="w"> </span>./my-chart<span class="w"> </span>--set<span class="w"> </span>image.tag<span class="o">=</span>v2.0<span class="w"> </span>--wait<span class="w"> </span>--timeout<span class="o">=</span>300s
+
+<span class="c1"># Check current release values</span>
+helm<span class="w"> </span>get<span class="w"> </span>values<span class="w"> </span>my-app
+
+<span class="c1"># Check all computed values</span>
+helm<span class="w"> </span>get<span class="w"> </span>values<span class="w"> </span>my-app<span class="w"> </span>--all
+
+<span class="c1"># Rollback to previous revision</span>
+helm<span class="w"> </span>rollback<span class="w"> </span>my-app<span class="w"> </span><span class="m">1</span>
+
+<span class="c1"># Rollback to specific revision</span>
+helm<span class="w"> </span>rollback<span class="w"> </span>my-app<span class="w"> </span><span class="m">2</span>
+
+<span class="c1"># Check rollback status</span>
+helm<span class="w"> </span><span class="nb">history</span><span class="w"> </span>my-app
+
+<span class="c1"># Force upgrade (recreate resources)</span>
+helm<span class="w"> </span>upgrade<span class="w"> </span>my-app<span class="w"> </span>./my-chart<span class="w"> </span>--set<span class="w"> </span>image.tag<span class="o">=</span>v3.0<span class="w"> </span>--force
+
+<span class="c1"># Atomic upgrade (rollback on failure)</span>
+helm<span class="w"> </span>upgrade<span class="w"> </span>my-app<span class="w"> </span>./my-chart<span class="w"> </span>--set<span class="w"> </span>image.tag<span class="o">=</span>v3.0<span class="w"> </span>--atomic
+
+<span class="c1"># Upgrade with dry-run</span>
+helm<span class="w"> </span>upgrade<span class="w"> </span>my-app<span class="w"> </span>./my-chart<span class="w"> </span>--set<span class="w"> </span>image.tag<span class="o">=</span>v4.0<span class="w"> </span>--dry-run<span class="w"> </span>--debug
+
+<span class="c1"># Clean up</span>
+helm<span class="w"> </span>uninstall<span class="w"> </span>my-app
+</code></pre></div>
+<hr />
+<h3 id="scenario-8-helm-hooks-lifecycle-control"><strong>Scenario 8: Helm Hooks &amp; Lifecycle Control</strong><a class="headerlink" href="#scenario-8-helm-hooks-lifecycle-control" title="Permanent link">&para;</a></h3>
+<p><em>Running jobs at specific points in the release lifecycle</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User as Developer
+    participant Hook as Hook Templates
+    participant Helm as Helm CLI
+    participant K8s as Kubernetes
+    participant Job as Job Pod
+    participant Test as Test Pod
+    User-&gt;&gt;Helm: helm install my-app ./chart
+    Helm-&gt;&gt;Hook: Find pre-install hooks
+    Hook-&gt;&gt;Job: Create pre-install Job
+    Job-&gt;&gt;K8s: Run database migration
+    K8s-&gt;&gt;Job: Wait for completion
+    Job--&gt;&gt;Helm: Job completed
+    Helm-&gt;&gt;K8s: Create main resources (Deployment, Service)
+    K8s-&gt;&gt;K8s: Start application
+    K8s--&gt;&gt;Helm: Resources ready
+    Helm-&gt;&gt;Hook: Find post-install hooks
+    Hook-&gt;&gt;Test: Create test pod
+    Test-&gt;&gt;K8s: Run integration tests
+    K8s-&gt;&gt;Test: Tests pass
+    Test--&gt;&gt;User: Installation successful!
+    Note over Helm: Hooks control release flow</code></pre>
+<p><strong>Code:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create a chart with hooks</span>
+helm<span class="w"> </span>create<span class="w"> </span>hook-demo
+
+<span class="c1"># Pre-install hook: Database migration</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>hook-demo/templates/pre-install-job.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">apiVersion: batch/v1</span>
+<span class="s">kind: Job</span>
+<span class="s">metadata:</span>
+<span class="s">  name: {{ .Release.Name }}-db-migrate</span>
+<span class="s">  annotations:</span>
+<span class="s">    &quot;helm.sh/hook&quot;: pre-install,pre-upgrade</span>
+<span class="s">    &quot;helm.sh/hook-weight&quot;: &quot;-5&quot;</span>
+<span class="s">    &quot;helm.sh/hook-delete-policy&quot;: hook-succeeded</span>
+<span class="s">spec:</span>
+<span class="s">  template:</span>
+<span class="s">    spec:</span>
+<span class="s">      restartPolicy: Never</span>
+<span class="s">      containers:</span>
+<span class="s">      - name: db-migrate</span>
+<span class="s">        image: busybox</span>
+<span class="s">        command: [&#39;sh&#39;, &#39;-c&#39;, &#39;echo &quot;Running database migration...&quot; &amp;&amp; sleep 5 &amp;&amp; echo &quot;Migration complete!&quot;&#39;]</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Post-install hook: Send notification</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>hook-demo/templates/post-install-job.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">apiVersion: batch/v1</span>
+<span class="s">kind: Job</span>
+<span class="s">metadata:</span>
+<span class="s">  name: {{ .Release.Name }}-notify</span>
+<span class="s">  annotations:</span>
+<span class="s">    &quot;helm.sh/hook&quot;: post-install,post-upgrade</span>
+<span class="s">    &quot;helm.sh/hook-weight&quot;: &quot;5&quot;</span>
+<span class="s">    &quot;helm.sh/hook-delete-policy&quot;: before-hook-creation</span>
+<span class="s">spec:</span>
+<span class="s">  template:</span>
+<span class="s">    spec:</span>
+<span class="s">      restartPolicy: Never</span>
+<span class="s">      containers:</span>
+<span class="s">      - name: notify</span>
+<span class="s">        image: curlimages/curl</span>
+<span class="s">        command: [&#39;sh&#39;, &#39;-c&#39;, &#39;echo &quot;Sending deployment notification...&quot; &amp;&amp; curl -X POST https://hooks.slack.com/services/XXX&#39;]</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Test hook: Validate deployment</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>hook-demo/templates/tests/test-connection.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">apiVersion: v1</span>
+<span class="s">kind: Pod</span>
+<span class="s">metadata:</span>
+<span class="s">  name: {{ .Release.Name }}-test</span>
+<span class="s">  annotations:</span>
+<span class="s">    &quot;helm.sh/hook&quot;: test</span>
+<span class="s">spec:</span>
+<span class="s">  containers:</span>
+<span class="s">  - name: test</span>
+<span class="s">    image: busybox</span>
+<span class="s">    command: [&#39;wget&#39;, &#39;--spider&#39;, &#39;{{ .Release.Name }}-hook-demo:80&#39;]</span>
+<span class="s">  restartPolicy: Never</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Install with hooks</span>
+helm<span class="w"> </span>install<span class="w"> </span>hooked-app<span class="w"> </span>./hook-demo<span class="w"> </span>--wait
+
+<span class="c1"># View hook status</span>
+kubectl<span class="w"> </span>get<span class="w"> </span><span class="nb">jobs</span>
+
+<span class="c1"># View hook pods (before they&#39;re deleted)</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-l<span class="w"> </span>helm.sh/hook
+
+<span class="c1"># Run tests manually</span>
+helm<span class="w"> </span><span class="nb">test</span><span class="w"> </span>hooked-app
+
+<span class="c1"># View test results</span>
+kubectl<span class="w"> </span>logs<span class="w"> </span>hooked-app-test
+
+<span class="c1"># Hook weights control execution order</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>hook-demo/templates/pre-install-secret.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">apiVersion: v1</span>
+<span class="s">kind: Secret</span>
+<span class="s">metadata:</span>
+<span class="s">  name: {{ .Release.Name }}-secret</span>
+<span class="s">  annotations:</span>
+<span class="s">    &quot;helm.sh/hook&quot;: pre-install</span>
+<span class="s">    &quot;helm.sh/hook-weight&quot;: &quot;-10&quot;  # Run first</span>
+<span class="s">type: Opaque</span>
+<span class="s">stringData:</span>
+<span class="s">  secret: {{ .Values.secret | default &quot;default-secret&quot; }}</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Hook delete policies</span>
+<span class="c1"># before-hook-creation: Delete previous hook before new one</span>
+<span class="c1"># hook-succeeded: Delete hook after success</span>
+<span class="c1"># hook-failed: Keep hook if it fails</span>
+<span class="c1"># helm.sh/hook-delete-policy: &quot;before-hook-creation,hook-succeeded&quot;</span>
+
+<span class="c1"># Available hooks:</span>
+<span class="c1"># pre-install: After rendering, before resources created</span>
+<span class="c1"># post-install: After all resources created</span>
+<span class="c1"># pre-delete: Before deletion starts</span>
+<span class="c1"># post-delete: After deletion completes</span>
+<span class="c1"># pre-upgrade: After upgrade rendering, before update</span>
+<span class="c1"># post-upgrade: After upgrade completes</span>
+<span class="c1"># pre-rollback: Before rollback starts</span>
+<span class="c1"># post-rollback: After rollback completes</span>
+<span class="c1"># test: Run helm test command</span>
+
+helm<span class="w"> </span>uninstall<span class="w"> </span>hooked-app
+</code></pre></div>
+<hr />
+<h3 id="scenario-9-chart-testing"><strong>Scenario 9: Chart Testing</strong><a class="headerlink" href="#scenario-9-chart-testing" title="Permanent link">&para;</a></h3>
+<p><em>Validating charts before deployment</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User as Developer
+    participant Helm as Helm CLI
+    participant Lint as Helm Lint
+    participant Test as Helm Test
+    participant K8s as Kubernetes
+    participant Pod as Test Pod
+    participant CT as Chart Testing (ct)
+    User-&gt;&gt;Helm: helm lint ./my-chart
+    Helm-&gt;&gt;Lint: Validate templates
+    Lint-&gt;&gt;Lint: Check YAML syntax
+    Lint-&gt;&gt;Lint: Validate values schema
+    Lint--&gt;&gt;User: Linting passed!
+    User-&gt;&gt;Helm: helm template test ./my-chart
+    Helm-&gt;&gt;K8s: Dry-run render
+    K8s--&gt;&gt;User: Show rendered manifests
+    User-&gt;&gt;Test: helm install test ./my-chart --wait
+    Test-&gt;&gt;K8s: Deploy test release
+    K8s-&gt;&gt;Pod: Create test pods
+    Pod-&gt;&gt;K8s: Run connectivity tests
+    K8s-&gt;&gt;Test: Tests passed
+    Test-&gt;&gt;User: Release ready!
+    User-&gt;&gt;CT: ct lint-and-install
+    CT-&gt;&gt;Lint: Lint charts
+    CT-&gt;&gt;Test: Install in kind cluster
+    CT-&gt;&gt;User: All checks passed!</code></pre>
+<p><strong>Code:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Lint your chart for errors</span>
+helm<span class="w"> </span>lint<span class="w"> </span>./my-chart
+
+<span class="c1"># Lint with strict mode</span>
+helm<span class="w"> </span>lint<span class="w"> </span>./my-chart<span class="w"> </span>--strict
+
+<span class="c1"># Dry run template rendering</span>
+helm<span class="w"> </span>template<span class="w"> </span>my-app<span class="w"> </span>./my-chart
+
+<span class="c1"># Render with specific values</span>
+helm<span class="w"> </span>template<span class="w"> </span>my-app<span class="w"> </span>./my-chart<span class="w"> </span>-f<span class="w"> </span>values.yaml<span class="w"> </span>--set<span class="w"> </span><span class="nv">replicaCount</span><span class="o">=</span><span class="m">3</span>
+
+<span class="c1"># Validate against Kubernetes cluster</span>
+helm<span class="w"> </span>template<span class="w"> </span>my-app<span class="w"> </span>./my-chart<span class="w"> </span>--validate
+
+<span class="c1"># Install in test namespace</span>
+helm<span class="w"> </span>install<span class="w"> </span>my-app-test<span class="w"> </span>./my-chart<span class="w"> </span>--namespace<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--create-namespace
+
+<span class="c1"># Run tests</span>
+helm<span class="w"> </span><span class="nb">test</span><span class="w"> </span>my-app-test
+
+<span class="c1"># Create test pod (automatically created by helm create)</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>my-chart/templates/tests/test-connection.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">apiVersion: v1</span>
+<span class="s">kind: Pod</span>
+<span class="s">metadata:</span>
+<span class="s">  name: &quot;{{ .Release.Name }}-test-connection&quot;</span>
+<span class="s">  annotations:</span>
+<span class="s">    &quot;helm.sh/hook&quot;: test</span>
+<span class="s">spec:</span>
+<span class="s">  containers:</span>
+<span class="s">  - name: wget</span>
+<span class="s">    image: busybox</span>
+<span class="s">    command: [&#39;wget&#39;]</span>
+<span class="s">    args: [&#39;{{ .Release.Name }}-my-chart:80&#39;]</span>
+<span class="s">  restartPolicy: Never</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Run specific tests only</span>
+helm<span class="w"> </span><span class="nb">test</span><span class="w"> </span>my-app-test<span class="w"> </span>--filter<span class="w"> </span><span class="nv">name</span><span class="o">=</span>my-app-test-test-connection
+
+<span class="c1"># Use Chart Testing (ct) tool</span>
+<span class="c1"># Install: brew install chart-testing</span>
+
+<span class="c1"># Lint and test charts</span>
+ct<span class="w"> </span>lint-and-install<span class="w"> </span>--charts<span class="w"> </span>./my-chart
+
+<span class="c1"># Lint only changed charts (CI/CD)</span>
+ct<span class="w"> </span>lint<span class="w"> </span>--target-branch<span class="w"> </span>main
+
+<span class="c1"># Test using kind cluster</span>
+ct<span class="w"> </span>install<span class="w"> </span>--target-branch<span class="w"> </span>main
+
+<span class="c1"># Debug failing tests</span>
+kubectl<span class="w"> </span>logs<span class="w"> </span>my-app-test-test-connection<span class="w"> </span>-n<span class="w"> </span><span class="nb">test</span>
+
+<span class="c1"># Use helm unittest plugin</span>
+<span class="c1"># Install: helm plugin install https://github.com/helm-unittest/helm-unittest</span>
+
+<span class="c1"># Create unit test</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>my-chart/tests/deployment_test.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">suite: test deployment</span>
+<span class="s">templates:</span>
+<span class="s">  - deployment.yaml</span>
+<span class="s">tests:</span>
+<span class="s">  - it: should have 3 replicas</span>
+<span class="s">    values:</span>
+<span class="s">      - ./values.yaml</span>
+<span class="s">    asserts:</span>
+<span class="s">      - equal:</span>
+<span class="s">          path: spec.replicas</span>
+<span class="s">          value: 3</span>
+<span class="s">  - it: should use correct image</span>
+<span class="s">    set:</span>
+<span class="s">      image.tag: v1.2.3</span>
+<span class="s">    asserts:</span>
+<span class="s">      - equal:</span>
+<span class="s">          path: spec.template.spec.containers[0].image</span>
+<span class="s">          value: nginx:v1.2.3</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Run unit tests</span>
+helm<span class="w"> </span>unittest<span class="w"> </span>./my-chart
+
+<span class="c1"># Clean up</span>
+helm<span class="w"> </span>uninstall<span class="w"> </span>my-app-test<span class="w"> </span>--namespace<span class="w"> </span><span class="nb">test</span>
+kubectl<span class="w"> </span>delete<span class="w"> </span>namespace<span class="w"> </span><span class="nb">test</span>
+</code></pre></div>
+<hr />
+<h2 id="intermediate-level-advanced-templating-patterns">INTERMEDIATE LEVEL: Advanced Templating &amp; Patterns<a class="headerlink" href="#intermediate-level-advanced-templating-patterns" title="Permanent link">&para;</a></h2>
+<h3 id="scenario-10-range-loops-conditionals"><strong>Scenario 10: Range Loops &amp; Conditionals</strong><a class="headerlink" href="#scenario-10-range-loops-conditionals" title="Permanent link">&para;</a></h3>
+<p><em>Generating multiple resources dynamically</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Dev as Developer
+    participant Values as values.yaml
+    participant Tpl as Go Templates
+    participants Services as Service Array
+    participant Ingress as Ingress Resources
+    participant K8s as Kubernetes
+    Dev-&gt;&gt;Values: Define services array
+    Values-&gt;&gt;Services: [api, web, db]
+    Tpl-&gt;&gt;Services: {{ range .Values.services }}
+    loop For each service
+        Tpl-&gt;&gt;K8s: Generate Deployment
+        Tpl-&gt;&gt;K8s: Generate Service
+    end
+    K8s-&gt;&gt;K8s: 3 deployments, 3 services
+    Dev-&gt;&gt;Values: Define ingress.rules
+    Values-&gt;&gt;Ingress: Array of host/path rules
+    Tpl-&gt;&gt;Ingress: {{ range .Values.ingress.rules }}
+    loop For each rule
+        Tpl-&gt;&gt;K8s: Generate Ingress path
+    end
+    K8s-&gt;&gt;User: Dynamic resources created
+    Note over Dev: DRY - Don't Repeat Yourself</code></pre>
+<p><strong>Code:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create chart with loops</span>
+helm<span class="w"> </span>create<span class="w"> </span>dynamic-resources
+
+<span class="c1"># Edit values.yaml with array</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>dynamic-resources/values.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">replicaCount: 1</span>
+<span class="s">image:</span>
+<span class="s">  repository: nginx</span>
+<span class="s">  tag: latest</span>
+
+<span class="s">services:</span>
+<span class="s">  - name: api</span>
+<span class="s">    port: 3000</span>
+<span class="s">    type: ClusterIP</span>
+<span class="s">  - name: web</span>
+<span class="s">    port: 80</span>
+<span class="s">    type: LoadBalancer</span>
+<span class="s">  - name: admin</span>
+<span class="s">    port: 8080</span>
+<span class="s">    type: ClusterIP</span>
+
+<span class="s">ingress:</span>
+<span class="s">  enabled: true</span>
+<span class="s">  rules:</span>
+<span class="s">    - host: api.example.com</span>
+<span class="s">      path: /api</span>
+<span class="s">      service: api</span>
+<span class="s">      port: 3000</span>
+<span class="s">    - host: www.example.com</span>
+<span class="s">      path: /</span>
+<span class="s">      service: web</span>
+<span class="s">      port: 80</span>
+<span class="s">    - host: admin.example.com</span>
+<span class="s">      path: /</span>
+<span class="s">      service: admin</span>
+<span class="s">      port: 8080</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Create deployment per service</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>dynamic-resources/templates/deployments.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">{{- range .Values.services }}</span>
+<span class="s">---</span>
+<span class="s">apiVersion: apps/v1</span>
+<span class="s">kind: Deployment</span>
+<span class="s">metadata:</span>
+<span class="s">  name: {{ include &quot;dynamic-resources.fullname&quot; $ }}-{{ .name }}</span>
+<span class="s">  labels:</span>
+<span class="s">    {{- include &quot;dynamic-resources.labels&quot; $ | nindent 4 }}</span>
+<span class="s">    service: {{ .name }}</span>
+<span class="s">spec:</span>
+<span class="s">  replicas: {{ $.Values.replicaCount }}</span>
+<span class="s">  selector:</span>
+<span class="s">    matchLabels:</span>
+<span class="s">      {{- include &quot;dynamic-resources.selectorLabels&quot; $ | nindent 6 }}</span>
+<span class="s">      service: {{ .name }}</span>
+<span class="s">  template:</span>
+<span class="s">    metadata:</span>
+<span class="s">      labels:</span>
+<span class="s">        {{- include &quot;dynamic-resources.selectorLabels&quot; $ | nindent 8 }}</span>
+<span class="s">        service: {{ .name }}</span>
+<span class="s">    spec:</span>
+<span class="s">      containers:</span>
+<span class="s">      - name: {{ .name }}</span>
+<span class="s">        image: &quot;{{ $.Values.image.repository }}:{{ $.Values.image.tag }}&quot;</span>
+<span class="s">        ports:</span>
+<span class="s">        - containerPort: {{ .port }}</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Create service per service definition</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>dynamic-resources/templates/services.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">{{- range .Values.services }}</span>
+<span class="s">---</span>
+<span class="s">apiVersion: v1</span>
+<span class="s">kind: Service</span>
+<span class="s">metadata:</span>
+<span class="s">  name: {{ include &quot;dynamic-resources.fullname&quot; $ }}-{{ .name }}</span>
+<span class="s">  labels:</span>
+<span class="s">    {{- include &quot;dynamic-resources.labels&quot; $ | nindent 4 }}</span>
+<span class="s">spec:</span>
+<span class="s">  type: {{ .type }}</span>
+<span class="s">  ports:</span>
+<span class="s">  - port: {{ .port }}</span>
+<span class="s">    targetPort: {{ .port }}</span>
+<span class="s">    protocol: TCP</span>
+<span class="s">    name: {{ .name }}</span>
+<span class="s">  selector:</span>
+<span class="s">    {{- include &quot;dynamic-resources.selectorLabels&quot; $ | nindent 4 }}</span>
+<span class="s">    service: {{ .name }}</span>
+<span class="s">{{- end }}</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Create ingress with dynamic rules</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>dynamic-resources/templates/ingress.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">{{- if .Values.ingress.enabled }}</span>
+<span class="s">apiVersion: networking.k8s.io/v1</span>
+<span class="s">kind: Ingress</span>
+<span class="s">metadata:</span>
+<span class="s">  name: {{ include &quot;dynamic-resources.fullname&quot; . }}</span>
+<span class="s">spec:</span>
+<span class="s">  rules:</span>
+<span class="s">  {{- range .Values.ingress.rules }}</span>
+<span class="s">  - host: {{ .host }}</span>
+<span class="s">    http:</span>
+<span class="s">      paths:</span>
+<span class="s">      - path: {{ .path }}</span>
+<span class="s">        pathType: Prefix</span>
+<span class="s">        backend:</span>
+<span class="s">          service:</span>
+<span class="s">            name: {{ include &quot;dynamic-resources.fullname&quot; $ }}-{{ .service }}</span>
+<span class="s">            port:</span>
+<span class="s">              number: {{ .port }}</span>
+<span class="s">  {{- end }}</span>
+<span class="s">{{- end }}</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Test rendering</span>
+helm<span class="w"> </span>template<span class="w"> </span>dynamic-test<span class="w"> </span>./dynamic-resources
+
+<span class="c1"># Install</span>
+helm<span class="w"> </span>install<span class="w"> </span>dynamic-app<span class="w"> </span>./dynamic-resources
+
+<span class="c1"># Verify multiple deployments</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>deployments
+kubectl<span class="w"> </span>get<span class="w"> </span>services
+
+<span class="c1"># Use conditionals with range</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>dynamic-resources/templates/rbac.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">{{- if .Values.rbac.create -}}</span>
+<span class="s">{{- range .Values.rbac.roles }}</span>
+<span class="s">---</span>
+<span class="s">apiVersion: rbac.authorization.k8s.io/v1</span>
+<span class="s">kind: Role</span>
+<span class="s">metadata:</span>
+<span class="s">  name: {{ include &quot;dynamic-resources.fullname&quot; $ }}-{{ .name }}</span>
+<span class="s">rules:</span>
+<span class="s">{{- toYaml .rules | nindent 0 }}</span>
+<span class="s">{{- end }}</span>
+<span class="s">{{- end }}</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Clean up</span>
+helm<span class="w"> </span>uninstall<span class="w"> </span>dynamic-app
+</code></pre></div>
+<hr />
+<h3 id="scenario-11-named-templates-blocks"><strong>Scenario 11: Named Templates &amp; Blocks</strong><a class="headerlink" href="#scenario-11-named-templates-blocks" title="Permanent link">&para;</a></h3>
+<p><em>Reusable template components</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Dev as Developer
+    participant Define as {{ define "block" }}
+    participant Template as _helpers.tpl
+    participants Usage as {{ include "block" . }}
+    participant Render as Rendering Engine
+    participant Deploy as Deployment
+    participant Service as Service
+    participant Ingress as Ingress
+    Dev-&gt;&gt;Define: Define named template
+    Define-&gt;&gt;Template: Store in _helpers.tpl
+    Dev-&gt;&gt;Usage: Use in deployment.yaml
+    Dev-&gt;&gt;Usage: Use in service.yaml
+    Dev-&gt;&gt;Usage: Use in ingress.yaml
+    Usage-&gt;&gt;Render: Include template
+    Render-&gt;&gt;Deploy: Apply labels
+    Render-&gt;&gt;Service: Apply same labels
+    Render-&gt;&gt;Ingress: Apply same labels
+    Deploy-&gt;&gt;K8s: Consistent labeling
+    Note over Dev: Single source of truth</code></pre>
+<p><strong>Code:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create shared templates</span>
+helm<span class="w"> </span>create<span class="w"> </span>shared-templates
+
+<span class="c1"># Create shared volume mount template</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>shared-templates/templates/_volumes.tpl<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">{{/* Define a persistent volume claim template */}}</span>
+<span class="s">{{- define &quot;shared-templates.pvc&quot; -}}</span>
+<span class="s">{{- if .Values.persistence.enabled -}}</span>
+<span class="s">apiVersion: v1</span>
+<span class="s">kind: PersistentVolumeClaim</span>
+<span class="s">metadata:</span>
+<span class="s">  name: {{ include &quot;shared-templates.fullname&quot; . }}-pvc</span>
+<span class="s">spec:</span>
+<span class="s">  accessModes:</span>
+<span class="s">    - {{ .Values.persistence.accessMode }}</span>
+<span class="s">  resources:</span>
+<span class="s">    requests:</span>
+<span class="s">      storage: {{ .Values.persistence.size }}</span>
+<span class="s">{{- if .Values.persistence.storageClass }}</span>
+<span class="s">  storageClassName: {{ .Values.persistence.storageClass }}</span>
+<span class="s">{{- end }}</span>
+<span class="s">{{- end -}}</span>
+<span class="s">{{- end -}}</span>
+
+<span class="s">{{/* Define volume mount for deployment */}}</span>
+<span class="s">{{- define &quot;shared-templates.volumeMounts&quot; -}}</span>
+<span class="s">{{- if .Values.persistence.enabled }}</span>
+<span class="s">volumeMounts:</span>
+<span class="s">- name: data</span>
+<span class="s">  mountPath: {{ .Values.persistence.mountPath }}</span>
+<span class="s">{{- end }}</span>
+<span class="s">{{- end -}}</span>
+
+<span class="s">{{/* Define volumes for deployment */}}</span>
+<span class="s">{{- define &quot;shared-templates.volumes&quot; -}}</span>
+<span class="s">{{- if .Values.persistence.enabled }}</span>
+<span class="s">volumes:</span>
+<span class="s">- name: data</span>
+<span class="s">  persistentVolumeClaim:</span>
+<span class="s">    claimName: {{ include &quot;shared-templates.fullname&quot; . }}-pvc</span>
+<span class="s">{{- end }}</span>
+<span class="s">{{- end -}}</span>
+
+<span class="s">{{/* Define environment variables template */}}</span>
+<span class="s">{{- define &quot;shared-templates.env&quot; -}}</span>
+<span class="s">{{- range .Values.env }}</span>
+<span class="s">- name: {{ .name }}</span>
+<span class="s">  value: {{ .value | quote }}</span>
+<span class="s">{{- end }}</span>
+<span class="s">{{- range .Values.envSecrets }}</span>
+<span class="s">- name: {{ .name }}</span>
+<span class="s">  valueFrom:</span>
+<span class="s">    secretKeyRef:</span>
+<span class="s">      name: {{ .secretName }}</span>
+<span class="s">      key: {{ .secretKey }}</span>
+<span class="s">{{- end }}</span>
+<span class="s">{{- end -}}</span>
+
+<span class="s">{{/* Define resources template */}}</span>
+<span class="s">{{- define &quot;shared-templates.resources&quot; -}}</span>
+<span class="s">{{- if .Values.resources }}</span>
+<span class="s">resources:</span>
+<span class="s">  {{- toYaml .Values.resources | nindent 2 }}</span>
+<span class="s">{{- else }}</span>
+<span class="s">resources: {}</span>
+<span class="s">{{- end }}</span>
+<span class="s">{{- end -}}</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Use named templates in deployment</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>shared-templates/templates/deployment.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">apiVersion: apps/v1</span>
+<span class="s">kind: Deployment</span>
+<span class="s">metadata:</span>
+<span class="s">  name: {{ include &quot;shared-templates.fullname&quot; . }}</span>
+<span class="s">spec:</span>
+<span class="s">  template:</span>
+<span class="s">    spec:</span>
+<span class="s">      containers:</span>
+<span class="s">      - name: {{ .Chart.Name }}</span>
+<span class="s">        image: &quot;{{ .Values.image.repository }}:{{ .Values.image.tag }}&quot;</span>
+<span class="s">        env:</span>
+<span class="s">          {{- include &quot;shared-templates.env&quot; . | nindent 10 }}</span>
+<span class="s">        {{- include &quot;shared-templates.volumeMounts&quot; . | nindent 8 }}</span>
+<span class="s">        {{- include &quot;shared-templates.resources&quot; . | nindent 8 }}</span>
+<span class="s">      {{- include &quot;shared-templates.volumes&quot; . | nindent 6 }}</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Create PVC using named template</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>shared-templates/templates/pvc.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">{{- include &quot;shared-templates.pvc&quot; . }}</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Use template composition</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>shared-templates/templates/_composition.tpl<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">{{/* Create a full application component */}}</span>
+<span class="s">{{- define &quot;shared-templates.appComponent&quot; -}}</span>
+<span class="s">{{- $top := index . 0 }}</span>
+<span class="s">{{- $component := index . 1 }}</span>
+<span class="s">---</span>
+<span class="s">apiVersion: apps/v1</span>
+<span class="s">kind: Deployment</span>
+<span class="s">metadata:</span>
+<span class="s">  name: {{ include &quot;shared-templates.fullname&quot; $top }}-{{ $component.name }}</span>
+<span class="s">spec:</span>
+<span class="s">  replicas: {{ $component.replicas | default 1 }}</span>
+<span class="s">  template:</span>
+<span class="s">    spec:</span>
+<span class="s">      containers:</span>
+<span class="s">      - name: {{ $component.name }}</span>
+<span class="s">        image: &quot;{{ $component.image }}:{{ $component.tag }}&quot;</span>
+<span class="s">        ports:</span>
+<span class="s">        - containerPort: {{ $component.port }}</span>
+<span class="s">---</span>
+<span class="s">apiVersion: v1</span>
+<span class="s">kind: Service</span>
+<span class="s">metadata:</span>
+<span class="s">  name: {{ include &quot;shared-templates.fullname&quot; $top }}-{{ $component.name }}</span>
+<span class="s">spec:</span>
+<span class="s">  ports:</span>
+<span class="s">  - port: {{ $component.port }}</span>
+<span class="s">    targetPort: {{ $component.port }}</span>
+<span class="s">  selector:</span>
+<span class="s">    app: {{ include &quot;shared-templates.fullname&quot; $top }}-{{ $component.name }}</span>
+<span class="s">{{- end -}}</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Use composition template</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>shared-templates/templates/composed.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">{{- range .Values.components }}</span>
+<span class="s">{{ include &quot;shared-templates.appComponent&quot; (list $ .) }}</span>
+<span class="s">{{- end }}</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Values file for composition</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>shared-templates/values.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">components:</span>
+<span class="s">  - name: api</span>
+<span class="s">    image: myapp/api</span>
+<span class="s">    tag: v1.0</span>
+<span class="s">    port: 3000</span>
+<span class="s">    replicas: 2</span>
+<span class="s">  - name: worker</span>
+<span class="s">    image: myapp/worker</span>
+<span class="s">    tag: v1.0</span>
+<span class="s">    port: 8080</span>
+<span class="s">    replicas: 1</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Render and install</span>
+helm<span class="w"> </span>template<span class="w"> </span>composition-test<span class="w"> </span>./shared-templates
+helm<span class="w"> </span>install<span class="w"> </span>composed-app<span class="w"> </span>./shared-templates
+
+<span class="c1"># Clean up</span>
+helm<span class="w"> </span>uninstall<span class="w"> </span>composed-app
+</code></pre></div>
+<hr />
+<h2 id="advanced-level-production-ready-patterns">ADVANCED LEVEL: Production-Ready Patterns<a class="headerlink" href="#advanced-level-production-ready-patterns" title="Permanent link">&para;</a></h2>
+<h3 id="scenario-12-secrets-management-integration"><strong>Scenario 12: Secrets Management &amp; Integration</strong><a class="headerlink" href="#scenario-12-secrets-management-integration" title="Permanent link">&para;</a></h3>
+<p><em>Securely handling sensitive data</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Dev as Developer
+    participant Values as values.yaml
+    participant SOPS as SOPS/SealedSecrets
+    participant Helm as Helm CLI
+    participant K8s as Kubernetes
+    participant Secret as K8s Secret
+    participant Pod as Application Pod
+    participant Vault as HashiCorp Vault
+    Dev-&gt;&gt;SOPS: Encrypt secrets in values
+    SOPS-&gt;&gt;Values: secrets.db_password=ENC[AES256_GCM]
+    Dev-&gt;&gt;Helm: helm secrets install app ./chart
+    Helm-&gt;&gt;SOPS: Decrypt secrets
+    SOPS-&gt;&gt;Helm: Return plaintext values
+    Helm-&gt;&gt;K8s: Create Secret manifest
+    K8s-&gt;&gt;Secret: Store encoded secret
+    Secret-&gt;&gt;Pod: Mount as env/volume
+    Pod-&gt;&gt;Pod: Use decrypted values
+    alt Using Vault
+        Dev-&gt;&gt;Vault: Store secrets in Vault
+        Pod-&gt;&gt;Vault: Request secret via sidecar
+        Vault-&gt;&gt;Pod: Return secret
+    end
+    Note over Pod: Secrets never in source control</code></pre>
+<p><strong>Code:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install helm-secrets plugin</span>
+helm<span class="w"> </span>plugin<span class="w"> </span>install<span class="w"> </span>https://github.com/jkroepke/helm-secrets
+
+<span class="c1"># Install sops</span>
+<span class="c1"># macOS: brew install sops</span>
+<span class="c1"># Linux: Download from https://github.com/mozilla/sops/releases</span>
+
+<span class="c1"># Create .sops.yaml for encryption</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>.sops.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">creation_rules:</span>
+<span class="s">  - path_regex: secrets/.*</span>
+<span class="s">    age: &quot;age1ql3z7hjy54pw3hyww5ayyfg7zqgvc7w3j2elw8zmrj2kg5sfn9aqmcac8p&quot;</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Generate age key</span>
+age-keygen<span class="w"> </span>-o<span class="w"> </span>key.txt
+
+<span class="c1"># Create secret values file</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>secrets.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">secrets:</span>
+<span class="s">  database_password: supersecret</span>
+<span class="s">  api_key: secretapikey123</span>
+<span class="s">  jwt_secret: myjwtsecret</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Encrypt the file</span>
+sops<span class="w"> </span>-e<span class="w"> </span>secrets.yaml<span class="w"> </span>&gt;<span class="w"> </span>secrets.enc.yaml
+
+<span class="c1"># Use encrypted values in Helm</span>
+helm<span class="w"> </span>secrets<span class="w"> </span>install<span class="w"> </span>my-app<span class="w"> </span>./my-chart<span class="w"> </span>-f<span class="w"> </span>secrets.enc.yaml
+
+<span class="c1"># Decrypt during CI/CD</span>
+<span class="nv">SOPS_AGE_KEY_FILE</span><span class="o">=</span>key.txt<span class="w"> </span>helm<span class="w"> </span>secrets<span class="w"> </span>install<span class="w"> </span>my-app<span class="w"> </span>./my-chart<span class="w"> </span>-f<span class="w"> </span>secrets.enc.yaml
+
+<span class="c1"># Alternative: SealedSecrets</span>
+<span class="c1"># Install SealedSecrets controller</span>
+helm<span class="w"> </span>install<span class="w"> </span>sealed-secrets<span class="w"> </span>sealed-secrets/sealed-secrets
+
+<span class="c1"># Create sealed secret</span>
+kubectl<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>generic<span class="w"> </span>my-secret<span class="w"> </span>--from-literal<span class="o">=</span><span class="nv">password</span><span class="o">=</span>secret<span class="w"> </span>--dry-run<span class="o">=</span>client<span class="w"> </span>-o<span class="w"> </span>yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>kubeseal<span class="w"> </span>&gt;<span class="w"> </span>my-chart/templates/sealed-secret.yaml
+
+<span class="c1"># Use in chart (no encryption keys needed)</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>my-chart/templates/sealedsecret.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">{{- if .Values.sealedSecrets.create }}</span>
+<span class="s">apiVersion: bitnami.com/v1alpha1</span>
+<span class="s">kind: SealedSecret</span>
+<span class="s">metadata:</span>
+<span class="s">  name: {{ .Release.Name }}-secrets</span>
+<span class="s">spec:</span>
+<span class="s">  encryptedData:</span>
+<span class="s">    DB_PASSWORD: {{ .Values.sealedSecrets.encryptedPassword }}</span>
+<span class="s">{{- end }}</span>
+<span class="s">EOF</span>
+
+<span class="c1"># HashiCorp Vault integration</span>
+<span class="c1"># Install vault injector</span>
+helm<span class="w"> </span>install<span class="w"> </span>vault<span class="w"> </span>hashicorp/vault
+
+<span class="c1"># Annotate pod for secret injection</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>my-chart/templates/deployment-vault.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">spec:</span>
+<span class="s">  template:</span>
+<span class="s">    metadata:</span>
+<span class="s">      annotations:</span>
+<span class="s">        vault.hashicorp.com/agent-inject: &quot;true&quot;</span>
+<span class="s">        vault.hashicorp.com/agent-inject-secret-db-creds: &quot;secret/data/db&quot;</span>
+<span class="s">        vault.hashicorp.com/agent-inject-template-db-creds: |</span>
+<span class="s">          {{- with secret &quot;secret/data/db&quot; -}}</span>
+<span class="s">          export DB_PASSWORD=&quot;{{ .Data.data.password }}&quot;</span>
+<span class="s">          {{- end }}</span>
+<span class="s">        vault.hashicorp.com/role: &quot;app-role&quot;</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Use external-secrets operator</span>
+helm<span class="w"> </span>install<span class="w"> </span>external-secrets<span class="w"> </span>external-secrets/external-secrets
+
+<span class="c1"># Create ExternalSecret CRD</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>my-chart/templates/externalsecret.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">{{- if .Values.externalSecrets.enabled }}</span>
+<span class="s">apiVersion: external-secrets.io/v1beta1</span>
+<span class="s">kind: ExternalSecret</span>
+<span class="s">metadata:</span>
+<span class="s">  name: {{ .Release.Name }}-external-secret</span>
+<span class="s">spec:</span>
+<span class="s">  refreshInterval: 1h</span>
+<span class="s">  secretStoreRef:</span>
+<span class="s">    name: {{ .Values.externalSecrets.storeName }}</span>
+<span class="s">    kind: SecretStore</span>
+<span class="s">  target:</span>
+<span class="s">    name: {{ .Release.Name }}-secret</span>
+<span class="s">  data:</span>
+<span class="s">  - secretKey: password</span>
+<span class="s">    remoteRef:</span>
+<span class="s">      key: /prod/app/password</span>
+<span class="s">{{- end }}</span>
+<span class="s">EOF</span>
+</code></pre></div>
+<hr />
+<h3 id="scenario-13-release-management-strategies"><strong>Scenario 13: Release Management Strategies</strong><a class="headerlink" href="#scenario-13-release-management-strategies" title="Permanent link">&para;</a></h3>
+<p><em>Blue-Green and Canary deployments</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User as DevOps Engineer
+    participant Helm as Helm CLI
+    participant Blue as Blue Release (v1)
+    participants Green as Green Release (v2)
+    participants Canary as Canary Release (v3)
+    participant Svc as Service
+    participant Ingress as Ingress Controller
+    User-&gt;&gt;Helm: helm install app-blue ./chart --set version=v1
+    Helm-&gt;&gt;Blue: Deploy version 1 (100% traffic)
+    Blue-&gt;&gt;Svc: Register endpoints
+    Svc-&gt;&gt;Blue: User traffic 100%
+    User-&gt;&gt;Helm: helm install app-green ./chart --set version=v2
+    Helm-&gt;&gt;Green: Deploy version 2 (0% traffic)
+    Green-&gt;&gt;Green: Run smoke tests
+    User-&gt;&gt;Ingress: Switch traffic to green
+    Ingress-&gt;&gt;Green: 100% traffic
+    Note over Green: Blue-Green complete
+    alt Canary deployment
+        User-&gt;&gt;Helm: helm upgrade app-blue --set version=v3,replicas=1
+        Helm-&gt;&gt;Canary: Deploy version 3 (10% traffic)
+        Ingress-&gt;&gt;Canary: Traffic split: 90% v2, 10% v3
+        User-&gt;&gt;User: Monitor metrics
+        User-&gt;&gt;Helm: Scale canary to 100%
+        Helm-&gt;&gt;Canary: 100% traffic
+    end</code></pre>
+<p><strong>Code:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Blue-Green Deployment Strategy</span>
+<span class="c1"># Install blue environment (production)</span>
+helm<span class="w"> </span>install<span class="w"> </span>app-blue<span class="w"> </span>./my-chart<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--set<span class="w"> </span>image.tag<span class="o">=</span>v1.0<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--set<span class="w"> </span><span class="nv">replicaCount</span><span class="o">=</span><span class="m">3</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--set<span class="w"> </span>service.suffix<span class="o">=</span>blue<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--set<span class="w"> </span>ingress.class<span class="o">=</span>blue
+
+<span class="c1"># Install green environment (new version)</span>
+helm<span class="w"> </span>install<span class="w"> </span>app-green<span class="w"> </span>./my-chart<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--set<span class="w"> </span>image.tag<span class="o">=</span>v2.0<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--set<span class="w"> </span><span class="nv">replicaCount</span><span class="o">=</span><span class="m">3</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--set<span class="w"> </span>service.suffix<span class="o">=</span>green<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--set<span class="w"> </span>ingress.class<span class="o">=</span>green
+
+<span class="c1"># Test green environment</span>
+kubectl<span class="w"> </span>port-forward<span class="w"> </span>svc/app-green-my-chart<span class="w"> </span><span class="m">8080</span>:80
+curl<span class="w"> </span>http://localhost:8080
+
+<span class="c1"># Switch traffic using ingress annotation</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>switch-to-green.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">controller:</span>
+<span class="s">  service:</span>
+<span class="s">    annotations:</span>
+<span class="s">      service.beta.kubernetes.io/aws-load-balancer-backend-protocol: http</span>
+<span class="s">      nginx.ingress.kubernetes.io/canary: &quot;true&quot;</span>
+<span class="s">      nginx.ingress.kubernetes.io/canary-weight: &quot;100&quot;</span>
+<span class="s">EOF</span>
+
+helm<span class="w"> </span>upgrade<span class="w"> </span>app-green<span class="w"> </span>./my-chart<span class="w"> </span>-f<span class="w"> </span>switch-to-green.yaml
+
+<span class="c1"># Delete blue after verification</span>
+helm<span class="w"> </span>uninstall<span class="w"> </span>app-blue
+
+<span class="c1"># Canary Deployment with Istio</span>
+<span class="c1"># Install Istio</span>
+helm<span class="w"> </span>install<span class="w"> </span>istio-base<span class="w"> </span>istio/base
+helm<span class="w"> </span>install<span class="w"> </span>istiod<span class="w"> </span>istio/istio-discovery
+
+<span class="c1"># Deploy canary version</span>
+helm<span class="w"> </span>install<span class="w"> </span>app-canary<span class="w"> </span>./my-chart<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--set<span class="w"> </span>image.tag<span class="o">=</span>v2.0<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--set<span class="w"> </span><span class="nv">replicaCount</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--set<span class="w"> </span>canary.enabled<span class="o">=</span><span class="nb">true</span>
+
+<span class="c1"># Configure traffic splitting</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>virtual-service.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">apiVersion: networking.istio.io/v1alpha3</span>
+<span class="s">kind: VirtualService</span>
+<span class="s">metadata:</span>
+<span class="s">  name: app-canary</span>
+<span class="s">spec:</span>
+<span class="s">  hosts:</span>
+<span class="s">  - app.example.com</span>
+<span class="s">  http:</span>
+<span class="s">  - route:</span>
+<span class="s">    - destination:</span>
+<span class="s">        host: app-stable</span>
+<span class="s">      weight: 90</span>
+<span class="s">    - destination:</span>
+<span class="s">        host: app-canary</span>
+<span class="s">      weight: 10</span>
+<span class="s">EOF</span>
+
+kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>virtual-service.yaml
+
+<span class="c1"># Gradually increase canary traffic</span>
+<span class="c1"># Update VirtualService weight to 50/50</span>
+<span class="c1"># Monitor metrics: error rate, latency</span>
+<span class="c1"># Full promotion: 100% to canary</span>
+<span class="c1"># Delete stable release</span>
+
+<span class="c1"># Native Helm Canary with Helm Controller</span>
+<span class="c1"># Install Helm Controller</span>
+helm<span class="w"> </span>install<span class="w"> </span>helm-controller<span class="w"> </span>helm/helm-controller
+
+<span class="c1"># Create HelmRelease with canary</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>helmrelease-canary.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">apiVersion: helm.cattle.io/v1</span>
+<span class="s">kind: HelmChart</span>
+<span class="s">metadata:</span>
+<span class="s">  name: app</span>
+<span class="s">  namespace: default</span>
+<span class="s">spec:</span>
+<span class="s">  chart: my-chart</span>
+<span class="s">  targetNamespace: default</span>
+<span class="s">  valuesContent: |-</span>
+<span class="s">    replicaCount: 3</span>
+<span class="s">    image:</span>
+<span class="s">      tag: v1.0</span>
+<span class="s">---</span>
+<span class="s">apiVersion: flagger.app/v1beta1</span>
+<span class="s">kind: Canary</span>
+<span class="s">metadata:</span>
+<span class="s">  name: app</span>
+<span class="s">spec:</span>
+<span class="s">  targetRef:</span>
+<span class="s">    apiVersion: helm.cattle.io/v1</span>
+<span class="s">    kind: HelmChart</span>
+<span class="s">    name: app</span>
+<span class="s">  service:</span>
+<span class="s">    port: 80</span>
+<span class="s">  analysis:</span>
+<span class="s">    interval: 1m</span>
+<span class="s">    threshold: 5</span>
+<span class="s">    maxWeight: 50</span>
+<span class="s">    stepWeight: 10</span>
+<span class="s">EOF</span>
+</code></pre></div>
+<hr />
+<h3 id="scenario-14-advanced-chart-patterns"><strong>Scenario 14: Advanced Chart Patterns</strong><a class="headerlink" href="#scenario-14-advanced-chart-patterns" title="Permanent link">&para;</a></h3>
+<p><em>Library charts and umbrella patterns</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Dev as Developer
+    participant Lib as Library Chart
+    participant Umbrella as Umbrella Chart
+    participant Sub1 as Subchart 1 (API)
+    participant Sub2 as Subchart 2 (Worker)
+    participants Sub3 as Subchart 3 (Frontend)
+    participants K8s as Kubernetes
+    Dev-&gt;&gt;Lib: Create library chart
+    Lib-&gt;&gt;Lib: Define reusable templates
+    Dev-&gt;&gt;Umbrella: Create umbrella chart
+    Umbrella-&gt;&gt;Sub1: Add as dependency
+    Umbrella-&gt;&gt;Sub2: Add as dependency
+    Umbrella-&gt;&gt;Sub3: Add as dependency
+    Umbrella-&gt;&gt;Umbrella: Override values
+    Dev-&gt;&gt;Helm: helm install platform ./umbrella
+    Helm-&gt;&gt;Lib: Include library templates
+    Helm-&gt;&gt;Sub1: Deploy API
+    Helm-&gt;&gt;Sub2: Deploy Worker
+    Helm-&gt;&gt;Sub3: Deploy Frontend
+    Sub1-&gt;&gt;K8s: API resources
+    Sub2-&gt;&gt;K8s: Worker resources
+    Sub3-&gt;&gt;K8s: Frontend resources
+    K8s-&gt;&gt;User: Full platform deployed</code></pre>
+<p><strong>Code:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create a library chart</span>
+helm<span class="w"> </span>create<span class="w"> </span>common-lib
+
+<span class="c1"># Convert to library type</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>common-lib/Chart.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">apiVersion: v2</span>
+<span class="s">name: common-lib</span>
+<span class="s">description: Common library templates</span>
+<span class="s">type: library</span>
+<span class="s">version: 0.1.0</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Remove templates (library charts don&#39;t deploy resources)</span>
+rm<span class="w"> </span>-rf<span class="w"> </span>common-lib/templates/*.yaml
+
+<span class="c1"># Create reusable templates</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>common-lib/templates/_deployment.tpl<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">{{- define &quot;common-lib.deployment&quot; -}}</span>
+<span class="s">{{- $ := index . 0 }}</span>
+<span class="s">{{- $values := index . 1 }}</span>
+<span class="s">apiVersion: apps/v1</span>
+<span class="s">kind: Deployment</span>
+<span class="s">metadata:</span>
+<span class="s">  name: {{ include &quot;common-lib.fullname&quot; $ }}-{{ $values.name }}</span>
+<span class="s">spec:</span>
+<span class="s">  replicas: {{ $values.replicas }}</span>
+<span class="s">  selector:</span>
+<span class="s">    matchLabels:</span>
+<span class="s">      app: {{ include &quot;common-lib.fullname&quot; $ }}-{{ $values.name }}</span>
+<span class="s">  template:</span>
+<span class="s">    metadata:</span>
+<span class="s">      labels:</span>
+<span class="s">        app: {{ include &quot;common-lib.fullname&quot; $ }}-{{ $values.name }}</span>
+<span class="s">    spec:</span>
+<span class="s">      containers:</span>
+<span class="s">      - name: {{ $values.name }}</span>
+<span class="s">        image: &quot;{{ $values.image }}:{{ $values.tag }}&quot;</span>
+<span class="s">        ports:</span>
+<span class="s">        - containerPort: {{ $values.port }}</span>
+<span class="s">{{- end -}}</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Create helper for library</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>common-lib/templates/_helpers.tpl<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">{{- define &quot;common-lib.fullname&quot; -}}</span>
+<span class="s">{{- printf &quot;%s-%s&quot; .Release.Name .Chart.Name | trunc 63 | trimSuffix &quot;-&quot; }}</span>
+<span class="s">{{- end -}}</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Package library chart</span>
+helm<span class="w"> </span>package<span class="w"> </span>common-lib
+
+<span class="c1"># Create umbrella chart</span>
+helm<span class="w"> </span>create<span class="w"> </span>umbrella-platform
+
+<span class="c1"># Edit Chart.yaml for umbrella</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>umbrella-platform/Chart.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">apiVersion: v2</span>
+<span class="s">name: umbrella-platform</span>
+<span class="s">description: Full platform deployment</span>
+<span class="s">type: application</span>
+<span class="s">version: 1.0.0</span>
+
+<span class="s">dependencies:</span>
+<span class="s">- name: api</span>
+<span class="s">  version: &quot;0.1.0&quot;</span>
+<span class="s">  repository: &quot;file://../api-chart&quot;</span>
+<span class="s">- name: worker</span>
+<span class="s">  version: &quot;0.1.0&quot;</span>
+<span class="s">  repository: &quot;file://../worker-chart&quot;</span>
+<span class="s">- name: frontend</span>
+<span class="s">  version: &quot;0.1.0&quot;</span>
+<span class="s">  repository: &quot;file://../frontend-chart&quot;</span>
+<span class="s">- name: common-lib</span>
+<span class="s">  version: &quot;0.1.0&quot;</span>
+<span class="s">  repository: &quot;file://../common-lib&quot;</span>
+<span class="s">  import-values:</span>
+<span class="s">    - defaults</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Use library in subchart</span>
+<span class="c1"># In api-chart/templates/deployment.yaml:</span>
+<span class="c1"># {{ include &quot;common-lib.deployment&quot; (list . .Values.api) }}</span>
+
+<span class="c1"># Create values for umbrella</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>umbrella-platform/values.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">api:</span>
+<span class="s">  replicas: 3</span>
+<span class="s">  image: myregistry/api</span>
+<span class="s">  tag: v1.0</span>
+<span class="s">  port: 3000</span>
+
+<span class="s">worker:</span>
+<span class="s">  replicas: 2</span>
+<span class="s">  image: myregistry/worker</span>
+<span class="s">  tag: v1.0</span>
+<span class="s">  port: 8080</span>
+
+<span class="s">frontend:</span>
+<span class="s">  replicas: 2</span>
+<span class="s">  image: myregistry/frontend</span>
+<span class="s">  tag: v1.0</span>
+<span class="s">  port: 80</span>
+
+<span class="s">global:</span>
+<span class="s">  environment: production</span>
+<span class="s">  domain: example.com</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Install umbrella chart</span>
+helm<span class="w"> </span>dependency<span class="w"> </span>update<span class="w"> </span>./umbrella-platform
+helm<span class="w"> </span>install<span class="w"> </span>platform<span class="w"> </span>./umbrella-platform
+
+<span class="c1"># View all deployed components</span>
+helm<span class="w"> </span>list
+
+<span class="c1"># Upgrade specific component</span>
+helm<span class="w"> </span>upgrade<span class="w"> </span>platform<span class="w"> </span>./umbrella-platform<span class="w"> </span>--set<span class="w"> </span>api.tag<span class="o">=</span>v1.1
+
+<span class="c1"># Library chart advantages:</span>
+<span class="c1"># 1. Share common templates across many charts</span>
+<span class="c1"># 2. Version templates independently</span>
+<span class="c1"># 3. Reduce duplication</span>
+<span class="c1"># 4. Centralize maintenance</span>
+
+<span class="c1"># Create helmignore file</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>common-lib/.helmignore<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s"># Patterns to ignore when building packages.</span>
+<span class="s">.DS_Store</span>
+<span class="s">.git/</span>
+<span class="s">.gitignore</span>
+<span class="s">.vscode/</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Use template blocks for inheritance</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>common-lib/templates/_base.tpl<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">{{- define &quot;common-lib.base.labels&quot; }}</span>
+<span class="s">labels:</span>
+<span class="s">  app: {{ .Chart.Name }}</span>
+<span class="s">  release: {{ .Release.Name }}</span>
+<span class="s">{{- end -}}</span>
+
+<span class="s">{{- define &quot;common-lib.base.metadata&quot; }}</span>
+<span class="s">metadata:</span>
+<span class="s">  name: {{ .Release.Name }}-{{ .Values.component }}</span>
+<span class="s">  {{- include &quot;common-lib.base.labels&quot; . | nindent 2 }}</span>
+<span class="s">{{- end -}}</span>
+<span class="s">EOF</span>
+
+<span class="c1"># In subchart:</span>
+<span class="c1"># {{ define &quot;myapp.deployment&quot; }}</span>
+<span class="c1"># {{ template &quot;common-lib.base.metadata&quot; . }}</span>
+<span class="c1"># spec:</span>
+<span class="c1">#   replicas: {{ .Values.replicas }}</span>
+<span class="c1"># {{ end }}</span>
+</code></pre></div>
+<hr />
+<h3 id="scenario-15-oci-registry-support"><strong>Scenario 15: OCI Registry Support</strong><a class="headerlink" href="#scenario-15-oci-registry-support" title="Permanent link">&para;</a></h3>
+<p><em>Storing charts in container registries</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Dev as Developer
+    participants Helm as Helm CLI
+    participants Docker as Docker CLI
+    participants OCI as OCI Registry (GHCR/ECR)
+    participants Artifact as Helm Artifact
+    participants K8s as Kubernetes
+    Dev-&gt;&gt;Helm: helm package ./my-chart
+    Helm-&gt;&gt;Artifact: Create .tgz package
+    Dev-&gt;&gt;Helm: helm registry login ghcr.io
+    Helm-&gt;&gt;OCI: Authenticate with token
+    OCI--&gt;&gt;Helm: Login successful
+    Dev-&gt;&gt;Helm: helm push my-chart-0.1.0.tgz oci://ghcr.io/myorg
+    Helm-&gt;&gt;OCI: Upload chart artifact
+    OCI-&gt;&gt;Artifact: Store as OCI artifact
+    Artifact--&gt;&gt;OCI: Stored with digest
+    OCI--&gt;&gt;Helm: Push successful!
+    Dev-&gt;&gt;Helm: helm install my-app oci://ghcr.io/myorg/my-chart --version 0.1.0
+    Helm-&gt;&gt;OCI: Pull chart artifact
+    OCI--&gt;&gt;Helm: Download chart
+    Helm-&gt;&gt;K8s: Deploy application
+    Note over Dev: Treat charts like container images</code></pre>
+<p><strong>Code:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Enable OCI support (Helm 3.8+)</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">HELM_EXPERIMENTAL_OCI</span><span class="o">=</span><span class="m">1</span>
+
+<span class="c1"># Create and package chart</span>
+helm<span class="w"> </span>create<span class="w"> </span>oci-chart
+helm<span class="w"> </span>package<span class="w"> </span>./oci-chart
+
+<span class="c1"># Login to OCI registry</span>
+<span class="c1"># GitHub Container Registry</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$GITHUB_TOKEN</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>helm<span class="w"> </span>registry<span class="w"> </span>login<span class="w"> </span>ghcr.io<span class="w"> </span>-u<span class="w"> </span><span class="nv">$GITHUB_USER</span><span class="w"> </span>--password-stdin
+
+<span class="c1"># Amazon ECR</span>
+aws<span class="w"> </span>ecr<span class="w"> </span>get-login-password<span class="w"> </span>--region<span class="w"> </span>us-west-2<span class="w"> </span><span class="p">|</span><span class="w"> </span>helm<span class="w"> </span>registry<span class="w"> </span>login<span class="w"> </span><span class="m">123456789</span>.dkr.ecr.us-west-2.amazonaws.com<span class="w"> </span>-u<span class="w"> </span>AWS<span class="w"> </span>--password-stdin
+
+<span class="c1"># Azure Container Registry</span>
+az<span class="w"> </span>acr<span class="w"> </span>login<span class="w"> </span>--name<span class="w"> </span>myregistry
+<span class="c1"># Helm uses Docker credentials</span>
+
+<span class="c1"># Push chart to OCI registry</span>
+helm<span class="w"> </span>push<span class="w"> </span>oci-chart-0.1.0.tgz<span class="w"> </span>oci://ghcr.io/myorg
+
+<span class="c1"># Push with specific tag</span>
+helm<span class="w"> </span>push<span class="w"> </span>oci-chart-0.1.0.tgz<span class="w"> </span>oci://ghcr.io/myorg<span class="w"> </span>--version<span class="w"> </span><span class="m">0</span>.1.0
+
+<span class="c1"># Install directly from OCI</span>
+helm<span class="w"> </span>install<span class="w"> </span>my-app<span class="w"> </span>oci://ghcr.io/myorg/oci-chart<span class="w"> </span>--version<span class="w"> </span><span class="m">0</span>.1.0
+
+<span class="c1"># Pull chart locally</span>
+helm<span class="w"> </span>pull<span class="w"> </span>oci://ghcr.io/myorg/oci-chart<span class="w"> </span>--version<span class="w"> </span><span class="m">0</span>.1.0<span class="w"> </span>--untar
+
+<span class="c1"># List tags in OCI registry</span>
+<span class="c1"># Using oras CLI</span>
+oras<span class="w"> </span>repo<span class="w"> </span>tags<span class="w"> </span>ghcr.io/myorg/oci-chart
+
+<span class="c1"># Sign charts with Cosign</span>
+<span class="c1"># Install cosign: brew install cosign</span>
+
+<span class="c1"># Sign the chart</span>
+cosign<span class="w"> </span>sign<span class="w"> </span>ghcr.io/myorg/oci-chart:0.1.0
+
+<span class="c1"># Verify signature</span>
+cosign<span class="w"> </span>verify<span class="w"> </span>ghcr.io/myorg/oci-chart:0.1.0<span class="w"> </span>--certificate-identity-regexp<span class="w"> </span><span class="s1">&#39;.*&#39;</span><span class="w"> </span>--certificate-oidc-issuer-regexp<span class="w"> </span><span class="s1">&#39;.*&#39;</span>
+
+<span class="c1"># Store in multiple registries</span>
+<span class="c1"># Helm chartmuseum alternative</span>
+helm<span class="w"> </span>repo<span class="w"> </span>index<span class="w"> </span>.<span class="w"> </span>--url<span class="w"> </span>https://myorg.github.io/helm-charts
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Release version 0.1.0&quot;</span>
+git<span class="w"> </span>tag<span class="w"> </span>v0.1.0
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main<span class="w"> </span>--tags
+
+<span class="c1"># Use GitHub Pages as Helm repository</span>
+<span class="c1"># GitHub Actions workflow:</span>
+<span class="c1"># .github/workflows/release.yml</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>.github/workflows/release.yml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">name: Release Charts</span>
+
+<span class="s">on:</span>
+<span class="s">  push:</span>
+<span class="s">    tags:</span>
+<span class="s">      - &#39;v*&#39;</span>
+
+<span class="s">jobs:</span>
+<span class="s">  release:</span>
+<span class="s">    runs-on: ubuntu-latest</span>
+<span class="s">    steps:</span>
+<span class="s">      - uses: actions/checkout@v3</span>
+<span class="s">      - name: Configure Git</span>
+<span class="s">        run: |</span>
+<span class="s">          git config user.name &quot;$GITHUB_ACTOR&quot;</span>
+<span class="s">          git config user.email &quot;$GITHUB_ACTOR@users.noreply.github.com&quot;</span>
+<span class="s">      - name: Run chart-releaser</span>
+<span class="s">        uses: helm/chart-releaser-action@v1.5.0</span>
+<span class="s">        env:</span>
+<span class="s">          CR_TOKEN: &quot;${{ secrets.GITHUB_TOKEN }}&quot;</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Integrate with GitOps</span>
+<span class="c1"># Flux Helm Controller</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>helmrelease.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">apiVersion: helm.toolkit.fluxcd.io/v2beta1</span>
+<span class="s">kind: HelmRelease</span>
+<span class="s">metadata:</span>
+<span class="s">  name: my-app</span>
+<span class="s">spec:</span>
+<span class="s">  interval: 5m</span>
+<span class="s">  chart:</span>
+<span class="s">    spec:</span>
+<span class="s">      chart: oci-chart</span>
+<span class="s">      version: &#39;0.1.0&#39;</span>
+<span class="s">      sourceRef:</span>
+<span class="s">        kind: HelmRepository</span>
+<span class="s">        name: oci-registry</span>
+<span class="s">  values:</span>
+<span class="s">    replicaCount: 3</span>
+<span class="s">EOF</span>
+</code></pre></div>
+<hr />
+<h3 id="scenario-16-chart-debugging-best-practices"><strong>Scenario 16: Chart Debugging &amp; Best Practices</strong><a class="headerlink" href="#scenario-16-chart-debugging-best-practices" title="Permanent link">&para;</a></h3>
+<p><em>Troubleshooting and production patterns</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Dev as Developer
+    participants Helm as Helm CLI
+    participants Lint as helm lint
+    participants Template as helm template
+    participants Debug as helm template --debug
+    participants K8s as Kubernetes
+    participants Pod as Debug Pod
+    Dev-&gt;&gt;Lint: helm lint ./chart
+    Lint-&gt;&gt;Dev: Report warnings/errors
+    Dev-&gt;&gt;Template: helm template test ./chart
+    Template-&gt;&gt;Dev: Show rendered YAML
+    Dev-&gt;&gt;Debug: helm template --debug --set image.tag=invalid
+    Debug-&gt;&gt;Dev: Show template context
+    Dev-&gt;&gt;Helm: helm install test ./chart --dry-run
+    Helm-&gt;&gt;K8s: Validate against cluster
+    K8s-&gt;&gt;Dev: Validation errors
+    Dev-&gt;&gt;Dev: Fix issues
+    Dev-&gt;&gt;Helm: helm install test ./chart
+    Helm-&gt;&gt;K8s: Deploy successfully
+    Note over Dev: Follow best practices!</code></pre>
+<p><strong>Code:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Comprehensive linting</span>
+helm<span class="w"> </span>lint<span class="w"> </span>./my-chart<span class="w"> </span>--strict<span class="w"> </span>--with-subcharts
+
+<span class="c1"># Debug template rendering</span>
+helm<span class="w"> </span>template<span class="w"> </span>debug<span class="w"> </span>./my-chart<span class="w"> </span>--debug<span class="w"> </span>--set<span class="w"> </span><span class="nv">replicaCount</span><span class="o">=</span>invalid
+
+<span class="c1"># Validate against cluster schema</span>
+helm<span class="w"> </span>template<span class="w"> </span><span class="nb">test</span><span class="w"> </span>./my-chart<span class="w"> </span>--validate
+
+<span class="c1"># Check for deprecated APIs</span>
+helm<span class="w"> </span>template<span class="w"> </span><span class="nb">test</span><span class="w"> </span>./my-chart<span class="w"> </span><span class="p">|</span><span class="w"> </span>kubeconform<span class="w"> </span>-strict
+
+<span class="c1"># Trace template execution</span>
+helm<span class="w"> </span>template<span class="w"> </span><span class="nb">test</span><span class="w"> </span>./my-chart<span class="w"> </span>--debug<span class="w"> </span>--execute<span class="w"> </span>templates/deployment.yaml
+
+<span class="c1"># Use fail function for validation</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>my-chart/templates/_helpers.tpl<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">{{- define &quot;my-chart.validate&quot; -}}</span>
+<span class="s">{{- if and .Values.persistence.enabled (not .Values.persistence.size) -}}</span>
+<span class="s">{{- fail &quot;persistence.size is required when persistence is enabled&quot; -}}</span>
+<span class="s">{{- end -}}</span>
+<span class="s">{{- end -}}</span>
+
+<span class="s"># Call in templates</span>
+<span class="s">{{ include &quot;my-chart.validate&quot; . }}</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Best practices checklist</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>chart-best-practices.md<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s"># Helm Chart Best Practices</span>
+
+<span class="s">## Chart Structure</span>
+<span class="s">- Use proper semantic versioning (Chart.yaml version)</span>
+<span class="s">- Include README.md with usage instructions</span>
+<span class="s">- Add LICENSE file</span>
+<span class="s">- Use .helmignore to exclude unnecessary files</span>
+<span class="s">- Keep charts small and focused</span>
+
+<span class="s">## Values</span>
+<span class="s">- Use camelCase for values (not snake_case or kebab-case)</span>
+<span class="s">- Provide sensible defaults in values.yaml</span>
+<span class="s">- Use comments in values.yaml to document options</span>
+<span class="s">- Group related values (e.g., `postgresql.auth.password`)</span>
+<span class="s">- Use `global` values for cross-chart configuration</span>
+
+<span class="s">## Templates</span>
+<span class="s">- Use named templates for reusable blocks</span>
+<span class="s">- Use `include` not `template` (includes pipelining)</span>
+<span class="s">- Always quote strings in templates</span>
+<span class="s">- Use `nindent` for proper indentation</span>
+<span class="s">- Validate required values with `fail`</span>
+<span class="s">- Don&#39;t hardcode namespaces</span>
+
+<span class="s">## Security</span>
+<span class="s">- Never put secrets in values.yaml</span>
+<span class="s">- Use secrets management (SOPS, Vault, SealedSecrets)</span>
+<span class="s">- Define securityContexts in templates</span>
+<span class="s">- Use readOnlyRootFilesystem when possible</span>
+<span class="s">- Don&#39;t run containers as root</span>
+
+<span class="s">## Dependencies</span>
+<span class="s">- Pin dependency versions</span>
+<span class="s">- Use `condition` flags for optional deps</span>
+<span class="s">- Use `alias` for multiple instances</span>
+<span class="s">- Document dependency requirements</span>
+
+<span class="s">## Testing</span>
+<span class="s">- Add tests in templates/tests/</span>
+<span class="s">- Use helm unittest for unit tests</span>
+<span class="s">- Test upgrades, not just installs</span>
+<span class="s">- Test with different value combinations</span>
+<span class="s">- Include CI/CD pipeline tests</span>
+
+<span class="s">## Documentation</span>
+<span class="s">- Generate README.md from values.yaml</span>
+<span class="s">- Use helm-docs tool</span>
+<span class="s">- Document breaking changes</span>
+<span class="s">- Maintain CHANGELOG</span>
+<span class="s">- Include examples in values-test.yaml</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Use helm-docs to generate documentation</span>
+<span class="c1"># Install: brew install norwoodj/tap/helm-docs</span>
+helm-docs<span class="w"> </span>-c<span class="w"> </span>./my-chart
+
+<span class="c1"># Create values schema validation</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>my-chart/values.schema.json<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">{</span>
+<span class="s">  &quot;$schema&quot;: &quot;https://json-schema.org/draft-07/schema#&quot;,</span>
+<span class="s">  &quot;properties&quot;: {</span>
+<span class="s">    &quot;replicaCount&quot;: {</span>
+<span class="s">      &quot;type&quot;: &quot;integer&quot;,</span>
+<span class="s">      &quot;minimum&quot;: 1,</span>
+<span class="s">      &quot;maximum&quot;: 100</span>
+<span class="s">    },</span>
+<span class="s">    &quot;image&quot;: {</span>
+<span class="s">      &quot;properties&quot;: {</span>
+<span class="s">        &quot;repository&quot;: {</span>
+<span class="s">          &quot;type&quot;: &quot;string&quot;,</span>
+<span class="s">          &quot;pattern&quot;: &quot;^[a-z0-9-/.]+$&quot;</span>
+<span class="s">        },</span>
+<span class="s">        &quot;tag&quot;: {</span>
+<span class="s">          &quot;type&quot;: &quot;string&quot;</span>
+<span class="s">        }</span>
+<span class="s">      },</span>
+<span class="s">      &quot;required&quot;: [&quot;repository&quot;, &quot;tag&quot;]</span>
+<span class="s">    },</span>
+<span class="s">    &quot;environment&quot;: {</span>
+<span class="s">      &quot;type&quot;: &quot;string&quot;,</span>
+<span class="s">      &quot;enum&quot;: [&quot;development&quot;, &quot;staging&quot;, &quot;production&quot;]</span>
+<span class="s">    }</span>
+<span class="s">  },</span>
+<span class="s">  &quot;required&quot;: [&quot;image&quot;]</span>
+<span class="s">}</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Validate values against schema</span>
+helm<span class="w"> </span>lint<span class="w"> </span>./my-chart<span class="w"> </span>--values<span class="w"> </span>values-prod.yaml<span class="w"> </span>--strict
+
+<span class="c1"># Use pre-commit hooks</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>.pre-commit-config.yaml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">repos:</span>
+<span class="s">- repo: https://github.com/gruntwork-io/pre-commit</span>
+<span class="s">  rev: v0.1.20</span>
+<span class="s">  hooks:</span>
+<span class="s">    - id: helmlint</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Install pre-commit</span>
+pip<span class="w"> </span>install<span class="w"> </span>pre-commit
+pre-commit<span class="w"> </span>install
+
+<span class="c1"># Performance optimization</span>
+<span class="c1"># Use --set-string for numeric strings</span>
+helm<span class="w"> </span>install<span class="w"> </span><span class="nb">test</span><span class="w"> </span>./my-chart<span class="w"> </span>--set-string<span class="w"> </span><span class="nv">port</span><span class="o">=</span><span class="s2">&quot;80&quot;</span><span class="w">  </span><span class="c1"># Not --set port=80</span>
+
+<span class="c1"># Minimize chart size</span>
+du<span class="w"> </span>-h<span class="w"> </span>my-chart/
+helm<span class="w"> </span>package<span class="w"> </span>my-chart<span class="w"> </span>--debug
+
+<span class="c1"># Use helm-s3 for private repositories</span>
+helm<span class="w"> </span>plugin<span class="w"> </span>install<span class="w"> </span>https://github.com/hypnoglow/helm-s3.git
+helm<span class="w"> </span>repo<span class="w"> </span>add<span class="w"> </span>stable<span class="w"> </span>s3://my-helm-charts/stable
+helm<span class="w"> </span>s3<span class="w"> </span>push<span class="w"> </span>my-chart-0.1.0.tgz<span class="w"> </span>stable
+
+<span class="c1"># Clean up</span>
+helm<span class="w"> </span>uninstall<span class="w"> </span><span class="nb">test</span>
+</code></pre></div>
+<hr />
+<h2 id="quick-reference-essential-commands">Quick Reference: Essential Commands<a class="headerlink" href="#quick-reference-essential-commands" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Command</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>helm install &lt;release&gt; &lt;chart&gt;</code></td>
+<td style="text-align: left;">Install a chart</td>
+<td style="text-align: left;">Beginner</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>helm list</code></td>
+<td style="text-align: left;">List releases</td>
+<td style="text-align: left;">Beginner</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>helm uninstall &lt;release&gt;</code></td>
+<td style="text-align: left;">Delete a release</td>
+<td style="text-align: left;">Beginner</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>helm repo add &lt;name&gt; &lt;url&gt;</code></td>
+<td style="text-align: left;">Add repository</td>
+<td style="text-align: left;">Beginner</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>helm create &lt;name&gt;</code></td>
+<td style="text-align: left;">Create new chart</td>
+<td style="text-align: left;">Beginner</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>helm package &lt;chart&gt;</code></td>
+<td style="text-align: left;">Package chart</td>
+<td style="text-align: left;">Beginner</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>helm upgrade &lt;release&gt; &lt;chart&gt;</code></td>
+<td style="text-align: left;">Upgrade release</td>
+<td style="text-align: left;">Intermediate</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>helm rollback &lt;release&gt; &lt;rev&gt;</code></td>
+<td style="text-align: left;">Rollback to version</td>
+<td style="text-align: left;">Intermediate</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>helm template &lt;release&gt; &lt;chart&gt;</code></td>
+<td style="text-align: left;">Render templates</td>
+<td style="text-align: left;">Intermediate</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>helm dependency update</code></td>
+<td style="text-align: left;">Update dependencies</td>
+<td style="text-align: left;">Intermediate</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>helm lint &lt;chart&gt;</code></td>
+<td style="text-align: left;">Lint chart</td>
+<td style="text-align: left;">Intermediate</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>helm test &lt;release&gt;</code></td>
+<td style="text-align: left;">Run tests</td>
+<td style="text-align: left;">Intermediate</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>helm push &lt;chart&gt; &lt;repo&gt;</code></td>
+<td style="text-align: left;">Push to registry</td>
+<td style="text-align: left;">Advanced</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>helm registry login &lt;registry&gt;</code></td>
+<td style="text-align: left;">Login to OCI registry</td>
+<td style="text-align: left;">Advanced</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>helm secrets &lt;command&gt;</code></td>
+<td style="text-align: left;">Manage secrets</td>
+<td style="text-align: left;">Advanced</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>helm plugin install &lt;url&gt;</code></td>
+<td style="text-align: left;">Install plugin</td>
+<td style="text-align: left;">Advanced</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="pro-tips-for-all-levels">Pro Tips for All Levels<a class="headerlink" href="#pro-tips-for-all-levels" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Always pin versions</strong>: Use exact chart versions, not <code>latest</code></li>
+<li><strong>Use helm-secrets</strong>: Never commit plain-text secrets</li>
+<li><strong>Lint in CI/CD</strong>: Add <code>helm lint</code> to your pipeline</li>
+<li><strong>Test upgrades</strong>: Always test <code>helm upgrade</code>, not just install</li>
+<li><strong>Use --atomic</strong>: On failed upgrades, automatically rollback</li>
+<li><strong>Document values</strong>: Comment every option in <code>values.yaml</code></li>
+<li><strong>Use semantic versioning</strong>: Follow <code>MAJOR.MINOR.PATCH</code></li>
+<li><strong>Keep charts small</strong>: One chart per microservice</li>
+<li><strong>Use library charts</strong>: Share common templates</li>
+<li><strong>Validate with schema</strong>: Add <code>values.schema.json</code></li>
+<li><strong>Use OCI registries</strong>: Treat charts like container images</li>
+<li><strong>Monitor releases</strong>: Track <code>helm history</code> regularly</li>
+<li><strong>Use pre-commit hooks</strong>: Catch errors early</li>
+<li><strong>Backup etcd</strong>: Helm state is stored in Kubernetes</li>
+<li><strong>Use Helmfile for multi-environment</strong>: Manage complex deployments</li>
+</ol>
+<p>Happy charting! 🎩</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 DevOps Guide Team
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ashishpatel26" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/ashishpatel2604" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://x.com/GenAIArchitect" target="_blank" rel="noopener" title="x.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://hub.docker.com/u/ashishpatel26" target="_blank" rel="noopener" title="hub.docker.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1zm0-204.3h-66.1v60.7h66.1zm78.2 144.8H362v59.4h66.1zm-156.3-72.1h-66.1v60.1h66.1zm78.1 0h-66.1v60.1h66.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1zm78.1 0h-66.1v59.4h66.1zm-78.1-72.1h-66.1v60.1h66.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://youtube.com" target="_blank" rel="noopener" title="youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M549.7 124.1c-6.2-23.7-24.8-42.3-48.3-48.6C458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5c-23.5 6.3-42 24.9-48.3 48.6C15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8C117.3 448 288.1 448 288.1 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6V175.2l142.7 81.2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

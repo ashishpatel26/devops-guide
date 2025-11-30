@@ -12,6 +12,8 @@
         <meta name="author" content="DevOps Learner">
       
       
+        <link rel="canonical" href="https://ashishpatel26.github.io/devops-guide/tools/git/">
+      
       
         <link rel="prev" href="../../installation/linux/">
       
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#git-cheat-sheet" class="md-skip">
+        <a href="#git-complete-master-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -90,12 +92,14 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="DevOps Master Guide" class="md-header__button md-logo" aria-label="DevOps Master Guide" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.95 13.5h-.23c-.18.11-.26.32-.18.5l.86 2.11c.83-.53 1.46-1.32 1.79-2.25l-2.23-.36zm-3.45.29a.415.415 0 0 0-.38-.29h-.08l-2.22.37c.33.92.96 1.7 1.79 2.23l.85-2.07V14c.04-.05.04-.14.04-.21m1.83.81a.38.38 0 0 0-.51-.15c-.07.05-.12.08-.15.15h-.01l-1.09 1.97c.78.26 1.62.31 2.43.12.14-.03.29-.07.43-.12l-1.09-1.97zm3.45-4.57L14.1 11.5l.01.03a.37.37 0 0 0-.04.53q.075.09.18.12l.01.01 2.17.62c.07-.97-.14-1.95-.65-2.78m-3.11.16c.01.21.18.37.39.36.08 0 .15-.02.21-.05h.01l1.83-1.31a4.45 4.45 0 0 0-2.57-1.24zm-1.94.31c.17.11.4.08.52-.09.05-.06.07-.13.08-.21h.01l.12-2.25c-.15.02-.3.05-.46.08-.8.18-1.54.58-2.12 1.16l1.84 1.31zm-.99 1.69c.2-.05.32-.26.26-.46 0-.08-.05-.14-.11-.19v-.01L8.21 10c-.52.86-.74 1.84-.63 2.82l2.16-.62zm1.64.66.62.3.62-.3.15-.67-.43-.53h-.69l-.43.53zm10.89 1.32L20.5 6.5c-.09-.42-.37-.76-.74-.94l-7.17-3.43c-.37-.17-.81-.17-1.19 0L4.24 5.56c-.37.18-.65.52-.74.94l-1.77 7.67c-.05.2-.05.4 0 .59.01.06.03.12.05.18.03.09.08.19.13.27.03.04.05.08.09.11l4.95 6.18c.02 0 .05.04.05.06.1.09.19.16.28.22.12.08.26.14.4.17.11.05.23.05.32.05h8.12c.07 0 .14-.03.2-.05.05-.01.1-.03.14-.04.04-.02.07-.03.11-.05.05-.02.1-.05.15-.08.12-.08.23-.18.33-.28l.15-.2 4.8-5.98c.1-.12.17-.25.22-.38.02-.06.04-.12.05-.18.05-.19.05-.4 0-.59m-7.43 2.99c.02.06.04.12.07.17-.04.08-.06.17-.03.26.12.24.23.46.38.68.08.11.16.23.24.34 0 .03.03.08.04.12.12.2.06.46-.15.59s-.47.05-.59-.15c-.01-.03-.02-.05-.03-.08-.02-.03-.04-.09-.06-.09-.05-.15-.09-.28-.12-.41-.09-.25-.17-.49-.3-.72a.38.38 0 0 0-.21-.14l-.08-.16c-1.29.48-2.7.48-3.97-.01l-.1.18c-.07.01-.14.04-.19.09-.14.24-.24.49-.33.77-.03.13-.07.26-.12.4-.02 0-.04.07-.06.1a.43.43 0 0 1-.81-.29c.01-.03.03-.05.04-.08.04-.03.04-.08.04-.11.09-.12.16-.23.24-.35.16-.21.29-.45.39-.69a.54.54 0 0 0-.03-.25l.07-.18a5.6 5.6 0 0 1-2.47-3.09l-.2.03a.4.4 0 0 0-.23-.09c-.27.05-.51.13-.77.22-.11.06-.24.11-.37.15-.03.01-.07.02-.13.03a.44.44 0 0 1-.54-.27c-.07-.23.04-.47.28-.55.02 0 .05-.01.08-.01v-.01h.01l.11-.02c.14-.04.28-.04.41-.04.26 0 .52-.06.77-.12.08-.05.14-.11.19-.19l.19-.05c-.21-1.36.1-2.73.86-3.87l-.14-.12c0-.09-.03-.18-.08-.25-.2-.17-.41-.32-.64-.45q-.18-.09-.36-.21c-.02-.02-.06-.05-.08-.07l-.01-.01c-.2-.16-.25-.42-.11-.63.09-.1.21-.15.35-.15q.165.015.3.12l.09.07c.1.09.19.2.28.3.18.19.37.37.58.52.08.04.17.05.26.03l.15.11c.75-.8 1.73-1.36 2.8-1.6.25-.06.52-.1.78-.12l.01-.18a.45.45 0 0 0 .14-.23c.01-.26-.01-.52-.05-.77-.03-.13-.05-.27-.06-.41V5.1c-.02-.24.15-.45.39-.48s.44.15.47.38v.22c-.01.14-.03.28-.06.41-.04.25-.06.51-.05.77.02.1.07.17.14.22l.01.19c1.36.12 2.62.73 3.56 1.72l.16-.12c.09.02.18.01.26-.03.21-.15.41-.33.58-.52.09-.1.18-.2.28-.3.03-.02.07-.06.1-.06.17-.18.44-.18.59 0 .19.16.18.43 0 .6 0 .02-.03.04-.06.06a2.495 2.495 0 0 1-.44.28c-.23.13-.45.28-.64.45-.06.07-.09.15-.08.24l-.16.14a5.44 5.44 0 0 1 .88 3.86l.19.05c.04.08.11.14.19.18.25.07.51.11.77.14h.41c.03.03.08.04.12.05.24.03.4.25.37.49-.05.23-.24.4-.48.37-.03-.01-.07-.01-.07-.02v-.01c-.06 0-.1-.01-.14-.02q-.195-.06-.36-.15c-.26-.1-.5-.17-.77-.21-.09 0-.17 0-.23.08-.07-.01-.13-.02-.19-.03-.41 1.31-1.31 2.41-2.47 3.11"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -169,6 +173,11 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
@@ -193,16 +202,22 @@
       
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/ashishpatel26/devops-guide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ashishpatel26/devops-guide
+  </div>
+</a>
+      </div>
+    
   </nav>
   
-</header>
     
-    <div class="md-container" data-md-component="container">
       
-      
-        
-          
-            
 <nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
@@ -272,25 +287,239 @@
     
   
   
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
-          
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
   
   
-  Tools & Commands
+    
+  
+  Git
 
-        </a>
-      </li>
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../docker/" class="md-tabs__link">
+        
+  
+  
     
+  
+  Docker
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kubernetes/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kubernetes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../helm/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Helm
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../jenkins/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Jenkins
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../terraform/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Terraform
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ansible/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Ansible
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../aws/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  AWS
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../jenkins/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Jenkins
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../terraform/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Terraform
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ansible/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Ansible
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../aws/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  AWS
+
+      </a>
+    </li>
   
 
       
     </ul>
   </div>
 </nav>
-          
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
         
       
       <main class="md-main" data-md-component="main">
@@ -314,11 +543,23 @@
     <a href="../.." title="DevOps Master Guide" class="md-nav__button md-logo" aria-label="DevOps Master Guide" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.95 13.5h-.23c-.18.11-.26.32-.18.5l.86 2.11c.83-.53 1.46-1.32 1.79-2.25l-2.23-.36zm-3.45.29a.415.415 0 0 0-.38-.29h-.08l-2.22.37c.33.92.96 1.7 1.79 2.23l.85-2.07V14c.04-.05.04-.14.04-.21m1.83.81a.38.38 0 0 0-.51-.15c-.07.05-.12.08-.15.15h-.01l-1.09 1.97c.78.26 1.62.31 2.43.12.14-.03.29-.07.43-.12l-1.09-1.97zm3.45-4.57L14.1 11.5l.01.03a.37.37 0 0 0-.04.53q.075.09.18.12l.01.01 2.17.62c.07-.97-.14-1.95-.65-2.78m-3.11.16c.01.21.18.37.39.36.08 0 .15-.02.21-.05h.01l1.83-1.31a4.45 4.45 0 0 0-2.57-1.24zm-1.94.31c.17.11.4.08.52-.09.05-.06.07-.13.08-.21h.01l.12-2.25c-.15.02-.3.05-.46.08-.8.18-1.54.58-2.12 1.16l1.84 1.31zm-.99 1.69c.2-.05.32-.26.26-.46 0-.08-.05-.14-.11-.19v-.01L8.21 10c-.52.86-.74 1.84-.63 2.82l2.16-.62zm1.64.66.62.3.62-.3.15-.67-.43-.53h-.69l-.43.53zm10.89 1.32L20.5 6.5c-.09-.42-.37-.76-.74-.94l-7.17-3.43c-.37-.17-.81-.17-1.19 0L4.24 5.56c-.37.18-.65.52-.74.94l-1.77 7.67c-.05.2-.05.4 0 .59.01.06.03.12.05.18.03.09.08.19.13.27.03.04.05.08.09.11l4.95 6.18c.02 0 .05.04.05.06.1.09.19.16.28.22.12.08.26.14.4.17.11.05.23.05.32.05h8.12c.07 0 .14-.03.2-.05.05-.01.1-.03.14-.04.04-.02.07-.03.11-.05.05-.02.1-.05.15-.08.12-.08.23-.18.33-.28l.15-.2 4.8-5.98c.1-.12.17-.25.22-.38.02-.06.04-.12.05-.18.05-.19.05-.4 0-.59m-7.43 2.99c.02.06.04.12.07.17-.04.08-.06.17-.03.26.12.24.23.46.38.68.08.11.16.23.24.34 0 .03.03.08.04.12.12.2.06.46-.15.59s-.47.05-.59-.15c-.01-.03-.02-.05-.03-.08-.02-.03-.04-.09-.06-.09-.05-.15-.09-.28-.12-.41-.09-.25-.17-.49-.3-.72a.38.38 0 0 0-.21-.14l-.08-.16c-1.29.48-2.7.48-3.97-.01l-.1.18c-.07.01-.14.04-.19.09-.14.24-.24.49-.33.77-.03.13-.07.26-.12.4-.02 0-.04.07-.06.1a.43.43 0 0 1-.81-.29c.01-.03.03-.05.04-.08.04-.03.04-.08.04-.11.09-.12.16-.23.24-.35.16-.21.29-.45.39-.69a.54.54 0 0 0-.03-.25l.07-.18a5.6 5.6 0 0 1-2.47-3.09l-.2.03a.4.4 0 0 0-.23-.09c-.27.05-.51.13-.77.22-.11.06-.24.11-.37.15-.03.01-.07.02-.13.03a.44.44 0 0 1-.54-.27c-.07-.23.04-.47.28-.55.02 0 .05-.01.08-.01v-.01h.01l.11-.02c.14-.04.28-.04.41-.04.26 0 .52-.06.77-.12.08-.05.14-.11.19-.19l.19-.05c-.21-1.36.1-2.73.86-3.87l-.14-.12c0-.09-.03-.18-.08-.25-.2-.17-.41-.32-.64-.45q-.18-.09-.36-.21c-.02-.02-.06-.05-.08-.07l-.01-.01c-.2-.16-.25-.42-.11-.63.09-.1.21-.15.35-.15q.165.015.3.12l.09.07c.1.09.19.2.28.3.18.19.37.37.58.52.08.04.17.05.26.03l.15.11c.75-.8 1.73-1.36 2.8-1.6.25-.06.52-.1.78-.12l.01-.18a.45.45 0 0 0 .14-.23c.01-.26-.01-.52-.05-.77-.03-.13-.05-.27-.06-.41V5.1c-.02-.24.15-.45.39-.48s.44.15.47.38v.22c-.01.14-.03.28-.06.41-.04.25-.06.51-.05.77.02.1.07.17.14.22l.01.19c1.36.12 2.62.73 3.56 1.72l.16-.12c.09.02.18.01.26-.03.21-.15.41-.33.58-.52.09-.1.18-.2.28-.3.03-.02.07-.06.1-.06.17-.18.44-.18.59 0 .19.16.18.43 0 .6 0 .02-.03.04-.06.06a2.495 2.495 0 0 1-.44.28c-.23.13-.45.28-.64.45-.06.07-.09.15-.08.24l-.16.14a5.44 5.44 0 0 1 .88 3.86l.19.05c.04.08.11.14.19.18.25.07.51.11.77.14h.41c.03.03.08.04.12.05.24.03.4.25.37.49-.05.23-.24.4-.48.37-.03-.01-.07-.01-.07-.02v-.01c-.06 0-.1-.01-.14-.02q-.195-.06-.36-.15c-.26-.1-.5-.17-.77-.21-.09 0-.17 0-.23.08-.07-.01-.13-.02-.19-.03-.41 1.31-1.31 2.41-2.47 3.11"/></svg>
 
     </a>
     DevOps Master Guide
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ashishpatel26/devops-guide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ashishpatel26/devops-guide
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -396,7 +637,9 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -555,63 +798,6 @@
   
   
   
-    
-    
-    
-    
-      
-        
-        
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tools & Commands
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Tools & Commands
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
@@ -671,10 +857,287 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
+  <a href="#installation-guide" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuration
+        Installation Guide
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        macOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux-ubuntudebian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux (Ubuntu/Debian)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beginner-level-first-steps-with-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BEGINNER LEVEL: First Steps with Git
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BEGINNER LEVEL: First Steps with Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-initial-setup-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 1: Initial Setup &amp; Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-starting-a-brand-new-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 2: Starting a Brand New Repository
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-cloning-an-existing-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 3: Cloning an Existing Repository
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-4-making-changes-and-committing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 4: Making Changes and Committing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-5-pushing-to-remote-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 5: Pushing to Remote Repository
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-6-pulling-latest-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 6: Pulling Latest Changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intermediate-level-branching-collaboration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        INTERMEDIATE LEVEL: Branching &amp; Collaboration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="INTERMEDIATE LEVEL: Branching &amp; Collaboration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-7-creating-and-switching-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 7: Creating and Switching Branches
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-8-merging-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 8: Merging Branches
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-9-handling-merge-conflicts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 9: Handling Merge Conflicts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-10-stashing-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 10: Stashing Changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-11-undoing-a-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 11: Undoing a Commit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-level-master-git-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADVANCED LEVEL: Master Git Workflows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ADVANCED LEVEL: Master Git Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-12-interactive-rebase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 12: Interactive Rebase
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-13-cherry-picking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 13: Cherry-Picking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-14-git-bisect-debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 14: Git Bisect Debugging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-15-working-with-submodules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 15: Working with Submodules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-16-git-hooks-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 16: Git Hooks Automation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-essential-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Reference: Essential Commands
       
     </span>
   </a>
@@ -682,32 +1145,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#basic-commands" class="md-nav__link">
+  <a href="#pro-tips-for-all-levels" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Basic Commands
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#branching" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Branching
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#undoing-changes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Undoing Changes
+        Pro Tips for All Levels
       
     </span>
   </a>
@@ -721,10 +1162,9 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
   
   
   
@@ -749,10 +1189,9 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
   
   
   
@@ -777,10 +1216,36 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../helm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Helm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
   
   
   
@@ -805,10 +1270,9 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
   
   
   
@@ -833,10 +1297,9 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
   
   
   
@@ -861,10 +1324,9 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
   
   
   
@@ -889,11 +1351,111 @@
     </li>
   
 
-              
-            
-          </ul>
-        </nav>
+    
       
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jenkins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jenkins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terraform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terraform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ansible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ansible
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aws/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -914,69 +1476,688 @@
                   
 
 
+  
+  
 
-<h1 id="git-cheat-sheet">Git Cheat Sheet</h1>
-<p>Git is a distributed version control system.</p>
-<h2 id="configuration">Configuration</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Your Name&quot;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;you@example.com&quot;</span>
+
+<h1 id="git-complete-master-guide">Git Complete Master Guide<a class="headerlink" href="#git-complete-master-guide" title="Permanent link">&para;</a></h1>
+<p>Git is a distributed version control system that tracks changes in your code, enables collaboration, and maintains project history.</p>
+<hr />
+<h2 id="installation-guide">Installation Guide<a class="headerlink" href="#installation-guide" title="Permanent link">&para;</a></h2>
+<h3 id="windows"><strong>Windows</strong><a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
+<p>Download and install from <a href="https://git-scm.com/download/win">git-scm.com</a> or use winget:
+<div class="highlight"><pre><span></span><code>winget<span class="w"> </span>install<span class="w"> </span>--id<span class="w"> </span>Git.Git<span class="w"> </span>-e<span class="w"> </span>--source<span class="w"> </span>winget
+</code></pre></div></p>
+<h3 id="macos"><strong>macOS</strong><a class="headerlink" href="#macos" title="Permanent link">&para;</a></h3>
+<p>Install using Homebrew:
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>git
+</code></pre></div></p>
+<h3 id="linux-ubuntudebian"><strong>Linux (Ubuntu/Debian)</strong><a class="headerlink" href="#linux-ubuntudebian" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>-y
 </code></pre></div>
-<h2 id="basic-commands">Basic Commands</h2>
+<p>Verify installation:
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>--version
+</code></pre></div></p>
+<hr />
+<h2 id="beginner-level-first-steps-with-git">BEGINNER LEVEL: First Steps with Git<a class="headerlink" href="#beginner-level-first-steps-with-git" title="Permanent link">&para;</a></h2>
+<h3 id="scenario-1-initial-setup-configuration"><strong>Scenario 1: Initial Setup &amp; Configuration</strong><a class="headerlink" href="#scenario-1-initial-setup-configuration" title="Permanent link">&para;</a></h3>
+<p><em>Setting up your identity before using Git</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Developer as You
+    participant Git as Git System
+    Developer-&gt;&gt;Git: Configure username
+    Git--&gt;&gt;Developer: Username saved globally
+    Developer-&gt;&gt;Git: Configure email
+    Git--&gt;&gt;Developer: Email saved globally
+    Developer-&gt;&gt;Git: Check configuration
+    Git--&gt;&gt;Developer: Show all settings</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Set your name (will appear in commits)</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Your Full Name&quot;</span>
+
+<span class="c1"># Set your email (must match GitHub/GitLab)</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;your.email@example.com&quot;</span>
+
+<span class="c1"># Verify your configuration</span>
+git<span class="w"> </span>config<span class="w"> </span>--list
+
+<span class="c1"># Set default branch name to &quot;main&quot;</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>init.defaultBranch<span class="w"> </span>main
+</code></pre></div></p>
+<hr />
+<h3 id="scenario-2-starting-a-brand-new-repository"><strong>Scenario 2: Starting a Brand New Repository</strong><a class="headerlink" href="#scenario-2-starting-a-brand-new-repository" title="Permanent link">&para;</a></h3>
+<p><em>Creating your first Git repository from scratch</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Dev as Developer
+    participant Folder as Project Folder
+    participant Git as Git Repository
+    participant File as README.md
+    Dev-&gt;&gt;Folder: Create project folder
+    Dev-&gt;&gt;Folder: Navigate into it
+    Dev-&gt;&gt;Git: git init
+    Git--&gt;&gt;Folder: Initialize .git directory
+    Dev-&gt;&gt;File: Create README.md
+    Dev-&gt;&gt;Git: git add README.md
+    Dev-&gt;&gt;Git: git commit -m "Initial commit"
+    Git--&gt;&gt;Dev: First commit created!</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create a new project folder</span>
+mkdir<span class="w"> </span>my-awesome-project
+<span class="nb">cd</span><span class="w"> </span>my-awesome-project
+
+<span class="c1"># Initialize git repository</span>
+git<span class="w"> </span>init
+
+<span class="c1"># Create your first file</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;# My Project&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>README.md
+
+<span class="c1"># Check status (shows untracked files)</span>
+git<span class="w"> </span>status
+
+<span class="c1"># Stage the file for commit</span>
+git<span class="w"> </span>add<span class="w"> </span>README.md
+<span class="c1"># Or stage all files: git add .</span>
+
+<span class="c1"># Commit with a descriptive message</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial commit: Add README with project description&quot;</span>
+
+<span class="c1"># View commit history</span>
+git<span class="w"> </span>log
+</code></pre></div></p>
+<hr />
+<h3 id="scenario-3-cloning-an-existing-repository"><strong>Scenario 3: Cloning an Existing Repository</strong><a class="headerlink" href="#scenario-3-cloning-an-existing-repository" title="Permanent link">&para;</a></h3>
+<p><em>Getting a remote project onto your computer</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Dev as Developer
+    participant Remote as GitHub/GitLab
+    participant Local as Your Computer
+    Dev-&gt;&gt;Remote: Find repository URL
+    Dev-&gt;&gt;Local: git clone &lt;URL&gt;
+    Remote--&gt;&gt;Local: Download all files &amp; history
+    Local--&gt;&gt;Dev: Repository ready to use!</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Clone a public repository</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/user/repository.git
+
+<span class="c1"># Clone into a specific folder name</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/user/repository.git<span class="w"> </span>my-folder-name
+
+<span class="c1"># Clone only the latest commit (faster)</span>
+git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="w"> </span><span class="m">1</span><span class="w"> </span>https://github.com/user/repository.git
+
+<span class="c1"># View remote connections</span>
+git<span class="w"> </span>remote<span class="w"> </span>-v
+</code></pre></div></p>
+<hr />
+<h3 id="scenario-4-making-changes-and-committing"><strong>Scenario 4: Making Changes and Committing</strong><a class="headerlink" href="#scenario-4-making-changes-and-committing" title="Permanent link">&para;</a></h3>
+<p><em>The daily workflow of saving your work</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Dev as Developer
+    participant WD as Working Directory
+    participant SA as Staging Area
+    participant Repo as Repository
+    Dev-&gt;&gt;WD: Edit files
+    Dev-&gt;&gt;WD: git status (check changes)
+    WD--&gt;&gt;Dev: Shows modified files
+    Dev-&gt;&gt;SA: git add &lt;file&gt;
+    Dev-&gt;&gt;SA: git commit -m "message"
+    SA-&gt;&gt;Repo: Create commit snapshot
+    Repo--&gt;&gt;Dev: Changes permanently saved!</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Edit your files (use any text editor)</span>
+<span class="c1"># For example, edit README.md</span>
+
+<span class="c1"># Check what changed (CRITICAL STEP)</span>
+git<span class="w"> </span>status
+
+<span class="c1"># Stage specific file</span>
+git<span class="w"> </span>add<span class="w"> </span>README.md
+
+<span class="c1"># Stage all changes in current directory</span>
+git<span class="w"> </span>add<span class="w"> </span>.
+
+<span class="c1"># Commit with meaningful message</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Update README with installation instructions&quot;</span>
+
+<span class="c1"># Check status again (should be clean)</span>
+git<span class="w"> </span>status
+
+<span class="c1"># View your commit</span>
+git<span class="w"> </span>log<span class="w"> </span>--oneline
+</code></pre></div></p>
+<hr />
+<h3 id="scenario-5-pushing-to-remote-repository"><strong>Scenario 5: Pushing to Remote Repository</strong><a class="headerlink" href="#scenario-5-pushing-to-remote-repository" title="Permanent link">&para;</a></h3>
+<p><em>Uploading your local commits to GitHub/GitLab</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Dev as Developer
+    participant Local as Local Repository
+    participant Remote as GitHub/GitLab
+    Dev-&gt;&gt;Local: git commit (changes ready)
+    Dev-&gt;&gt;Remote: git push origin main
+    Local--&gt;&gt;Remote: Upload commits
+    Remote--&gt;&gt;Dev: Changes live online!</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># First, link to remote repository (if not cloned)</span>
+git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/your-username/repo.git
+
+<span class="c1"># Verify remote</span>
+git<span class="w"> </span>remote<span class="w"> </span>-v
+
+<span class="c1"># Push to main branch</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+<span class="c1"># Older repositories might use &#39;master&#39; instead of &#39;main&#39;</span>
+
+<span class="c1"># Push current branch (Git 2.0+)</span>
+git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+
+<span class="c1"># For subsequent pushes (after -u)</span>
+git<span class="w"> </span>push
+
+<span class="c1"># Force push (USE WITH CAUTION!)</span>
+git<span class="w"> </span>push<span class="w"> </span>--force-with-lease<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div></p>
+<hr />
+<h3 id="scenario-6-pulling-latest-changes"><strong>Scenario 6: Pulling Latest Changes</strong><a class="headerlink" href="#scenario-6-pulling-latest-changes" title="Permanent link">&para;</a></h3>
+<p><em>Getting updates from your team</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Dev as Developer
+    participant Remote as GitHub
+    participant Local as Your Copy
+    Dev-&gt;&gt;Remote: git pull origin main
+    Remote--&gt;&gt;Local: Download new commits
+    Local--&gt;&gt;Dev: Merge changes automatically
+    Note over Local: Your code is now up-to-date!</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Pull latest changes and merge</span>
+git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
+
+<span class="c1"># Fetch changes without merging (review first)</span>
+git<span class="w"> </span>fetch<span class="w"> </span>origin
+
+<span class="c1"># See what changed</span>
+git<span class="w"> </span>log<span class="w"> </span>origin/main<span class="w"> </span>--oneline
+
+<span class="c1"># Merge fetched changes</span>
+git<span class="w"> </span>merge<span class="w"> </span>origin/main
+
+<span class="c1"># Pull with rebase (cleaner history)</span>
+git<span class="w"> </span>pull<span class="w"> </span>--rebase<span class="w"> </span>origin<span class="w"> </span>main
+
+<span class="c1"># Check for conflicts after pull</span>
+git<span class="w"> </span>status
+</code></pre></div></p>
+<hr />
+<h2 id="intermediate-level-branching-collaboration">INTERMEDIATE LEVEL: Branching &amp; Collaboration<a class="headerlink" href="#intermediate-level-branching-collaboration" title="Permanent link">&para;</a></h2>
+<h3 id="scenario-7-creating-and-switching-branches"><strong>Scenario 7: Creating and Switching Branches</strong><a class="headerlink" href="#scenario-7-creating-and-switching-branches" title="Permanent link">&para;</a></h3>
+<p><em>Isolating features from main code</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Dev as Developer
+    participant Main as Main Branch
+    participant Feature as Feature Branch
+    Dev-&gt;&gt;Main: Currently on main
+    Dev-&gt;&gt;Feature: git checkout -b new-feature
+    Main-&gt;&gt;Feature: Create branch snapshot
+    Dev-&gt;&gt;Feature: Now working on feature
+    Note over Feature: Safe to experiment here!</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create and switch to new branch</span>
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature-login-system
+
+<span class="c1"># Equivalent to:</span>
+git<span class="w"> </span>branch<span class="w"> </span>feature-login-system
+git<span class="w"> </span>checkout<span class="w"> </span>feature-login-system
+
+<span class="c1"># Switch to existing branch</span>
+git<span class="w"> </span>checkout<span class="w"> </span>main
+
+<span class="c1"># List all local branches</span>
+git<span class="w"> </span>branch
+
+<span class="c1"># List all branches (including remote)</span>
+git<span class="w"> </span>branch<span class="w"> </span>-a
+
+<span class="c1"># Rename current branch</span>
+git<span class="w"> </span>branch<span class="w"> </span>-m<span class="w"> </span>better-branch-name
+</code></pre></div></p>
+<hr />
+<h3 id="scenario-8-merging-branches"><strong>Scenario 8: Merging Branches</strong><a class="headerlink" href="#scenario-8-merging-branches" title="Permanent link">&para;</a></h3>
+<p><em>Combining your feature back into main</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Dev as Developer
+    participant Main as Main Branch
+    participant Feature as Feature Branch
+    Dev-&gt;&gt;Feature: Complete work
+    Dev-&gt;&gt;Main: git checkout main
+    Dev-&gt;&gt;Main: git merge feature
+    Feature-&gt;&gt;Main: Apply changes
+    Note over Main: Feature integrated!</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Complete your feature work and commit</span>
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add complete login functionality&quot;</span>
+
+<span class="c1"># Switch to main branch</span>
+git<span class="w"> </span>checkout<span class="w"> </span>main
+
+<span class="c1"># Ensure main is up-to-date</span>
+git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
+
+<span class="c1"># Merge your feature branch</span>
+git<span class="w"> </span>merge<span class="w"> </span>feature-login-system
+
+<span class="c1"># If no conflicts: automatic merge!</span>
+<span class="c1"># If conflicts: manual resolution needed</span>
+
+<span class="c1"># After successful merge, delete feature branch</span>
+git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>feature-login-system
+
+<span class="c1"># Push merged changes</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div></p>
+<hr />
+<h3 id="scenario-9-handling-merge-conflicts"><strong>Scenario 9: Handling Merge Conflicts</strong><a class="headerlink" href="#scenario-9-handling-merge-conflicts" title="Permanent link">&para;</a></h3>
+<p><em>When Git can't automatically merge</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Dev as Developer
+    participant Git as Git
+    participant Files as Conflict Files
+    Dev-&gt;&gt;Git: git merge feature
+    Git-&gt;&gt;Files: Mark conflict areas
+    Git--&gt;&gt;Dev: CONFLICT! Manual fix needed
+    Dev-&gt;&gt;Files: Edit &amp; resolve markers
+    Dev-&gt;&gt;Git: git add &lt;resolved-files&gt;
+    Dev-&gt;&gt;Git: git commit
+    Git--&gt;&gt;Dev: Merge complete!</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Attempt merge that causes conflict</span>
+git<span class="w"> </span>merge<span class="w"> </span>another-feature
+
+<span class="c1"># Check which files have conflicts</span>
+git<span class="w"> </span>status
+
+<span class="c1"># Open conflicted file(s), see markers:</span>
+<span class="c1"># &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
+<span class="c1"># Your changes</span>
+<span class="c1"># =======</span>
+<span class="c1"># Their changes</span>
+<span class="c1"># &gt;&gt;&gt;&gt;&gt;&gt;&gt; branch-name</span>
+
+<span class="c1"># Edit file manually, keep desired code</span>
+<span class="c1"># Remove all &lt;&lt;&lt;&lt;&lt;, =====, &gt;&gt;&gt;&gt;&gt; markers</span>
+
+<span class="c1"># After fixing all conflicts:</span>
+git<span class="w"> </span>add<span class="w"> </span>README.md
+git<span class="w"> </span>add<span class="w"> </span>other-conflicted-file.js
+
+<span class="c1"># Complete the merge</span>
+git<span class="w"> </span>commit
+<span class="c1"># Editor opens - save default merge message</span>
+
+<span class="c1"># If merge is too messy, abort:</span>
+git<span class="w"> </span>merge<span class="w"> </span>--abort
+
+<span class="c1"># Verify merge</span>
+git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>--graph
+</code></pre></div></p>
+<hr />
+<h3 id="scenario-10-stashing-changes"><strong>Scenario 10: Stashing Changes</strong><a class="headerlink" href="#scenario-10-stashing-changes" title="Permanent link">&para;</a></h3>
+<p><em>Temporarily saving incomplete work</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Dev as Developer
+    participant WIP as Work in Progress
+    participant Stash as Stash Storage
+    participant Main as Main Branch
+    Dev-&gt;&gt;WIP: Unfinished changes
+    Dev-&gt;&gt;Stash: git stash push -m "WIP"
+    WIP-&gt;&gt;Stash: Store temporarily
+    Dev-&gt;&gt;Main: Switch branches freely
+    Dev-&gt;&gt;Stash: git stash pop
+    Stash-&gt;&gt;WIP: Restore changes</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Save uncommitted changes</span>
+git<span class="w"> </span>stash<span class="w"> </span>push<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Work in progress on login form&quot;</span>
+
+<span class="c1"># View stashed items</span>
+git<span class="w"> </span>stash<span class="w"> </span>list
+
+<span class="c1"># Apply most recent stash (keeps it in stash)</span>
+git<span class="w"> </span>stash<span class="w"> </span>apply
+
+<span class="c1"># Apply and remove from stash</span>
+git<span class="w"> </span>stash<span class="w"> </span>pop
+
+<span class="c1"># Apply specific stash</span>
+git<span class="w"> </span>stash<span class="w"> </span>apply<span class="w"> </span>stash@<span class="o">{</span><span class="m">1</span><span class="o">}</span>
+
+<span class="c1"># Drop a stash</span>
+git<span class="w"> </span>stash<span class="w"> </span>drop<span class="w"> </span>stash@<span class="o">{</span><span class="m">0</span><span class="o">}</span>
+
+<span class="c1"># Clear all stashes</span>
+git<span class="w"> </span>stash<span class="w"> </span>clear
+</code></pre></div></p>
+<hr />
+<h3 id="scenario-11-undoing-a-commit"><strong>Scenario 11: Undoing a Commit</strong><a class="headerlink" href="#scenario-11-undoing-a-commit" title="Permanent link">&para;</a></h3>
+<p><em>Fixing mistakes in your recent history</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Dev as Developer
+    participant Repo as Repository
+    participant Old as Bad Commit
+    participant New as New Commit
+    Dev-&gt;&gt;Repo: Oops! Wrong commit message
+    Dev-&gt;&gt;Old: git reset --soft HEAD~1
+    Old-&gt;&gt;Repo: Move pointer back
+    Repo--&gt;&gt;Dev: Changes staged &amp; ready
+    Dev-&gt;&gt;New: git commit -m "Correct message"
+    New-&gt;&gt;Repo: New commit created</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># FIX LAST COMMIT MESSAGE (keeps changes)</span>
+git<span class="w"> </span>commit<span class="w"> </span>--amend<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Correct commit message&quot;</span>
+
+<span class="c1"># CANCEL LAST COMMIT but keep changes staged</span>
+git<span class="w"> </span>reset<span class="w"> </span>--soft<span class="w"> </span>HEAD~1
+
+<span class="c1"># CANCEL LAST COMMIT and unstage changes</span>
+git<span class="w"> </span>reset<span class="w"> </span>--mixed<span class="w"> </span>HEAD~1
+
+<span class="c1"># DANGER: Completely delete last commit</span>
+git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> </span>HEAD~1
+
+<span class="c1"># Create a &quot;revert commit&quot; (safe for shared branches)</span>
+git<span class="w"> </span>revert<span class="w"> </span>HEAD
+<span class="c1"># This creates a NEW commit that undoes changes</span>
+</code></pre></div></p>
+<hr />
+<h2 id="advanced-level-master-git-workflows">ADVANCED LEVEL: Master Git Workflows<a class="headerlink" href="#advanced-level-master-git-workflows" title="Permanent link">&para;</a></h2>
+<h3 id="scenario-12-interactive-rebase"><strong>Scenario 12: Interactive Rebase</strong><a class="headerlink" href="#scenario-12-interactive-rebase" title="Permanent link">&para;</a></h3>
+<p><em>Rewriting history for clean commits</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Dev as Developer
+    participant Git as Git History
+    participant Commits as 3 Messy Commits
+    participant Clean as 1 Clean Commit
+    Dev-&gt;&gt;Git: Start interactive rebase
+    Dev-&gt;&gt;Commits: pick, squash, reword
+    Commits-&gt;&gt;Clean: Combine &amp; clean
+    Git--&gt;&gt;Dev: Polished history ready!
+    Note over Git: Never rebase shared branches!</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Start interactive rebase for last 3 commits</span>
+git<span class="w"> </span>rebase<span class="w"> </span>-i<span class="w"> </span>HEAD~3
+
+<span class="c1"># Editor opens - change commands:</span>
+<span class="c1"># pick a1b2c3d First commit</span>
+<span class="c1"># squash d4e5f6a Second commit</span>
+<span class="c1"># squash g7h8i9b Third commit</span>
+
+<span class="c1"># Save and close - editor reopens for final message</span>
+
+<span class="c1"># Reword a commit message</span>
+git<span class="w"> </span>rebase<span class="w"> </span>-i<span class="w"> </span>HEAD~2
+<span class="c1"># Change &#39;pick&#39; to &#39;reword&#39; on target commit</span>
+
+<span class="c1"># Abort rebase if something goes wrong</span>
+git<span class="w"> </span>rebase<span class="w"> </span>--abort
+
+<span class="c1"># Continue after resolving conflicts</span>
+git<span class="w"> </span>rebase<span class="w"> </span>--continue
+</code></pre></div></p>
+<hr />
+<h3 id="scenario-13-cherry-picking"><strong>Scenario 13: Cherry-Picking</strong><a class="headerlink" href="#scenario-13-cherry-picking" title="Permanent link">&para;</a></h3>
+<p><em>Applying specific commits to another branch</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Dev as Developer
+    participant Source as Source Branch
+    participant Target as Target Branch
+    participant Commit as Specific Commit
+    Dev-&gt;&gt;Source: Find commit hash
+    Dev-&gt;&gt;Target: Switch to target branch
+    Dev-&gt;&gt;Target: git cherry-pick a1b2c3d
+    Commit-&gt;&gt;Target: Apply only this commit
+    Target--&gt;&gt;Dev: Specific change merged!</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Find commit hash to cherry-pick</span>
+git<span class="w"> </span>log<span class="w"> </span>--oneline
+
+<span class="c1"># Switch to target branch</span>
+git<span class="w"> </span>checkout<span class="w"> </span>target-branch
+
+<span class="c1"># Apply specific commit</span>
+git<span class="w"> </span>cherry-pick<span class="w"> </span>a1b2c3d4
+
+<span class="c1"># Cherry-pick multiple commits</span>
+git<span class="w"> </span>cherry-pick<span class="w"> </span>a1b2c3d..f5e6d7c
+
+<span class="c1"># Abort if conflicts occur</span>
+git<span class="w"> </span>cherry-pick<span class="w"> </span>--abort
+
+<span class="c1"># Continue after fixing conflicts</span>
+git<span class="w"> </span>cherry-pick<span class="w"> </span>--continue
+</code></pre></div></p>
+<hr />
+<h3 id="scenario-14-git-bisect-debugging"><strong>Scenario 14: Git Bisect Debugging</strong><a class="headerlink" href="#scenario-14-git-bisect-debugging" title="Permanent link">&para;</a></h3>
+<p><em>Find the commit that introduced a bug</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Dev as Developer
+    participant Bisect as Git Bisect
+    participant Good as Good Commit
+    participant Bad as Bad Commit
+    participant Bug as Bug Introducer
+    Dev-&gt;&gt;Good: Mark as good
+    Dev-&gt;&gt;Bad: Mark as bad
+    Bisect-&gt;&gt;Dev: Checkout middle commit
+    loop Check Each Commit
+        Dev-&gt;&gt;Bisect: Test &amp; mark good/bad
+        Bisect-&gt;&gt;Dev: Next commit to test
+    end
+    Bug-&gt;&gt;Dev: Bug found!</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Start bisect session</span>
+git<span class="w"> </span>bisect<span class="w"> </span>start
+
+<span class="c1"># Mark current commit as bad</span>
+git<span class="w"> </span>bisect<span class="w"> </span>bad
+
+<span class="c1"># Mark earlier commit as good</span>
+git<span class="w"> </span>bisect<span class="w"> </span>good<span class="w"> </span>a1b2c3d
+
+<span class="c1"># Git checks out middle commit</span>
+<span class="c1"># Test your code...</span>
+
+<span class="c1"># If bug exists:</span>
+git<span class="w"> </span>bisect<span class="w"> </span>bad
+
+<span class="c1"># If bug is gone:</span>
+git<span class="w"> </span>bisect<span class="w"> </span>good
+
+<span class="c1"># Repeat until Git identifies culprit</span>
+<span class="c1"># Output: &quot;first bad commit is: [hash]&quot;</span>
+
+<span class="c1"># End bisect session</span>
+git<span class="w"> </span>bisect<span class="w"> </span>reset
+</code></pre></div></p>
+<hr />
+<h3 id="scenario-15-working-with-submodules"><strong>Scenario 15: Working with Submodules</strong><a class="headerlink" href="#scenario-15-working-with-submodules" title="Permanent link">&para;</a></h3>
+<p><em>Managing repositories inside repositories</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Main as Main Project
+    participant Git as Git
+    participant Sub as Submodule Repo
+    participant Local as Local Copy
+    Main-&gt;&gt;Git: git submodule add &lt;URL&gt;
+    Git-&gt;&gt;Sub: Register submodule
+    Sub-&gt;&gt;Local: Clone submodule content
+    Local--&gt;&gt;Main: Submodule ready
+    Note over Main: Main project tracks submodule commit</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Add a submodule to your project</span>
+git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>https://github.com/user/library.git<span class="w"> </span>libs/super-lib
+
+<span class="c1"># Initialize submodules after clone</span>
+git<span class="w"> </span>submodule<span class="w"> </span>init
+
+<span class="c1"># Update submodule content</span>
+git<span class="w"> </span>submodule<span class="w"> </span>update
+
+<span class="c1"># Clone with submodules recursively</span>
+git<span class="w"> </span>clone<span class="w"> </span>--recurse-submodules<span class="w"> </span>https://github.com/user/main-project.git
+
+<span class="c1"># Pull updates for submodules</span>
+git<span class="w"> </span>submodule<span class="w"> </span>update<span class="w"> </span>--remote
+
+<span class="c1"># Commit submodule changes (points to new commit)</span>
+<span class="nb">cd</span><span class="w"> </span>libs/super-lib
+git<span class="w"> </span>checkout<span class="w"> </span>v2.0
+<span class="nb">cd</span><span class="w"> </span>../..
+git<span class="w"> </span>add<span class="w"> </span>libs/super-lib
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Update super-lib to v2.0&quot;</span>
+</code></pre></div></p>
+<hr />
+<h3 id="scenario-16-git-hooks-automation"><strong>Scenario 16: Git Hooks Automation</strong><a class="headerlink" href="#scenario-16-git-hooks-automation" title="Permanent link">&para;</a></h3>
+<p><em>Running scripts automatically</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Dev as Developer
+    participant Git as Git Action
+    participant Hook as Hook Script
+    participant Test as Tests
+    Dev-&gt;&gt;Git: git commit
+    Git-&gt;&gt;Hook: Execute pre-commit hook
+    Hook-&gt;&gt;Test: Run test suite
+    alt Tests Pass
+        Test--&gt;&gt;Hook: Success
+        Hook--&gt;&gt;Git: Continue commit
+    else Tests Fail
+        Test--&gt;&gt;Hook: Failure
+        Hook--&gt;&gt;Git: Block commit
+        Git--&gt;&gt;Dev: Commit rejected
+    end</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Go to your repository&#39;s hooks directory</span>
+<span class="nb">cd</span><span class="w"> </span>.git/hooks
+
+<span class="c1"># Create a pre-commit hook</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>pre-commit<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">#!/bin/bash</span>
+<span class="s"># Run tests before allowing commit</span>
+<span class="s">echo &quot;Running pre-commit tests...&quot;</span>
+<span class="s">npm test</span>
+
+<span class="s"># If tests fail, block commit</span>
+<span class="s">if [ $? -ne 0 ]; then</span>
+<span class="s">  echo &quot;Tests failed! Commit blocked.&quot;</span>
+<span class="s">  exit 1</span>
+<span class="s">fi</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Make it executable</span>
+chmod<span class="w"> </span>+x<span class="w"> </span>pre-commit
+
+<span class="c1"># Common hook types:</span>
+<span class="c1"># pre-commit: Before commit is created</span>
+<span class="c1"># commit-msg: Validate commit message</span>
+<span class="c1"># pre-push: Before pushing to remote</span>
+<span class="c1"># post-merge: After successful merge</span>
+</code></pre></div></p>
+<hr />
+<h2 id="quick-reference-essential-commands">Quick Reference: Essential Commands<a class="headerlink" href="#quick-reference-essential-commands" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">Command</th>
 <th style="text-align: left;">Description</th>
+<th style="text-align: left;">Level</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;"><code>git init</code></td>
-<td style="text-align: left;">Initialize a new repository</td>
+<td style="text-align: left;">Initialize new repository</td>
+<td style="text-align: left;">Beginner</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>git clone &lt;url&gt;</code></td>
-<td style="text-align: left;">Clone an existing repository</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>git status</code></td>
-<td style="text-align: left;">Check the status of files</td>
+<td style="text-align: left;">Copy remote repository</td>
+<td style="text-align: left;">Beginner</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>git add .</code></td>
 <td style="text-align: left;">Stage all changes</td>
+<td style="text-align: left;">Beginner</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>git commit -m "msg"</code></td>
-<td style="text-align: left;">Commit staged changes</td>
+<td style="text-align: left;">Save changes</td>
+<td style="text-align: left;">Beginner</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>git push origin main</code></td>
-<td style="text-align: left;">Push changes to remote</td>
+<td style="text-align: left;"><code>git push</code></td>
+<td style="text-align: left;">Upload to remote</td>
+<td style="text-align: left;">Beginner</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>git pull</code></td>
-<td style="text-align: left;">Pull changes from remote</td>
+<td style="text-align: left;">Download &amp; merge</td>
+<td style="text-align: left;">Beginner</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git checkout -b &lt;branch&gt;</code></td>
+<td style="text-align: left;">Create &amp; switch branch</td>
+<td style="text-align: left;">Intermediate</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git merge &lt;branch&gt;</code></td>
+<td style="text-align: left;">Merge branches</td>
+<td style="text-align: left;">Intermediate</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git stash</code></td>
+<td style="text-align: left;">Temporarily save work</td>
+<td style="text-align: left;">Intermediate</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git reset --soft HEAD~1</code></td>
+<td style="text-align: left;">Undo last commit</td>
+<td style="text-align: left;">Intermediate</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git rebase -i HEAD~3</code></td>
+<td style="text-align: left;">Rewrite history</td>
+<td style="text-align: left;">Advanced</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git cherry-pick &lt;hash&gt;</code></td>
+<td style="text-align: left;">Apply specific commit</td>
+<td style="text-align: left;">Advanced</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git bisect</code></td>
+<td style="text-align: left;">Find bug-introducing commit</td>
+<td style="text-align: left;">Advanced</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git submodule</code></td>
+<td style="text-align: left;">Manage nested repositories</td>
+<td style="text-align: left;">Advanced</td>
 </tr>
 </tbody>
 </table>
-<h2 id="branching">Branching</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Create a new branch</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature-branch
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Switch to a branch</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>git<span class="w"> </span>checkout<span class="w"> </span>main
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># Merge branch into current branch</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>git<span class="w"> </span>merge<span class="w"> </span>feature-branch
-</code></pre></div>
-<h2 id="undoing-changes">Undoing Changes</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Discard changes in working directory</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>git<span class="w"> </span>checkout<span class="w"> </span>--<span class="w"> </span>&lt;file&gt;
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Unstage a file</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>git<span class="w"> </span>reset<span class="w"> </span>HEAD<span class="w"> </span>&lt;file&gt;
-</code></pre></div>
+<hr />
+<h2 id="pro-tips-for-all-levels">Pro Tips for All Levels<a class="headerlink" href="#pro-tips-for-all-levels" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Always pull before pushing</strong> to avoid unnecessary merge conflicts</li>
+<li><strong>Write meaningful commit messages</strong>: "Fix login bug" &gt; "Update stuff"</li>
+<li><strong>Commit early, commit often</strong> - small commits are easier to manage</li>
+<li><strong>Never <code>git reset --hard</code> on shared branches</strong> - it rewrites history</li>
+<li><strong>Use branches for every feature</strong> - keep main branch clean</li>
+<li><strong>Review before committing</strong>: <code>git diff --staged</code> shows what you're about to commit</li>
+<li><strong>Configure helpful aliases</strong>:
+   <div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.co<span class="w"> </span>checkout
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.br<span class="w"> </span>branch
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.ci<span class="w"> </span>commit
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.st<span class="w"> </span>status
+</code></pre></div></li>
+</ol>
+<p>Happy coding! 🚀</p>
 
 
 
@@ -1011,10 +2192,74 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 DevOps Guide Team
+    </div>
+  
   
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
       Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ashishpatel26" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/ashishpatel2604" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://x.com/GenAIArchitect" target="_blank" rel="noopener" title="x.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://hub.docker.com/u/ashishpatel26" target="_blank" rel="noopener" title="hub.docker.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1zm0-204.3h-66.1v60.7h66.1zm78.2 144.8H362v59.4h66.1zm-156.3-72.1h-66.1v60.1h66.1zm78.1 0h-66.1v60.1h66.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1zm78.1 0h-66.1v59.4h66.1zm-78.1-72.1h-66.1v60.1h66.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://youtube.com" target="_blank" rel="noopener" title="youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M549.7 124.1c-6.2-23.7-24.8-42.3-48.3-48.6C458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5c-23.5 6.3-42 24.9-48.3 48.6C15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8C117.3 448 288.1 448 288.1 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6V175.2l142.7 81.2z"/></svg>
     </a>
   
 </div>
@@ -1028,11 +2273,13 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
     
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>

@@ -12,6 +12,8 @@
         <meta name="author" content="DevOps Learner">
       
       
+        <link rel="canonical" href="https://ashishpatel26.github.io/devops-guide/tools/docker/">
+      
       
         <link rel="prev" href="../git/">
       
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#docker-cheat-sheet" class="md-skip">
+        <a href="#docker-complete-master-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -90,12 +92,14 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="DevOps Master Guide" class="md-header__button md-logo" aria-label="DevOps Master Guide" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.95 13.5h-.23c-.18.11-.26.32-.18.5l.86 2.11c.83-.53 1.46-1.32 1.79-2.25l-2.23-.36zm-3.45.29a.415.415 0 0 0-.38-.29h-.08l-2.22.37c.33.92.96 1.7 1.79 2.23l.85-2.07V14c.04-.05.04-.14.04-.21m1.83.81a.38.38 0 0 0-.51-.15c-.07.05-.12.08-.15.15h-.01l-1.09 1.97c.78.26 1.62.31 2.43.12.14-.03.29-.07.43-.12l-1.09-1.97zm3.45-4.57L14.1 11.5l.01.03a.37.37 0 0 0-.04.53q.075.09.18.12l.01.01 2.17.62c.07-.97-.14-1.95-.65-2.78m-3.11.16c.01.21.18.37.39.36.08 0 .15-.02.21-.05h.01l1.83-1.31a4.45 4.45 0 0 0-2.57-1.24zm-1.94.31c.17.11.4.08.52-.09.05-.06.07-.13.08-.21h.01l.12-2.25c-.15.02-.3.05-.46.08-.8.18-1.54.58-2.12 1.16l1.84 1.31zm-.99 1.69c.2-.05.32-.26.26-.46 0-.08-.05-.14-.11-.19v-.01L8.21 10c-.52.86-.74 1.84-.63 2.82l2.16-.62zm1.64.66.62.3.62-.3.15-.67-.43-.53h-.69l-.43.53zm10.89 1.32L20.5 6.5c-.09-.42-.37-.76-.74-.94l-7.17-3.43c-.37-.17-.81-.17-1.19 0L4.24 5.56c-.37.18-.65.52-.74.94l-1.77 7.67c-.05.2-.05.4 0 .59.01.06.03.12.05.18.03.09.08.19.13.27.03.04.05.08.09.11l4.95 6.18c.02 0 .05.04.05.06.1.09.19.16.28.22.12.08.26.14.4.17.11.05.23.05.32.05h8.12c.07 0 .14-.03.2-.05.05-.01.1-.03.14-.04.04-.02.07-.03.11-.05.05-.02.1-.05.15-.08.12-.08.23-.18.33-.28l.15-.2 4.8-5.98c.1-.12.17-.25.22-.38.02-.06.04-.12.05-.18.05-.19.05-.4 0-.59m-7.43 2.99c.02.06.04.12.07.17-.04.08-.06.17-.03.26.12.24.23.46.38.68.08.11.16.23.24.34 0 .03.03.08.04.12.12.2.06.46-.15.59s-.47.05-.59-.15c-.01-.03-.02-.05-.03-.08-.02-.03-.04-.09-.06-.09-.05-.15-.09-.28-.12-.41-.09-.25-.17-.49-.3-.72a.38.38 0 0 0-.21-.14l-.08-.16c-1.29.48-2.7.48-3.97-.01l-.1.18c-.07.01-.14.04-.19.09-.14.24-.24.49-.33.77-.03.13-.07.26-.12.4-.02 0-.04.07-.06.1a.43.43 0 0 1-.81-.29c.01-.03.03-.05.04-.08.04-.03.04-.08.04-.11.09-.12.16-.23.24-.35.16-.21.29-.45.39-.69a.54.54 0 0 0-.03-.25l.07-.18a5.6 5.6 0 0 1-2.47-3.09l-.2.03a.4.4 0 0 0-.23-.09c-.27.05-.51.13-.77.22-.11.06-.24.11-.37.15-.03.01-.07.02-.13.03a.44.44 0 0 1-.54-.27c-.07-.23.04-.47.28-.55.02 0 .05-.01.08-.01v-.01h.01l.11-.02c.14-.04.28-.04.41-.04.26 0 .52-.06.77-.12.08-.05.14-.11.19-.19l.19-.05c-.21-1.36.1-2.73.86-3.87l-.14-.12c0-.09-.03-.18-.08-.25-.2-.17-.41-.32-.64-.45q-.18-.09-.36-.21c-.02-.02-.06-.05-.08-.07l-.01-.01c-.2-.16-.25-.42-.11-.63.09-.1.21-.15.35-.15q.165.015.3.12l.09.07c.1.09.19.2.28.3.18.19.37.37.58.52.08.04.17.05.26.03l.15.11c.75-.8 1.73-1.36 2.8-1.6.25-.06.52-.1.78-.12l.01-.18a.45.45 0 0 0 .14-.23c.01-.26-.01-.52-.05-.77-.03-.13-.05-.27-.06-.41V5.1c-.02-.24.15-.45.39-.48s.44.15.47.38v.22c-.01.14-.03.28-.06.41-.04.25-.06.51-.05.77.02.1.07.17.14.22l.01.19c1.36.12 2.62.73 3.56 1.72l.16-.12c.09.02.18.01.26-.03.21-.15.41-.33.58-.52.09-.1.18-.2.28-.3.03-.02.07-.06.1-.06.17-.18.44-.18.59 0 .19.16.18.43 0 .6 0 .02-.03.04-.06.06a2.495 2.495 0 0 1-.44.28c-.23.13-.45.28-.64.45-.06.07-.09.15-.08.24l-.16.14a5.44 5.44 0 0 1 .88 3.86l.19.05c.04.08.11.14.19.18.25.07.51.11.77.14h.41c.03.03.08.04.12.05.24.03.4.25.37.49-.05.23-.24.4-.48.37-.03-.01-.07-.01-.07-.02v-.01c-.06 0-.1-.01-.14-.02q-.195-.06-.36-.15c-.26-.1-.5-.17-.77-.21-.09 0-.17 0-.23.08-.07-.01-.13-.02-.19-.03-.41 1.31-1.31 2.41-2.47 3.11"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -169,6 +173,11 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
@@ -193,16 +202,22 @@
       
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/ashishpatel26/devops-guide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ashishpatel26/devops-guide
+  </div>
+</a>
+      </div>
+    
   </nav>
   
-</header>
     
-    <div class="md-container" data-md-component="container">
       
-      
-        
-          
-            
 <nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
@@ -269,28 +284,242 @@
   
   
   
-    
+  
+    <li class="md-tabs__item">
+      <a href="../git/" class="md-tabs__link">
+        
   
   
     
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../git/" class="md-tabs__link">
-          
   
-  
-  Tools & Commands
+  Git
 
-        </a>
-      </li>
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
     
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Docker
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kubernetes/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kubernetes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../helm/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Helm
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../jenkins/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Jenkins
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../terraform/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Terraform
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ansible/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Ansible
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../aws/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  AWS
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../jenkins/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Jenkins
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../terraform/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Terraform
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ansible/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Ansible
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../aws/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  AWS
+
+      </a>
+    </li>
   
 
       
     </ul>
   </div>
 </nav>
-          
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
         
       
       <main class="md-main" data-md-component="main">
@@ -314,11 +543,23 @@
     <a href="../.." title="DevOps Master Guide" class="md-nav__button md-logo" aria-label="DevOps Master Guide" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.95 13.5h-.23c-.18.11-.26.32-.18.5l.86 2.11c.83-.53 1.46-1.32 1.79-2.25l-2.23-.36zm-3.45.29a.415.415 0 0 0-.38-.29h-.08l-2.22.37c.33.92.96 1.7 1.79 2.23l.85-2.07V14c.04-.05.04-.14.04-.21m1.83.81a.38.38 0 0 0-.51-.15c-.07.05-.12.08-.15.15h-.01l-1.09 1.97c.78.26 1.62.31 2.43.12.14-.03.29-.07.43-.12l-1.09-1.97zm3.45-4.57L14.1 11.5l.01.03a.37.37 0 0 0-.04.53q.075.09.18.12l.01.01 2.17.62c.07-.97-.14-1.95-.65-2.78m-3.11.16c.01.21.18.37.39.36.08 0 .15-.02.21-.05h.01l1.83-1.31a4.45 4.45 0 0 0-2.57-1.24zm-1.94.31c.17.11.4.08.52-.09.05-.06.07-.13.08-.21h.01l.12-2.25c-.15.02-.3.05-.46.08-.8.18-1.54.58-2.12 1.16l1.84 1.31zm-.99 1.69c.2-.05.32-.26.26-.46 0-.08-.05-.14-.11-.19v-.01L8.21 10c-.52.86-.74 1.84-.63 2.82l2.16-.62zm1.64.66.62.3.62-.3.15-.67-.43-.53h-.69l-.43.53zm10.89 1.32L20.5 6.5c-.09-.42-.37-.76-.74-.94l-7.17-3.43c-.37-.17-.81-.17-1.19 0L4.24 5.56c-.37.18-.65.52-.74.94l-1.77 7.67c-.05.2-.05.4 0 .59.01.06.03.12.05.18.03.09.08.19.13.27.03.04.05.08.09.11l4.95 6.18c.02 0 .05.04.05.06.1.09.19.16.28.22.12.08.26.14.4.17.11.05.23.05.32.05h8.12c.07 0 .14-.03.2-.05.05-.01.1-.03.14-.04.04-.02.07-.03.11-.05.05-.02.1-.05.15-.08.12-.08.23-.18.33-.28l.15-.2 4.8-5.98c.1-.12.17-.25.22-.38.02-.06.04-.12.05-.18.05-.19.05-.4 0-.59m-7.43 2.99c.02.06.04.12.07.17-.04.08-.06.17-.03.26.12.24.23.46.38.68.08.11.16.23.24.34 0 .03.03.08.04.12.12.2.06.46-.15.59s-.47.05-.59-.15c-.01-.03-.02-.05-.03-.08-.02-.03-.04-.09-.06-.09-.05-.15-.09-.28-.12-.41-.09-.25-.17-.49-.3-.72a.38.38 0 0 0-.21-.14l-.08-.16c-1.29.48-2.7.48-3.97-.01l-.1.18c-.07.01-.14.04-.19.09-.14.24-.24.49-.33.77-.03.13-.07.26-.12.4-.02 0-.04.07-.06.1a.43.43 0 0 1-.81-.29c.01-.03.03-.05.04-.08.04-.03.04-.08.04-.11.09-.12.16-.23.24-.35.16-.21.29-.45.39-.69a.54.54 0 0 0-.03-.25l.07-.18a5.6 5.6 0 0 1-2.47-3.09l-.2.03a.4.4 0 0 0-.23-.09c-.27.05-.51.13-.77.22-.11.06-.24.11-.37.15-.03.01-.07.02-.13.03a.44.44 0 0 1-.54-.27c-.07-.23.04-.47.28-.55.02 0 .05-.01.08-.01v-.01h.01l.11-.02c.14-.04.28-.04.41-.04.26 0 .52-.06.77-.12.08-.05.14-.11.19-.19l.19-.05c-.21-1.36.1-2.73.86-3.87l-.14-.12c0-.09-.03-.18-.08-.25-.2-.17-.41-.32-.64-.45q-.18-.09-.36-.21c-.02-.02-.06-.05-.08-.07l-.01-.01c-.2-.16-.25-.42-.11-.63.09-.1.21-.15.35-.15q.165.015.3.12l.09.07c.1.09.19.2.28.3.18.19.37.37.58.52.08.04.17.05.26.03l.15.11c.75-.8 1.73-1.36 2.8-1.6.25-.06.52-.1.78-.12l.01-.18a.45.45 0 0 0 .14-.23c.01-.26-.01-.52-.05-.77-.03-.13-.05-.27-.06-.41V5.1c-.02-.24.15-.45.39-.48s.44.15.47.38v.22c-.01.14-.03.28-.06.41-.04.25-.06.51-.05.77.02.1.07.17.14.22l.01.19c1.36.12 2.62.73 3.56 1.72l.16-.12c.09.02.18.01.26-.03.21-.15.41-.33.58-.52.09-.1.18-.2.28-.3.03-.02.07-.06.1-.06.17-.18.44-.18.59 0 .19.16.18.43 0 .6 0 .02-.03.04-.06.06a2.495 2.495 0 0 1-.44.28c-.23.13-.45.28-.64.45-.06.07-.09.15-.08.24l-.16.14a5.44 5.44 0 0 1 .88 3.86l.19.05c.04.08.11.14.19.18.25.07.51.11.77.14h.41c.03.03.08.04.12.05.24.03.4.25.37.49-.05.23-.24.4-.48.37-.03-.01-.07-.01-.07-.02v-.01c-.06 0-.1-.01-.14-.02q-.195-.06-.36-.15c-.26-.1-.5-.17-.77-.21-.09 0-.17 0-.23.08-.07-.01-.13-.02-.19-.03-.41 1.31-1.31 2.41-2.47 3.11"/></svg>
 
     </a>
     DevOps Master Guide
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ashishpatel26/devops-guide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ashishpatel26/devops-guide
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -396,7 +637,9 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -551,63 +794,6 @@
       
   
   
-    
-  
-  
-  
-    
-    
-    
-    
-      
-        
-        
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tools & Commands
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Tools & Commands
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
@@ -630,10 +816,9 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
   
   
     
@@ -699,10 +884,287 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-commands" class="md-nav__link">
+  <a href="#installation-guide" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Basic Commands
+        Installation Guide
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        macOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux-ubuntudebian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux (Ubuntu/Debian)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beginner-level-first-steps-with-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BEGINNER LEVEL: First Steps with Docker
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BEGINNER LEVEL: First Steps with Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-running-your-first-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 1: Running Your First Container
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-running-a-web-server-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 2: Running a Web Server (Nginx)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-managing-containers-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 3: Managing Containers Lifecycle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-4-working-with-docker-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 4: Working with Docker Images
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-5-building-your-first-custom-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 5: Building Your First Custom Image
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-6-interactive-container-with-bash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 6: Interactive Container with Bash
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intermediate-level-working-with-data-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        INTERMEDIATE LEVEL: Working with Data &amp; Networks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="INTERMEDIATE LEVEL: Working with Data &amp; Networks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-7-persistent-data-with-volumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 7: Persistent Data with Volumes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-8-docker-compose-for-multi-container-apps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 8: Docker Compose for Multi-Container Apps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-9-container-networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 9: Container Networking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-10-environment-variables-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 10: Environment Variables &amp; Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-11-debugging-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 11: Debugging &amp; Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-level-production-ready-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADVANCED LEVEL: Production-Ready Docker
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ADVANCED LEVEL: Production-Ready Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-12-multi-stage-builds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 12: Multi-Stage Builds
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-13-docker-registry-image-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 13: Docker Registry &amp; Image Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-14-resource-limits-health-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 14: Resource Limits &amp; Health Checks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-15-security-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 15: Security Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-16-advanced-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 16: Advanced Docker Compose
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-essential-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Reference: Essential Commands
       
     </span>
   </a>
@@ -710,21 +1172,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#building-images" class="md-nav__link">
+  <a href="#pro-tips-for-all-levels" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Building Images
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#running-containers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Running Containers
+        Pro Tips for All Levels
       
     </span>
   </a>
@@ -738,10 +1189,9 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
   
   
   
@@ -766,10 +1216,36 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../helm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Helm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
   
   
   
@@ -794,10 +1270,9 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
   
   
   
@@ -822,10 +1297,9 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
   
   
   
@@ -850,10 +1324,9 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
   
   
   
@@ -878,11 +1351,111 @@
     </li>
   
 
-              
-            
-          </ul>
-        </nav>
+    
       
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jenkins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jenkins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terraform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terraform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ansible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ansible
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aws/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -903,62 +1476,1275 @@
                   
 
 
+  
+  
 
-<h1 id="docker-cheat-sheet">Docker Cheat Sheet</h1>
-<p>Docker allows you to package applications into containers.</p>
-<h2 id="basic-commands">Basic Commands</h2>
+
+<h1 id="docker-complete-master-guide">Docker Complete Master Guide<a class="headerlink" href="#docker-complete-master-guide" title="Permanent link">&para;</a></h1>
+<p>Docker allows you to package applications with all their dependencies into portable containers that run consistently anywhere.</p>
+<hr />
+<h2 id="installation-guide">Installation Guide<a class="headerlink" href="#installation-guide" title="Permanent link">&para;</a></h2>
+<h3 id="windows"><strong>Windows</strong><a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
+<p>Download Docker Desktop from <a href="https://www.docker.com/products/docker-desktop/">docker.com</a> and install. Requires Windows 10 64-bit or later.</p>
+<h3 id="macos"><strong>macOS</strong><a class="headerlink" href="#macos" title="Permanent link">&para;</a></h3>
+<p>Download Docker Desktop from <a href="https://www.docker.com/products/docker-desktop/">docker.com</a> or use Homebrew:
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>docker
+</code></pre></div></p>
+<h3 id="linux-ubuntudebian"><strong>Linux (Ubuntu/Debian)</strong><a class="headerlink" href="#linux-ubuntudebian" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Uninstall old versions</span>
+sudo<span class="w"> </span>apt-get<span class="w"> </span>remove<span class="w"> </span>docker<span class="w"> </span>docker-engine<span class="w"> </span>docker.io<span class="w"> </span>containerd<span class="w"> </span>runc
+
+<span class="c1"># Install using the repository</span>
+sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>ca-certificates<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>curl<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>gnupg<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>lsb-release
+
+<span class="c1"># Add Docker&#39;s official GPG key</span>
+curl<span class="w"> </span>-fsSL<span class="w"> </span>https://download.docker.com/linux/ubuntu/gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>-o<span class="w"> </span>/usr/share/keyrings/docker-archive-keyring.gpg
+
+<span class="c1"># Set up the stable repository</span>
+<span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="s2">&quot;deb [arch=</span><span class="k">$(</span>dpkg<span class="w"> </span>--print-architecture<span class="k">)</span><span class="s2"> signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \</span>
+<span class="s2">  </span><span class="k">$(</span>lsb_release<span class="w"> </span>-cs<span class="k">)</span><span class="s2"> stable&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/docker.list<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+
+<span class="c1"># Install Docker Engine</span>
+sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>docker-ce<span class="w"> </span>docker-ce-cli<span class="w"> </span>containerd.io
+
+<span class="c1"># Start Docker</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>docker
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>docker
+
+<span class="c1"># Add user to docker group (avoid sudo)</span>
+sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="nv">$USER</span>
+newgrp<span class="w"> </span>docker
+</code></pre></div>
+<p>Verify installation:
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>--version
+docker<span class="w"> </span>run<span class="w"> </span>hello-world
+</code></pre></div></p>
+<hr />
+<h2 id="beginner-level-first-steps-with-docker">BEGINNER LEVEL: First Steps with Docker<a class="headerlink" href="#beginner-level-first-steps-with-docker" title="Permanent link">&para;</a></h2>
+<h3 id="scenario-1-running-your-first-container"><strong>Scenario 1: Running Your First Container</strong><a class="headerlink" href="#scenario-1-running-your-first-container" title="Permanent link">&para;</a></h3>
+<p><em>Starting with the classic hello-world example</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User as You
+    participant Docker as Docker Engine
+    participant Hub as Docker Hub
+    participant Container as Hello Container
+    User-&gt;&gt;Docker: docker run hello-world
+    Docker-&gt;&gt;Hub: Check for image locally
+    alt Image Not Found
+        Docker-&gt;&gt;Hub: Pull hello-world:latest
+        Hub--&gt;&gt;Docker: Download image layers
+    end
+    Docker-&gt;&gt;Container: Create &amp; start container
+    Container--&gt;&gt;User: Print hello message
+    Container-&gt;&gt;Container: Exit (container stops)</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Run the hello-world container</span>
+docker<span class="w"> </span>run<span class="w"> </span>hello-world
+
+<span class="c1"># Expected output:</span>
+<span class="c1"># Hello from Docker!</span>
+<span class="c1"># This message shows that your installation appears to be working correctly.</span>
+
+<span class="c1"># Check if container is still running (it should be stopped)</span>
+docker<span class="w"> </span>ps
+
+<span class="c1"># See all containers including stopped ones</span>
+docker<span class="w"> </span>ps<span class="w"> </span>-a
+
+<span class="c1"># Clean up the stopped container</span>
+docker<span class="w"> </span>container<span class="w"> </span>prune
+</code></pre></div></p>
+<hr />
+<h3 id="scenario-2-running-a-web-server-nginx"><strong>Scenario 2: Running a Web Server (Nginx)</strong><a class="headerlink" href="#scenario-2-running-a-web-server-nginx" title="Permanent link">&para;</a></h3>
+<p><em>Hosting a website in seconds</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User as You
+    participant Docker as Docker Engine
+    participant Hub as Docker Hub
+    participant Nginx as Nginx Container
+    participant Browser as Web Browser
+    User-&gt;&gt;Docker: docker run -d -p 8080:80 nginx
+    Docker-&gt;&gt;Hub: Pull nginx image
+    Hub--&gt;&gt;Docker: Image ready
+    Docker-&gt;&gt;Nginx: Start container in background
+    Nginx--&gt;&gt;Nginx: Listen on port 80
+    Browser-&gt;&gt;User: Visit http://localhost:8080
+    User-&gt;&gt;Browser: http://localhost:8080
+    Browser-&gt;&gt;Nginx: Request on port 8080
+    Nginx--&gt;&gt;Browser: Serve welcome page</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Run nginx in detached mode (-d) with port mapping</span>
+docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:80<span class="w"> </span>--name<span class="w"> </span>my-nginx<span class="w"> </span>nginx
+
+<span class="c1"># Check running containers</span>
+docker<span class="w"> </span>ps
+
+<span class="c1"># Visit http://localhost:8080 in your browser</span>
+<span class="c1"># You&#39;ll see the &quot;Welcome to nginx!&quot; page</span>
+
+<span class="c1"># View real-time logs</span>
+docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>my-nginx
+
+<span class="c1"># Stop the container</span>
+docker<span class="w"> </span>stop<span class="w"> </span>my-nginx
+
+<span class="c1"># Remove the container</span>
+docker<span class="w"> </span>rm<span class="w"> </span>my-nginx
+</code></pre></div></p>
+<hr />
+<h3 id="scenario-3-managing-containers-lifecycle"><strong>Scenario 3: Managing Containers Lifecycle</strong><a class="headerlink" href="#scenario-3-managing-containers-lifecycle" title="Permanent link">&para;</a></h3>
+<p><em>Everything you need to know about container operations</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User as Developer
+    participant Docker as Docker Engine
+    participant C1 as Container 1
+    participant C2 as Container 2
+    participant C3 as Container 3
+    User-&gt;&gt;Docker: docker run -d --name web nginx
+    Docker-&gt;&gt;C1: Create &amp; start web container
+    User-&gt;&gt;Docker: docker run -d --name db redis
+    Docker-&gt;&gt;C2: Create &amp; start db container
+    User-&gt;&gt;Docker: docker ps
+    Docker--&gt;&gt;User: List running containers
+    User-&gt;&gt;Docker: docker stop web
+    Docker-&gt;&gt;C1: Stop web container
+    User-&gt;&gt;Docker: docker ps -a
+    Docker--&gt;&gt;User: Show stopped containers
+    User-&gt;&gt;Docker: docker rm web
+    Docker-&gt;&gt;C1: Remove web container
+    User-&gt;&gt;Docker: docker container prune
+    Docker-&gt;&gt;C3: Remove ALL stopped containers</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Start multiple containers</span>
+docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>web-server<span class="w"> </span>nginx
+docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>database<span class="w"> </span>redis
+
+<span class="c1"># List only running containers</span>
+docker<span class="w"> </span>ps
+<span class="c1"># OR</span>
+docker<span class="w"> </span>container<span class="w"> </span>ls
+
+<span class="c1"># List all containers (running + stopped)</span>
+docker<span class="w"> </span>ps<span class="w"> </span>-a
+
+<span class="c1"># Stop a specific container</span>
+docker<span class="w"> </span>stop<span class="w"> </span>web-server
+
+<span class="c1"># Stop multiple containers</span>
+docker<span class="w"> </span>stop<span class="w"> </span>web-server<span class="w"> </span>database
+
+<span class="c1"># Remove a stopped container</span>
+docker<span class="w"> </span>rm<span class="w"> </span>web-server
+
+<span class="c1"># Force remove a running container</span>
+docker<span class="w"> </span>rm<span class="w"> </span>-f<span class="w"> </span>database
+
+<span class="c1"># Remove all stopped containers</span>
+docker<span class="w"> </span>container<span class="w"> </span>prune
+
+<span class="c1"># Remove everything (containers, networks, volumes)</span>
+docker<span class="w"> </span>system<span class="w"> </span>prune<span class="w"> </span>-a
+</code></pre></div></p>
+<hr />
+<h3 id="scenario-4-working-with-docker-images"><strong>Scenario 4: Working with Docker Images</strong><a class="headerlink" href="#scenario-4-working-with-docker-images" title="Permanent link">&para;</a></h3>
+<p><em>Building blocks of containers</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User as Developer
+    participant Docker as Docker Engine
+    participant Hub as Docker Hub
+    participant Img as Local Images
+    User-&gt;&gt;Docker: docker pull ubuntu:20.04
+    Docker-&gt;&gt;Hub: Download ubuntu image
+    Hub--&gt;&gt;Img: Store locally
+    User-&gt;&gt;Docker: docker images
+    Docker--&gt;&gt;User: List all local images
+    User-&gt;&gt;Docker: docker run ubuntu:20.04 echo "Hello"
+    Docker-&gt;&gt;Img: Create container from image
+    Img--&gt;&gt;User: Execute command
+    User-&gt;&gt;Docker: docker rmi ubuntu:20.04
+    Docker-&gt;&gt;Img: Remove image</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Pull an image from Docker Hub</span>
+docker<span class="w"> </span>pull<span class="w"> </span>ubuntu:20.04
+
+<span class="c1"># List all local images</span>
+docker<span class="w"> </span>images
+<span class="c1"># OR</span>
+docker<span class="w"> </span>image<span class="w"> </span>ls
+
+<span class="c1"># Run a command in a new container</span>
+docker<span class="w"> </span>run<span class="w"> </span>ubuntu:20.04<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello from Ubuntu!&quot;</span>
+
+<span class="c1"># Check available tags for an image</span>
+docker<span class="w"> </span>search<span class="w"> </span>nginx
+
+<span class="c1"># Remove an image</span>
+docker<span class="w"> </span>rmi<span class="w"> </span>ubuntu:20.04
+
+<span class="c1"># Remove all unused images</span>
+docker<span class="w"> </span>image<span class="w"> </span>prune<span class="w"> </span>-a
+
+<span class="c1"># Tag an image for custom naming</span>
+docker<span class="w"> </span>tag<span class="w"> </span>nginx<span class="w"> </span>my-registry/nginx:v1.0
+</code></pre></div></p>
+<hr />
+<h3 id="scenario-5-building-your-first-custom-image"><strong>Scenario 5: Building Your First Custom Image</strong><a class="headerlink" href="#scenario-5-building-your-first-custom-image" title="Permanent link">&para;</a></h3>
+<p><em>Creating a Docker image for your application</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User as Developer
+    participant Dir as Project Directory
+    participant Dockerfile as Dockerfile
+    participant Docker as Docker Engine
+    participant Img as Built Image
+    User-&gt;&gt;Dir: Create project folder
+    User-&gt;&gt;Dir: Add application files
+    User-&gt;&gt;Dir: Create Dockerfile
+    Dir-&gt;&gt;Dockerfile: Define build instructions
+    User-&gt;&gt;Docker: docker build -t my-app .
+    Docker-&gt;&gt;Dockerfile: Read instructions
+    loop For each step
+        Dockerfile-&gt;&gt;Docker: Execute command
+        Docker-&gt;&gt;Img: Create layer
+    end
+    Img--&gt;&gt;User: Image built successfully!</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create project directory</span>
+mkdir<span class="w"> </span>my-docker-app<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>my-docker-app
+
+<span class="c1"># Create a simple Python app</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>app.py<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">from flask import Flask</span>
+<span class="s">app = Flask(__name__)</span>
+
+<span class="s">@app.route(&#39;/&#39;)</span>
+<span class="s">def hello():</span>
+<span class="s">    return &quot;Hello from Docker!&quot;</span>
+
+<span class="s">if __name__ == &#39;__main__&#39;:</span>
+<span class="s">    app.run(host=&#39;0.0.0.0&#39;, port=5000)</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Create requirements.txt</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;flask==2.3.2&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>requirements.txt
+
+<span class="c1"># Create Dockerfile</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>Dockerfile<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s"># Use Python 3.11 as base image</span>
+<span class="s">FROM python:3.11-slim</span>
+
+<span class="s"># Set working directory in container</span>
+<span class="s">WORKDIR /app</span>
+
+<span class="s"># Copy requirements file</span>
+<span class="s">COPY requirements.txt .</span>
+
+<span class="s"># Install Python dependencies</span>
+<span class="s">RUN pip install --no-cache-dir -r requirements.txt</span>
+
+<span class="s"># Copy application code</span>
+<span class="s">COPY app.py .</span>
+
+<span class="s"># Expose port 5000</span>
+<span class="s">EXPOSE 5000</span>
+
+<span class="s"># Command to run the app</span>
+<span class="s">CMD [&quot;python&quot;, &quot;app.py&quot;]</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Build the Docker image</span>
+docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>my-flask-app:v1<span class="w"> </span>.
+
+<span class="c1"># Verify image is built</span>
+docker<span class="w"> </span>images
+
+<span class="c1"># Run the container</span>
+docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">5000</span>:5000<span class="w"> </span>--name<span class="w"> </span>flask-app<span class="w"> </span>my-flask-app:v1
+
+<span class="c1"># Test it: curl http://localhost:5000 or visit in browser</span>
+</code></pre></div></p>
+<hr />
+<h3 id="scenario-6-interactive-container-with-bash"><strong>Scenario 6: Interactive Container with Bash</strong><a class="headerlink" href="#scenario-6-interactive-container-with-bash" title="Permanent link">&para;</a></h3>
+<p><em>Getting inside a running container</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User as Developer
+    participant Docker as Docker Engine
+    participant Container as Ubuntu Container
+    participant Bash as Bash Shell
+    User-&gt;&gt;Docker: docker run -it ubuntu bash
+    Docker-&gt;&gt;Container: Start container
+    Container-&gt;&gt;Bash: Launch interactive bash
+    Bash--&gt;&gt;User: root@container-id:/
+    User-&gt;&gt;Bash: ls, apt update, etc
+    Bash--&gt;&gt;User: Command output
+    User-&gt;&gt;Bash: exit
+    Bash-&gt;&gt;Container: Stop container</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Run Ubuntu container interactively with terminal</span>
+docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>ubuntu<span class="w"> </span>bash
+
+<span class="c1"># Inside container:</span>
+<span class="c1"># root@123456789abc:/# ls</span>
+<span class="c1"># root@123456789abc:/# apt update</span>
+<span class="c1"># root@123456789abc:/# apt install -y curl</span>
+<span class="c1"># root@123456789abc:/# exit</span>
+
+<span class="c1"># Run container in background first, then exec into it</span>
+docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>my-ubuntu<span class="w"> </span>ubuntu<span class="w"> </span>sleep<span class="w"> </span>infinity
+
+<span class="c1"># Execute bash in running container</span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>my-ubuntu<span class="w"> </span>bash
+
+<span class="c1"># View container processes</span>
+docker<span class="w"> </span>top<span class="w"> </span>my-ubuntu
+
+<span class="c1"># Copy files from host to container</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>test.txt
+docker<span class="w"> </span>cp<span class="w"> </span>test.txt<span class="w"> </span>my-ubuntu:/app/
+
+<span class="c1"># Copy files from container to host</span>
+docker<span class="w"> </span>cp<span class="w"> </span>my-ubuntu:/etc/hosts<span class="w"> </span>./hosts-backup
+
+<span class="c1"># Clean up</span>
+docker<span class="w"> </span>stop<span class="w"> </span>my-ubuntu<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>docker<span class="w"> </span>rm<span class="w"> </span>my-ubuntu
+</code></pre></div></p>
+<hr />
+<h2 id="intermediate-level-working-with-data-networks">INTERMEDIATE LEVEL: Working with Data &amp; Networks<a class="headerlink" href="#intermediate-level-working-with-data-networks" title="Permanent link">&para;</a></h2>
+<h3 id="scenario-7-persistent-data-with-volumes"><strong>Scenario 7: Persistent Data with Volumes</strong><a class="headerlink" href="#scenario-7-persistent-data-with-volumes" title="Permanent link">&para;</a></h3>
+<p><em>Storing data that survives container restarts</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User as Developer
+    participant Docker as Docker Engine
+    participant Nginx as Nginx Container
+    participant Vol as Volume
+    participant Host as Host Directory
+    User-&gt;&gt;Docker: Create volume
+    Docker-&gt;&gt;Vol: Create named volume
+    User-&gt;&gt;Docker: Run container with volume
+    Docker-&gt;&gt;Nginx: Mount volume to /usr/share/nginx/html
+    User-&gt;&gt;Host: Add index.html to volume
+    Host-&gt;&gt;Vol: Store file persistently
+    User-&gt;&gt;Nginx: Restart container
+    Nginx-&gt;&gt;Vol: Read persisted data
+    Vol--&gt;&gt;Nginx: index.html available</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create a named volume</span>
+docker<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>my-static-files
+
+<span class="c1"># Inspect the volume</span>
+docker<span class="w"> </span>volume<span class="w"> </span>inspect<span class="w"> </span>my-static-files
+
+<span class="c1"># Run nginx with volume mounted</span>
+docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:80<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span>web-with-volume<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-v<span class="w"> </span>my-static-files:/usr/share/nginx/html<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>nginx
+
+<span class="c1"># Create a custom HTML file in the volume</span>
+<span class="c1"># Method 1: Use a temporary container</span>
+docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-v<span class="w"> </span>my-static-files:/data<span class="w"> </span>ubuntu<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;echo &#39;&lt;h1&gt;Hello from Volume!&lt;/h1&gt;&#39; &gt; /data/index.html&quot;</span>
+
+<span class="c1"># Method 2: Copy file directly</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;&lt;h1&gt;Direct Copy&lt;/h1&gt;&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>index.html
+docker<span class="w"> </span>cp<span class="w"> </span>index.html<span class="w"> </span>web-with-volume:/usr/share/nginx/html/
+
+<span class="c1"># Restart container to serve new content</span>
+docker<span class="w"> </span>restart<span class="w"> </span>web-with-volume
+
+<span class="c1"># View in browser: http://localhost:8080</span>
+
+<span class="c1"># Use bind mount (host directory)</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>~/docker-html
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;&lt;h1&gt;Host Directory&lt;/h1&gt;&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>~/docker-html/index.html
+
+docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">9090</span>:80<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span>web-bind-mount<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-v<span class="w"> </span>~/docker-html:/usr/share/nginx/html<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>nginx
+
+<span class="c1"># Clean up</span>
+docker<span class="w"> </span>stop<span class="w"> </span>web-with-volume<span class="w"> </span>web-bind-mount
+docker<span class="w"> </span>rm<span class="w"> </span>web-with-volume<span class="w"> </span>web-bind-mount
+docker<span class="w"> </span>volume<span class="w"> </span>rm<span class="w"> </span>my-static-files
+</code></pre></div></p>
+<hr />
+<h3 id="scenario-8-docker-compose-for-multi-container-apps"><strong>Scenario 8: Docker Compose for Multi-Container Apps</strong><a class="headerlink" href="#scenario-8-docker-compose-for-multi-container-apps" title="Permanent link">&para;</a></h3>
+<p><em>Running WordPress with MySQL using one command</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User as Developer
+    participant Compose as Docker Compose
+    participant Docker as Docker Engine
+    participant WP as WordPress Container
+    participant DB as MySQL Container
+    participant Vol as Database Volume
+    User-&gt;&gt;Compose: docker-compose up -d
+    Compose-&gt;&gt;Docker: Parse docker-compose.yml
+    Docker-&gt;&gt;Vol: Create volume for DB
+    Docker-&gt;&gt;DB: Start MySQL container
+    DB-&gt;&gt;DB: Initialize database
+    Docker-&gt;&gt;WP: Start WordPress container
+    WP-&gt;&gt;DB: Connect on port 3306
+    DB--&gt;&gt;WP: Connection successful
+    WP--&gt;&gt;User: WordPress ready at :8000</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create project directory</span>
+mkdir<span class="w"> </span>wordpress-app<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>wordpress-app
+
+<span class="c1"># Create docker-compose.yml</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>docker-compose.yml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">version: &#39;3.8&#39;</span>
+
+<span class="s">services:</span>
+<span class="s">  db:</span>
+<span class="s">    image: mysql:8.0</span>
+<span class="s">    container_name: wordpress-db</span>
+<span class="s">    environment:</span>
+<span class="s">      MYSQL_ROOT_PASSWORD: rootpassword123</span>
+<span class="s">      MYSQL_DATABASE: wordpress</span>
+<span class="s">      MYSQL_USER: wordpress</span>
+<span class="s">      MYSQL_PASSWORD: wordpresspass</span>
+<span class="s">    volumes:</span>
+<span class="s">      - db_data:/var/lib/mysql</span>
+<span class="s">    ports:</span>
+<span class="s">      - &quot;3306:3306&quot;</span>
+<span class="s">    restart: unless-stopped</span>
+
+<span class="s">  wordpress:</span>
+<span class="s">    image: wordpress:latest</span>
+<span class="s">    container_name: wordpress-app</span>
+<span class="s">    depends_on:</span>
+<span class="s">      - db</span>
+<span class="s">    environment:</span>
+<span class="s">      WORDPRESS_DB_HOST: db:3306</span>
+<span class="s">      WORDPRESS_DB_USER: wordpress</span>
+<span class="s">      WORDPRESS_DB_PASSWORD: wordpresspass</span>
+<span class="s">      WORDPRESS_DB_NAME: wordpress</span>
+<span class="s">    ports:</span>
+<span class="s">      - &quot;8000:80&quot;</span>
+<span class="s">    restart: unless-stopped</span>
+
+<span class="s">volumes:</span>
+<span class="s">  db_data:</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Start all services in background</span>
+docker-compose<span class="w"> </span>up<span class="w"> </span>-d
+
+<span class="c1"># View logs</span>
+docker-compose<span class="w"> </span>logs<span class="w"> </span>-f
+
+<span class="c1"># List running containers</span>
+docker-compose<span class="w"> </span>ps
+
+<span class="c1"># Stop all services</span>
+docker-compose<span class="w"> </span>down
+
+<span class="c1"># Stop and remove volumes (WARNING: data loss!)</span>
+docker-compose<span class="w"> </span>down<span class="w"> </span>-v
+
+<span class="c1"># Scale WordPress instances (requires load balancer)</span>
+docker-compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--scale<span class="w"> </span><span class="nv">wordpress</span><span class="o">=</span><span class="m">3</span>
+</code></pre></div></p>
+<hr />
+<h3 id="scenario-9-container-networking"><strong>Scenario 9: Container Networking</strong><a class="headerlink" href="#scenario-9-container-networking" title="Permanent link">&para;</a></h3>
+<p><em>Connecting containers without exposing ports</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User as Developer
+    participant Docker as Docker Engine
+    participant Net as Custom Network
+    participant API as API Container
+    participant DB as Database Container
+    participant Web as Web Frontend
+    User-&gt;&gt;Docker: docker network create my-app
+    Docker-&gt;&gt;Net: Create bridge network
+    User-&gt;&gt;API: Run container on network
+    API-&gt;&gt;Net: Connect to my-app
+    User-&gt;&gt;DB: Run container on network
+    DB-&gt;&gt;Net: Connect to my-app
+    API-&gt;&gt;DB: Connect via "db:5432"
+    DB--&gt;&gt;API: Internal communication
+    User-&gt;&gt;Web: Run with exposed ports
+    Web-&gt;&gt;Net: Connect to my-app
+    Web-&gt;&gt;API: Connect via "api:3000"
+    User-&gt;&gt;User: Only web ports exposed</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create a custom bridge network</span>
+docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>my-app-network
+
+<span class="c1"># Inspect the network</span>
+docker<span class="w"> </span>network<span class="w"> </span>inspect<span class="w"> </span>my-app-network
+
+<span class="c1"># Run PostgreSQL on the network (not exposed to host)</span>
+docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span>database<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--network<span class="w"> </span>my-app-network<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">POSTGRES_PASSWORD</span><span class="o">=</span>secret<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>postgres:15
+
+<span class="c1"># Run API that connects to database</span>
+docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span>api-server<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--network<span class="w"> </span>my-app-network<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">DB_HOST</span><span class="o">=</span>database<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">DB_PASSWORD</span><span class="o">=</span>secret<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>node-api-app
+
+<span class="c1"># Run web frontend with port exposed</span>
+docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span>web-frontend<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--network<span class="w"> </span>my-app-network<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-p<span class="w"> </span><span class="m">3000</span>:3000<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>react-app
+
+<span class="c1"># Test connectivity from within network</span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>api-server<span class="w"> </span>bash
+<span class="c1"># Inside api-server container:</span>
+<span class="c1"># ping database</span>
+<span class="c1"># curl http://api-server:3000</span>
+
+<span class="c1"># List networks</span>
+docker<span class="w"> </span>network<span class="w"> </span>ls
+
+<span class="c1"># Disconnect container from network</span>
+docker<span class="w"> </span>network<span class="w"> </span>disconnect<span class="w"> </span>my-app-network<span class="w"> </span>api-server
+
+<span class="c1"># Connect container to network</span>
+docker<span class="w"> </span>network<span class="w"> </span>connect<span class="w"> </span>my-app-network<span class="w"> </span>api-server
+
+<span class="c1"># Clean up</span>
+docker<span class="w"> </span>stop<span class="w"> </span>web-frontend<span class="w"> </span>api-server<span class="w"> </span>database
+docker<span class="w"> </span>rm<span class="w"> </span>web-frontend<span class="w"> </span>api-server<span class="w"> </span>database
+docker<span class="w"> </span>network<span class="w"> </span>rm<span class="w"> </span>my-app-network
+</code></pre></div></p>
+<hr />
+<h3 id="scenario-10-environment-variables-configuration"><strong>Scenario 10: Environment Variables &amp; Configuration</strong><a class="headerlink" href="#scenario-10-environment-variables-configuration" title="Permanent link">&para;</a></h3>
+<p><em>Configuring containers without hardcoding</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User as Developer
+    participant Docker as Docker Engine
+    participant Env as Environment Variables
+    participant App as Application
+    participant File as .env File
+    User-&gt;&gt;File: Create .env file
+    File-&gt;&gt;Env: Store key=value pairs
+    User-&gt;&gt;Docker: docker run --env-file .env app
+    Docker-&gt;&gt;Env: Load variables
+    Env-&gt;&gt;App: Inject into container
+    App-&gt;&gt;App: Use API_KEY, DB_HOST, etc
+    App--&gt;&gt;User: Configured app running
+    Note over App: No secrets in image!</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create .env file</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>.env<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">APP_ENV=production</span>
+<span class="s">API_KEY=sk-1234567890abcdef</span>
+<span class="s">DB_HOST=postgres.example.com</span>
+<span class="s">DB_PORT=5432</span>
+<span class="s">DEBUG=false</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Run container with env file</span>
+docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span>config-app<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--env-file<span class="w"> </span>.env<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-p<span class="w"> </span><span class="m">5000</span>:5000<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>my-python-app
+
+<span class="c1"># Override specific environment variable</span>
+docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span>dev-app<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--env-file<span class="w"> </span>.env<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">APP_ENV</span><span class="o">=</span>development<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">DEBUG</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-p<span class="w"> </span><span class="m">5001</span>:5000<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>my-python-app
+
+<span class="c1"># View container environment variables</span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>config-app<span class="w"> </span>env
+
+<span class="c1"># Pass secrets securely (not in command history)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;supersecretpassword&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-i<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span>secure-app<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">DB_PASSWORD</span><span class="o">=</span>stdin<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>my-app
+
+<span class="c1"># Use Docker secrets (swarm mode)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;my_secret&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>docker<span class="w"> </span>secret<span class="w"> </span>create<span class="w"> </span>db_password<span class="w"> </span>-
+docker<span class="w"> </span>service<span class="w"> </span>create<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--secret<span class="w"> </span>db_password<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span>app<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>my-app
+</code></pre></div></p>
+<hr />
+<h3 id="scenario-11-debugging-monitoring"><strong>Scenario 11: Debugging &amp; Monitoring</strong><a class="headerlink" href="#scenario-11-debugging-monitoring" title="Permanent link">&para;</a></h3>
+<p><em>Inspecting running containers</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User as Developer
+    participant Docker as Docker Engine
+    participant Container as Running App
+    participant Logs as Container Logs
+    participant FS as Container Filesystem
+    participant Proc as Container Processes
+    User-&gt;&gt;Docker: docker logs -f container
+    Docker-&gt;&gt;Logs: Stream logs
+    Logs--&gt;&gt;User: Real-time output
+    User-&gt;&gt;Docker: docker exec -it container sh
+    Docker-&gt;&gt;Container: Open shell
+    Container-&gt;&gt;FS: Access filesystem
+    FS--&gt;&gt;User: Inspect files
+    User-&gt;&gt;Docker: docker top container
+    Docker-&gt;&gt;Proc: List processes
+    Proc--&gt;&gt;User: PID, CPU, Memory
+    User-&gt;&gt;Docker: docker stats
+    Docker--&gt;&gt;User: Live resource usage</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Run a problematic container</span>
+docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>buggy-app<span class="w"> </span>node-app
+
+<span class="c1"># View all logs</span>
+docker<span class="w"> </span>logs<span class="w"> </span>buggy-app
+
+<span class="c1"># Follow logs in real-time (like tail -f)</span>
+docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>buggy-app
+
+<span class="c1"># Show last 50 lines of logs</span>
+docker<span class="w"> </span>logs<span class="w"> </span>--tail<span class="w"> </span><span class="m">50</span><span class="w"> </span>buggy-app
+
+<span class="c1"># Show logs with timestamps</span>
+docker<span class="w"> </span>logs<span class="w"> </span>-t<span class="w"> </span>buggy-app
+
+<span class="c1"># Get inside running container</span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>buggy-app<span class="w"> </span>sh
+<span class="c1"># Or if bash is available:</span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>buggy-app<span class="w"> </span>bash
+
+<span class="c1"># Inside container:</span>
+<span class="c1"># ps aux</span>
+<span class="c1"># cat /app/logs/error.log</span>
+<span class="c1"># exit</span>
+
+<span class="c1"># View running processes</span>
+docker<span class="w"> </span>top<span class="w"> </span>buggy-app
+
+<span class="c1"># View resource usage (live)</span>
+docker<span class="w"> </span>stats<span class="w"> </span>buggy-app
+
+<span class="c1"># Inspect container details (IP, mounts, config)</span>
+docker<span class="w"> </span>inspect<span class="w"> </span>buggy-app
+
+<span class="c1"># Copy a file from container for analysis</span>
+docker<span class="w"> </span>cp<span class="w"> </span>buggy-app:/app/debug.log<span class="w"> </span>./debug.log
+
+<span class="c1"># Health check in Dockerfile</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>Dockerfile<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">FROM nginx</span>
+<span class="s">HEALTHCHECK --interval=30s --timeout=3s \</span>
+<span class="s">  CMD curl -f http://localhost/ || exit 1</span>
+<span class="s">EOF</span>
+</code></pre></div></p>
+<hr />
+<h2 id="advanced-level-production-ready-docker">ADVANCED LEVEL: Production-Ready Docker<a class="headerlink" href="#advanced-level-production-ready-docker" title="Permanent link">&para;</a></h2>
+<h3 id="scenario-12-multi-stage-builds"><strong>Scenario 12: Multi-Stage Builds</strong><a class="headerlink" href="#scenario-12-multi-stage-builds" title="Permanent link">&para;</a></h3>
+<p><em>Optimizing image size for production</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User as Developer
+    participant Build as Build Stage
+    participant Base as Base Image
+    participant App as Application Code
+    participant Final as Final Stage
+    participant Prod as Production Image
+    User-&gt;&gt;Build: FROM node:18 AS builder
+    Build-&gt;&gt;Base: Install all dependencies
+    Base-&gt;&gt;App: Copy source code
+    App-&gt;&gt;Build: Run npm run build
+    Build-&gt;&gt;Build: Generate dist/ folder
+    User-&gt;&gt;Final: FROM node:18-alpine
+    Final-&gt;&gt;Prod: Only copy dist/ from builder
+    Prod-&gt;&gt;Prod: Install only production deps
+    Prod--&gt;&gt;User: Tiny final image (no dev tools)
+    Note over Prod: 500MB → 50MB</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create optimized Node.js Dockerfile</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>Dockerfile<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s"># STAGE 1: Build environment</span>
+<span class="s">FROM node:18 AS builder</span>
+
+<span class="s">WORKDIR /app</span>
+
+<span class="s"># Copy dependency files</span>
+<span class="s">COPY package*.json ./</span>
+
+<span class="s"># Install ALL dependencies (including dev)</span>
+<span class="s">RUN npm ci</span>
+
+<span class="s"># Copy source code</span>
+<span class="s">COPY . .</span>
+
+<span class="s"># Build the application</span>
+<span class="s">RUN npm run build</span>
+
+<span class="s"># Remove dev dependencies</span>
+<span class="s">RUN npm prune --production</span>
+
+<span class="s"># STAGE 2: Production environment</span>
+<span class="s">FROM node:18-alpine</span>
+
+<span class="s"># Create non-root user</span>
+<span class="s">RUN addgroup -g 1001 -S nodejs</span>
+<span class="s">RUN adduser -S nodeuser -u 1001</span>
+
+<span class="s">WORKDIR /app</span>
+
+<span class="s"># Copy only necessary files from builder stage</span>
+<span class="s">COPY --from=builder --chown=nodeuser:nodejs /app/dist ./dist</span>
+<span class="s">COPY --from=builder --chown=nodeuser:nodejs /app/node_modules ./node_modules</span>
+<span class="s">COPY --from=builder --chown=nodeuser:nodejs /app/package.json ./</span>
+
+<span class="s"># Switch to non-root user</span>
+<span class="s">USER nodeuser</span>
+
+<span class="s"># Expose port</span>
+<span class="s">EXPOSE 3000</span>
+
+<span class="s"># Start application</span>
+<span class="s">CMD [&quot;node&quot;, &quot;dist/index.js&quot;]</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Build the multi-stage image</span>
+docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>my-app:multi-stage<span class="w"> </span>.
+
+<span class="c1"># Compare image sizes</span>
+docker<span class="w"> </span>images<span class="w"> </span>my-app:multi-stage
+
+<span class="c1"># Build without multi-stage for comparison</span>
+<span class="c1"># (Create simple Dockerfile and build)</span>
+docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>my-app:simple<span class="w"> </span>-f<span class="w"> </span>Dockerfile.simple<span class="w"> </span>.
+
+<span class="c1"># Push to registry</span>
+docker<span class="w"> </span>tag<span class="w"> </span>my-app:multi-stage<span class="w"> </span>myregistry.com/my-app:latest
+docker<span class="w"> </span>push<span class="w"> </span>myregistry.com/my-app:latest
+</code></pre></div></p>
+<hr />
+<h3 id="scenario-13-docker-registry-image-management"><strong>Scenario 13: Docker Registry &amp; Image Management</strong><a class="headerlink" href="#scenario-13-docker-registry-image-management" title="Permanent link">&para;</a></h3>
+<p><em>Storing and sharing images</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User as Developer
+    participant Local as Local Image
+    participant Registry as Docker Registry
+    participant Team as Team Members
+    User-&gt;&gt;Local: docker build -t my-app .
+    Local-&gt;&gt;User: Image built
+    User-&gt;&gt;Registry: docker login
+    Registry--&gt;&gt;User: Authentication successful
+    User-&gt;&gt;Local: docker tag my-app registry.com/my-app:v1
+    User-&gt;&gt;Registry: docker push registry.com/my-app:v1
+    Registry-&gt;&gt;Registry: Store image layers
+    Team-&gt;&gt;Registry: docker pull registry.com/my-app:v1
+    Registry--&gt;&gt;Team: Download image
+    Team-&gt;&gt;Team: Run container locally</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tag your image for registry</span>
+docker<span class="w"> </span>tag<span class="w"> </span>my-flask-app:v1<span class="w"> </span>your-registry.com/my-flask-app:v1
+
+<span class="c1"># Login to registry (Docker Hub)</span>
+docker<span class="w"> </span>login
+
+<span class="c1"># Or login to private registry</span>
+docker<span class="w"> </span>login<span class="w"> </span>your-registry.com
+
+<span class="c1"># Push image</span>
+docker<span class="w"> </span>push<span class="w"> </span>your-registry.com/my-flask-app:v1
+
+<span class="c1"># Pull image on another machine</span>
+docker<span class="w"> </span>pull<span class="w"> </span>your-registry.com/my-flask-app:v1
+
+<span class="c1"># List all images</span>
+docker<span class="w"> </span>images
+
+<span class="c1"># Remove dangling (untagged) images</span>
+docker<span class="w"> </span>image<span class="w"> </span>prune
+
+<span class="c1"># Save image to tar file (offline transfer)</span>
+docker<span class="w"> </span>save<span class="w"> </span>-o<span class="w"> </span>my-app.tar<span class="w"> </span>your-registry.com/my-flask-app:v1
+
+<span class="c1"># Load image from tar file</span>
+docker<span class="w"> </span>load<span class="w"> </span>-i<span class="w"> </span>my-app.tar
+
+<span class="c1"># Scan image for vulnerabilities</span>
+docker<span class="w"> </span>scan<span class="w"> </span>your-registry.com/my-flask-app:v1
+
+<span class="c1"># Tag with semantic versioning</span>
+docker<span class="w"> </span>tag<span class="w"> </span>my-app:v1<span class="w"> </span>your-registry.com/my-app:1.0.0
+docker<span class="w"> </span>tag<span class="w"> </span>my-app:v1<span class="w"> </span>your-registry.com/my-app:latest
+
+<span class="c1"># Push all tags</span>
+docker<span class="w"> </span>push<span class="w"> </span>your-registry.com/my-app<span class="w"> </span>--all-tags
+</code></pre></div></p>
+<hr />
+<h3 id="scenario-14-resource-limits-health-checks"><strong>Scenario 14: Resource Limits &amp; Health Checks</strong><a class="headerlink" href="#scenario-14-resource-limits-health-checks" title="Permanent link">&para;</a></h3>
+<p><em>Production-ready container configuration</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User as DevOps
+    participant Docker as Docker Engine
+    participant Container as App Container
+    participant Host as Host System
+    participant HC as Health Check
+    User-&gt;&gt;Docker: docker run --memory=512m --cpus=1
+    Docker-&gt;&gt;Container: Set resource limits
+    Container-&gt;&gt;Host: Use max 512MB RAM, 1 CPU
+    loop Every 30 seconds
+        Docker-&gt;&gt;HC: Execute health check
+        HC-&gt;&gt;Container: curl http://localhost/
+        alt HTTP 200
+            Container--&gt;&gt;HC: Healthy
+        else HTTP 500 or timeout
+            Container--&gt;&gt;HC: Unhealthy
+            HC-&gt;&gt;Docker: Mark container unhealthy
+        end
+    end
+    Docker-&gt;&gt;User: Restart if unhealthy</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Run container with resource limits</span>
+docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span>production-app<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--memory<span class="o">=</span>512m<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--memory-swap<span class="o">=</span>1g<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--cpus<span class="o">=</span><span class="m">1</span>.0<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--cpu-shares<span class="o">=</span><span class="m">1024</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-p<span class="w"> </span><span class="m">3000</span>:3000<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>my-node-app
+
+<span class="c1"># Set hard memory limit (kill if exceeded)</span>
+docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span>strict-app<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--memory<span class="o">=</span>256m<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--memory-swap<span class="o">=</span>256m<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>my-app
+
+<span class="c1"># Add health check to Dockerfile</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>Dockerfile<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">FROM node:18-alpine</span>
+
+<span class="s">WORKDIR /app</span>
+<span class="s">COPY package*.json ./</span>
+<span class="s">RUN npm ci --only=production</span>
+<span class="s">COPY . .</span>
+
+<span class="s">EXPOSE 3000</span>
+
+<span class="s"># Health check every 30s, timeout 10s, start after 5s</span>
+<span class="s">HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \</span>
+<span class="s">  CMD curl -f http://localhost:3000/health || exit 1</span>
+
+<span class="s">CMD [&quot;node&quot;, &quot;server.js&quot;]</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Run with restart policy</span>
+docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span>auto-restart-app<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--restart<span class="w"> </span>unless-stopped<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-p<span class="w"> </span><span class="m">3000</span>:3000<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>my-node-app
+
+<span class="c1"># Restart policies:</span>
+<span class="c1"># no: never restart (default)</span>
+<span class="c1"># on-failure: restart on non-zero exit</span>
+<span class="c1"># always: always restart</span>
+<span class="c1"># unless-stopped: restart unless manually stopped</span>
+
+<span class="c1"># View health status</span>
+docker<span class="w"> </span>ps
+<span class="c1"># HEALTH STATUS column shows: healthy/unhealthy/starting</span>
+
+<span class="c1"># Check detailed health info</span>
+docker<span class="w"> </span>inspect<span class="w"> </span>--format<span class="o">=</span><span class="s1">&#39;{{json .State.Health}}&#39;</span><span class="w"> </span>auto-restart-app
+</code></pre></div></p>
+<hr />
+<h3 id="scenario-15-security-best-practices"><strong>Scenario 15: Security Best Practices</strong><a class="headerlink" href="#scenario-15-security-best-practices" title="Permanent link">&para;</a></h3>
+<p><em>Running containers securely</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User as Security Engineer
+    participant Docker as Docker Engine
+    participant Build as Build Process
+    participant NonRoot as Non-Root User
+    participant Container as Secured Container
+    participant Host as Host System
+    User-&gt;&gt;Build: Create minimal image (alpine)
+    Build-&gt;&gt;Build: Scan for vulnerabilities
+    User-&gt;&gt;NonRoot: Add non-root user
+    NonRoot-&gt;&gt;Container: Run as nodeuser:1001
+    User-&gt;&gt;Docker: docker run --read-only
+    Docker-&gt;&gt;Container: Make filesystem read-only
+    Container-&gt;&gt;Host: Cannot write to root
+    User-&gt;&gt;Docker: docker run --security-opt no-new-privileges
+    Docker-&gt;&gt;Container: Drop capabilities
+    Container-&gt;&gt;Host: Limited attack surface</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Dockerfile with security best practices</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>Dockerfile.secure<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s"># Use minimal base image</span>
+<span class="s">FROM node:18-alpine</span>
+
+<span class="s"># Install security updates</span>
+<span class="s">RUN apk update &amp;&amp; apk upgrade</span>
+
+<span class="s"># Create non-root user</span>
+<span class="s">RUN addgroup -g 1001 -S nodejs &amp;&amp; \</span>
+<span class="s">    adduser -S nodeuser -u 1001 -G nodejs</span>
+
+<span class="s"># Set working directory with correct permissions</span>
+<span class="s">WORKDIR /app</span>
+<span class="s">RUN chown nodeuser:nodejs /app</span>
+
+<span class="s"># Switch to non-root user BEFORE copying files</span>
+<span class="s">USER nodeuser</span>
+
+<span class="s"># Copy dependency files and install</span>
+<span class="s">COPY --chown=nodeuser:nodejs package*.json ./</span>
+<span class="s">RUN npm ci --only=production</span>
+
+<span class="s"># Copy application code</span>
+<span class="s">COPY --chown=nodeuser:nodejs . .</span>
+
+<span class="s"># Make port available</span>
+<span class="s">EXPOSE 3000</span>
+
+<span class="s"># Health check</span>
+<span class="s">HEALTHCHECK --interval=30s CMD curl -f http://localhost:3000/health || exit 1</span>
+
+<span class="s"># Run the app</span>
+<span class="s">CMD [&quot;node&quot;, &quot;server.js&quot;]</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Run with security options</span>
+docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span>secure-app<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--user<span class="w"> </span><span class="m">1001</span>:1001<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--read-only<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--tmpfs<span class="w"> </span>/tmp<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--cap-drop<span class="w"> </span>ALL<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--cap-add<span class="w"> </span>CHOWN<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--cap-add<span class="w"> </span>SETGID<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--cap-add<span class="w"> </span>SETUID<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--security-opt<span class="w"> </span>no-new-privileges<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--security-opt<span class="w"> </span><span class="nv">apparmor</span><span class="o">=</span>docker-default<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-p<span class="w"> </span><span class="m">3000</span>:3000<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>my-secure-app
+
+<span class="c1"># Scan image for vulnerabilities</span>
+docker<span class="w"> </span>scan<span class="w"> </span>my-secure-app
+
+<span class="c1"># Use docker-bench-security for compliance</span>
+docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--net<span class="w"> </span>host<span class="w"> </span>--pid<span class="w"> </span>host<span class="w"> </span>--cap-add<span class="w"> </span>audit_control<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">DOCKER_CONTENT_TRUST</span><span class="o">=</span><span class="nv">$DOCKER_CONTENT_TRUST</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-v<span class="w"> </span>/var/lib:/var/lib<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-v<span class="w"> </span>/var/run/docker.sock:/var/run/docker.sock<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-v<span class="w"> </span>/usr/lib/systemd:/usr/lib/systemd<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-v<span class="w"> </span>/etc:/etc<span class="w"> </span>--label<span class="w"> </span>docker_bench_security<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>docker/docker-bench-security
+</code></pre></div></p>
+<hr />
+<h3 id="scenario-16-advanced-docker-compose"><strong>Scenario 16: Advanced Docker Compose</strong><a class="headerlink" href="#scenario-16-advanced-docker-compose" title="Permanent link">&para;</a></h3>
+<p><em>Production-ready multi-service setup</em></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User as DevOps
+    participant Compose as Docker Compose
+    participant Proxy as Nginx Proxy
+    participant App1 as App Instance 1
+    participant App2 as App Instance 2
+    participant App3 as App Instance 3
+    participant DB as PostgreSQL
+    participant Redis as Redis Cache
+    participant Vol as Data Volumes
+    User-&gt;&gt;Compose: docker-compose -f prod.yml up -d
+    Compose-&gt;&gt;Vol: Create volumes
+    Compose-&gt;&gt;DB: Start with config
+    Compose-&gt;&gt;Redis: Start with limits
+    Compose-&gt;&gt;App1: Start app replica 1
+    Compose-&gt;&gt;App2: Start app replica 2
+    Compose-&gt;&gt;App3: Start app replica 3
+    Compose-&gt;&gt;Proxy: Start load balancer
+    Proxy-&gt;&gt;App1: Proxy traffic
+    Proxy-&gt;&gt;App2: Proxy traffic
+    Proxy-&gt;&gt;App3: Proxy traffic
+    App1-&gt;&gt;DB: Query data
+    App1-&gt;&gt;Redis: Cache results</code></pre>
+<p><strong>Code:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># docker-compose.prod.yml</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>docker-compose.prod.yml<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">version: &#39;3.8&#39;</span>
+
+<span class="s">services:</span>
+<span class="s">  # Load Balancer</span>
+<span class="s">  nginx:</span>
+<span class="s">    image: nginx:alpine</span>
+<span class="s">    container_name: prod-proxy</span>
+<span class="s">    ports:</span>
+<span class="s">      - &quot;80:80&quot;</span>
+<span class="s">      - &quot;443:443&quot;</span>
+<span class="s">    volumes:</span>
+<span class="s">      - ./nginx.conf:/etc/nginx/nginx.conf:ro</span>
+<span class="s">      - ssl_certs:/etc/ssl/certs</span>
+<span class="s">    depends_on:</span>
+<span class="s">      - app</span>
+<span class="s">    restart: unless-stopped</span>
+<span class="s">    healthcheck:</span>
+<span class="s">      test: [&quot;CMD&quot;, &quot;curl&quot;, &quot;-f&quot;, &quot;http://localhost/health&quot;]</span>
+<span class="s">      interval: 30s</span>
+<span class="s">    deploy:</span>
+<span class="s">      resources:</span>
+<span class="s">        limits:</span>
+<span class="s">          cpus: &#39;0.5&#39;</span>
+<span class="s">          memory: 128M</span>
+
+<span class="s">  # Application (3 replicas)</span>
+<span class="s">  app:</span>
+<span class="s">    image: my-app:latest</span>
+<span class="s">    deploy:</span>
+<span class="s">      replicas: 3</span>
+<span class="s">      resources:</span>
+<span class="s">        limits:</span>
+<span class="s">          cpus: &#39;1&#39;</span>
+<span class="s">          memory: 512M</span>
+<span class="s">        reservations:</span>
+<span class="s">          cpus: &#39;0.5&#39;</span>
+<span class="s">          memory: 256M</span>
+<span class="s">      restart_policy:</span>
+<span class="s">        condition: on-failure</span>
+<span class="s">        delay: 5s</span>
+<span class="s">    environment:</span>
+<span class="s">      - NODE_ENV=production</span>
+<span class="s">      - DB_HOST=db</span>
+<span class="s">      - REDIS_HOST=cache</span>
+<span class="s">    depends_on:</span>
+<span class="s">      - db</span>
+<span class="s">      - cache</span>
+<span class="s">    healthcheck:</span>
+<span class="s">      test: [&quot;CMD&quot;, &quot;curl&quot;, &quot;-f&quot;, &quot;http://localhost:3000/health&quot;]</span>
+<span class="s">      interval: 30s</span>
+<span class="s">      timeout: 10s</span>
+<span class="s">      retries: 3</span>
+<span class="s">    networks:</span>
+<span class="s">      - backend</span>
+
+<span class="s">  # Database</span>
+<span class="s">  db:</span>
+<span class="s">    image: postgres:15-alpine</span>
+<span class="s">    container_name: prod-db</span>
+<span class="s">    environment:</span>
+<span class="s">      POSTGRES_DB: myapp_prod</span>
+<span class="s">      POSTGRES_USER: app_user</span>
+<span class="s">      POSTGRES_PASSWORD_FILE: /run/secrets/db_password</span>
+<span class="s">    secrets:</span>
+<span class="s">      - db_password</span>
+<span class="s">    volumes:</span>
+<span class="s">      - db_data:/var/lib/postgresql/data</span>
+<span class="s">      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro</span>
+<span class="s">    ports:</span>
+<span class="s">      - &quot;5432:5432&quot;</span>
+<span class="s">    restart: unless-stopped</span>
+<span class="s">    deploy:</span>
+<span class="s">      resources:</span>
+<span class="s">        limits:</span>
+<span class="s">          memory: 1G</span>
+<span class="s">    networks:</span>
+<span class="s">      - backend</span>
+
+<span class="s">  # Redis Cache</span>
+<span class="s">  cache:</span>
+<span class="s">    image: redis:7-alpine</span>
+<span class="s">    container_name: prod-cache</span>
+<span class="s">    command: redis-server --requirepass ${REDIS_PASSWORD}</span>
+<span class="s">    environment:</span>
+<span class="s">      REDIS_PASSWORD_FILE: /run/secrets/redis_password</span>
+<span class="s">    secrets:</span>
+<span class="s">      - redis_password</span>
+<span class="s">    volumes:</span>
+<span class="s">      - cache_data:/data</span>
+<span class="s">    restart: unless-stopped</span>
+<span class="s">    deploy:</span>
+<span class="s">      resources:</span>
+<span class="s">        limits:</span>
+<span class="s">          memory: 256M</span>
+<span class="s">    networks:</span>
+<span class="s">      - backend</span>
+
+<span class="s">volumes:</span>
+<span class="s">  db_data:</span>
+<span class="s">    driver: local</span>
+<span class="s">  cache_data:</span>
+<span class="s">    driver: local</span>
+<span class="s">  ssl_certs:</span>
+<span class="s">    driver: local</span>
+
+<span class="s">secrets:</span>
+<span class="s">  db_password:</span>
+<span class="s">    external: true</span>
+<span class="s">  redis_password:</span>
+<span class="s">    external: true</span>
+
+<span class="s">networks:</span>
+<span class="s">  backend:</span>
+<span class="s">    driver: bridge</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Create secrets (requires Docker Swarm or Docker Compose 1.25+)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;supersecurepassword&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>docker<span class="w"> </span>secret<span class="w"> </span>create<span class="w"> </span>db_password<span class="w"> </span>-
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;anothersecret&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>docker<span class="w"> </span>secret<span class="w"> </span>create<span class="w"> </span>redis_password<span class="w"> </span>-
+
+<span class="c1"># Deploy with production config</span>
+docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.prod.yml<span class="w"> </span>up<span class="w"> </span>-d
+
+<span class="c1"># Scale specific service</span>
+docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.prod.yml<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--scale<span class="w"> </span><span class="nv">app</span><span class="o">=</span><span class="m">5</span>
+
+<span class="c1"># Rolling update</span>
+docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.prod.yml<span class="w"> </span>pull<span class="w"> </span>app
+docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.prod.yml<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--no-deps<span class="w"> </span>app
+
+<span class="c1"># View logs for all services</span>
+docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.prod.yml<span class="w"> </span>logs<span class="w"> </span>-f
+
+<span class="c1"># Check service status</span>
+docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.prod.yml<span class="w"> </span>ps
+
+<span class="c1"># Clean up everything</span>
+docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.prod.yml<span class="w"> </span>down<span class="w"> </span>-v<span class="w"> </span>--remove-orphans
+</code></pre></div></p>
+<hr />
+<h2 id="quick-reference-essential-commands">Quick Reference: Essential Commands<a class="headerlink" href="#quick-reference-essential-commands" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">Command</th>
 <th style="text-align: left;">Description</th>
+<th style="text-align: left;">Level</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;"><code>docker run &lt;image&gt;</code></td>
 <td style="text-align: left;">Run a container from an image</td>
+<td style="text-align: left;">Beginner</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>docker ps</code></td>
 <td style="text-align: left;">List running containers</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>docker ps -a</code></td>
-<td style="text-align: left;">List all containers (including stopped)</td>
+<td style="text-align: left;">Beginner</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>docker images</code></td>
 <td style="text-align: left;">List available images</td>
+<td style="text-align: left;">Beginner</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>docker stop &lt;id&gt;</code></td>
+<td style="text-align: left;"><code>docker pull &lt;image&gt;</code></td>
+<td style="text-align: left;">Download an image</td>
+<td style="text-align: left;">Beginner</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker build -t &lt;tag&gt; .</code></td>
+<td style="text-align: left;">Build image from Dockerfile</td>
+<td style="text-align: left;">Beginner</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker exec -it &lt;container&gt; bash</code></td>
+<td style="text-align: left;">Run command in container</td>
+<td style="text-align: left;">Beginner</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker stop &lt;container&gt;</code></td>
 <td style="text-align: left;">Stop a running container</td>
+<td style="text-align: left;">Beginner</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>docker rm &lt;id&gt;</code></td>
+<td style="text-align: left;"><code>docker rm &lt;container&gt;</code></td>
 <td style="text-align: left;">Remove a container</td>
+<td style="text-align: left;">Beginner</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>docker rmi &lt;image&gt;</code></td>
 <td style="text-align: left;">Remove an image</td>
+<td style="text-align: left;">Beginner</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker volume create &lt;name&gt;</code></td>
+<td style="text-align: left;">Create a persistent volume</td>
+<td style="text-align: left;">Intermediate</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker network create &lt;name&gt;</code></td>
+<td style="text-align: left;">Create a network</td>
+<td style="text-align: left;">Intermediate</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker-compose up -d</code></td>
+<td style="text-align: left;">Start multi-container app</td>
+<td style="text-align: left;">Intermediate</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker logs -f &lt;container&gt;</code></td>
+<td style="text-align: left;">Follow container logs</td>
+<td style="text-align: left;">Intermediate</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker inspect &lt;container&gt;</code></td>
+<td style="text-align: left;">View detailed container info</td>
+<td style="text-align: left;">Intermediate</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker system prune -a</code></td>
+<td style="text-align: left;">Clean up all unused resources</td>
+<td style="text-align: left;">Intermediate</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker build --target &lt;stage&gt;</code></td>
+<td style="text-align: left;">Build specific stage</td>
+<td style="text-align: left;">Advanced</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker scan &lt;image&gt;</code></td>
+<td style="text-align: left;">Scan for vulnerabilities</td>
+<td style="text-align: left;">Advanced</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker secret create &lt;name&gt;</code></td>
+<td style="text-align: left;">Create a secret (Swarm)</td>
+<td style="text-align: left;">Advanced</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker service create</code></td>
+<td style="text-align: left;">Create a service (Swarm)</td>
+<td style="text-align: left;">Advanced</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker stack deploy</code></td>
+<td style="text-align: left;">Deploy stack (Swarm)</td>
+<td style="text-align: left;">Advanced</td>
 </tr>
 </tbody>
 </table>
-<h2 id="building-images">Building Images</h2>
-<p>Create a <code>Dockerfile</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.9-slim</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>.
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;app.py&quot;</span><span class="p">]</span>
-</code></pre></div>
-<p>Build the image:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>my-app:v1<span class="w"> </span>.
-</code></pre></div>
-<h2 id="running-containers">Running Containers</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Run in background (-d) and map port (-p host:container)</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:80<span class="w"> </span>my-app:v1
-</code></pre></div>
+<hr />
+<h2 id="pro-tips-for-all-levels">Pro Tips for All Levels<a class="headerlink" href="#pro-tips-for-all-levels" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Use specific image tags</strong>: <code>nginx:1.24-alpine</code> &gt; <code>nginx:latest</code></li>
+<li><strong>Keep images small</strong>: Use Alpine Linux variants when possible</li>
+<li><strong>Never store secrets in images</strong>: Use environment variables or Docker secrets</li>
+<li><strong>Always use volumes for persistent data</strong>: Containers are ephemeral</li>
+<li><strong>Scan images for vulnerabilities</strong>: <code>docker scan &lt;image&gt;</code></li>
+<li><strong>Use <code>.dockerignore</code></strong>: Exclude files from build context (like <code>.gitignore</code>)</li>
+<li><strong>One process per container</strong>: Follow microservices architecture</li>
+<li><strong>Use health checks</strong>: Ensure containers are actually working</li>
+<li><strong>Clean up regularly</strong>: <code>docker system prune</code> to free disk space</li>
+<li><strong>Learn Docker Compose</strong>: It's essential for multi-container apps</li>
+</ol>
+<p>Happy containerizing! 🐳</p>
 
 
 
@@ -993,10 +2779,74 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 DevOps Guide Team
+    </div>
+  
   
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
       Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ashishpatel26" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/ashishpatel2604" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://x.com/GenAIArchitect" target="_blank" rel="noopener" title="x.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://hub.docker.com/u/ashishpatel26" target="_blank" rel="noopener" title="hub.docker.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1zm0-204.3h-66.1v60.7h66.1zm78.2 144.8H362v59.4h66.1zm-156.3-72.1h-66.1v60.1h66.1zm78.1 0h-66.1v60.1h66.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1zm78.1 0h-66.1v59.4h66.1zm-78.1-72.1h-66.1v60.1h66.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://youtube.com" target="_blank" rel="noopener" title="youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M549.7 124.1c-6.2-23.7-24.8-42.3-48.3-48.6C458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5c-23.5 6.3-42 24.9-48.3 48.6C15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8C117.3 448 288.1 448 288.1 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6V175.2l142.7 81.2z"/></svg>
     </a>
   
 </div>
@@ -1010,11 +2860,13 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
     
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>

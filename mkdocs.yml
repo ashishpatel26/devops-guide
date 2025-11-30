@@ -1,16 +1,34 @@
 site_name: DevOps Master Guide
 site_description: A comprehensive guide for DevOps tools, commands, and installation.
 site_author: DevOps Learner
+site_url: https://ashishpatel26.github.io/devops-guide/
+
+# Repository information
+repo_name: ashishpatel26/devops-guide
+repo_url: https://github.com/ashishpatel26/devops-guide
+edit_uri: edit/main/docs/
 
 theme:
   name: material
+  language: en
+  icon:
+    logo: material/kubernetes
+    repo: fontawesome/brands/github
+    favicon: material/kubernetes
   features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.instant.preview
+    - navigation.tracking
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
+    - navigation.expand
     - toc.integrate
     - navigation.top
     - search.suggest
     - search.highlight
+    - search.share
     - content.code.copy
   palette:
     - scheme: default
@@ -26,16 +44,42 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 
+# Extensions
 markdown_extensions:
   - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
   - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.highlight:
-      anchor_linenums: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
   - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
   - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
 
 nav:
   - Home: index.md
@@ -45,11 +89,32 @@ nav:
     - Windows 11: installation/windows.md
     - macOS: installation/macos.md
     - Linux: installation/linux.md
-  - Tools & Commands:
-    - Git: tools/git.md
-    - Docker: tools/docker.md
-    - Kubernetes: tools/kubernetes.md
-    - Jenkins: tools/jenkins.md
-    - Terraform: tools/terraform.md
-    - Ansible: tools/ansible.md
-    - AWS: tools/aws.md
+  - Git : tools/git.md
+  - Docker: tools/docker.md
+  - Kubernetes: tools/kubernetes.md
+  - Helm: tools/helm.md
+  - Jenkins: tools/jenkins.md
+  - Terraform: tools/terraform.md
+  - Ansible: tools/ansible.md
+  - AWS: tools/aws.md 
+  - Jenkins: tools/jenkins.md
+  - Terraform: tools/terraform.md
+  - Ansible: tools/ansible.md
+  - AWS: tools/aws.md
+
+# Copyright
+copyright: Copyright &copy; 2025 DevOps Guide Team
+
+# Social links
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ashishpatel26
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/ashishpatel2604
+    - icon: fontawesome/brands/twitter
+      link: https://x.com/GenAIArchitect
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/u/ashishpatel26
+    - icon: fontawesome/brands/youtube
+      link: https://youtube.com
