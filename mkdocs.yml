@@ -1,0 +1,55 @@
+site_name: DevOps Master Guide
+site_description: A comprehensive guide for DevOps tools, commands, and installation.
+site_author: DevOps Learner
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: teal
+      accent: purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true 
+
+nav:
+  - Home: index.md
+  - Learning Path: learning-path.md
+  - Installation Guides:
+    - Overview: installation/index.md
+    - Windows 11: installation/windows.md
+    - macOS: installation/macos.md
+    - Linux: installation/linux.md
+  - Tools & Commands:
+    - Git: tools/git.md
+    - Docker: tools/docker.md
+    - Kubernetes: tools/kubernetes.md
+    - Jenkins: tools/jenkins.md
+    - Terraform: tools/terraform.md
+    - Ansible: tools/ansible.md
+    - AWS: tools/aws.md
