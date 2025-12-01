@@ -12,13 +12,13 @@
         <meta name="author" content="DevOps Learner">
       
       
-        <link rel="canonical" href="https://ashishpatel26.github.io/devops-guide/tools/git/">
+        <link rel="canonical" href="https://ashishpatel26.github.io/devops-guide/tools/gitlab/">
       
       
-        <link rel="prev" href="../../installation/linux/">
+        <link rel="prev" href="../git/">
       
       
-        <link rel="next" href="../gitlab/">
+        <link rel="next" href="../docker/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Git - DevOps Master Guide</title>
+        <title>Gitlab - DevOps Master Guide</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#git-complete-master-guide" class="md-skip">
+        <a href="#gitlab-master-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Git
+              Gitlab
             
           </span>
         </div>
@@ -284,11 +284,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../git/" class="md-tabs__link">
         
   
   
@@ -305,9 +303,11 @@
   
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../gitlab/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
   
@@ -737,6 +737,33 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -756,7 +783,7 @@
   <span class="md-ellipsis">
     
   
-    Git
+    Gitlab
   
 
     
@@ -774,7 +801,7 @@
   <span class="md-ellipsis">
     
   
-    Git
+    Gitlab
   
 
     
@@ -812,10 +839,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
+  <a href="#using-docker-recommended" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Windows
+        Using Docker (Recommended)
       
     </span>
   </a>
@@ -823,21 +850,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#macos" class="md-nav__link">
+  <a href="#on-ubuntu" class="md-nav__link">
     <span class="md-ellipsis">
       
-        macOS
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#linux-ubuntudebian" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Linux (Ubuntu/Debian)
+        On Ubuntu
       
     </span>
   </a>
@@ -850,22 +866,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#beginner-level-first-steps-with-git" class="md-nav__link">
+  <a href="#beginner-level-first-steps-with-gitlab" class="md-nav__link">
     <span class="md-ellipsis">
       
-        BEGINNER LEVEL: First Steps with Git
+        BEGINNER LEVEL: First Steps with GitLab
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="BEGINNER LEVEL: First Steps with Git">
+    <nav class="md-nav" aria-label="BEGINNER LEVEL: First Steps with GitLab">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#scenario-1-initial-setup-configuration" class="md-nav__link">
+  <a href="#scenario-1-setting-up-gitlab-for-the-first-time" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Scenario 1: Initial Setup &amp; Configuration
+        Scenario 1: Setting Up GitLab for the First Time
       
     </span>
   </a>
@@ -873,10 +889,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#scenario-2-starting-a-brand-new-repository" class="md-nav__link">
+  <a href="#scenario-2-creating-your-first-project" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Scenario 2: Starting a Brand New Repository
+        Scenario 2: Creating Your First Project
       
     </span>
   </a>
@@ -884,43 +900,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#scenario-3-cloning-an-existing-repository" class="md-nav__link">
+  <a href="#scenario-3-cloning-a-project" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Scenario 3: Cloning an Existing Repository
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scenario-4-making-changes-and-committing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Scenario 4: Making Changes and Committing
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scenario-5-pushing-to-remote-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Scenario 5: Pushing to Remote Repository
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scenario-6-pulling-latest-changes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Scenario 6: Pulling Latest Changes
+        Scenario 3: Cloning a Project
       
     </span>
   </a>
@@ -933,22 +916,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#intermediate-level-branching-collaboration" class="md-nav__link">
+  <a href="#intermediate-level-working-with-gitlab-cicd" class="md-nav__link">
     <span class="md-ellipsis">
       
-        INTERMEDIATE LEVEL: Branching &amp; Collaboration
+        INTERMEDIATE LEVEL: Working with GitLab CI/CD
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="INTERMEDIATE LEVEL: Branching &amp; Collaboration">
+    <nav class="md-nav" aria-label="INTERMEDIATE LEVEL: Working with GitLab CI/CD">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#scenario-7-creating-and-switching-branches" class="md-nav__link">
+  <a href="#scenario-4-setting-up-cicd-pipeline" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Scenario 7: Creating and Switching Branches
+        Scenario 4: Setting Up CI/CD Pipeline
       
     </span>
   </a>
@@ -956,43 +939,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#scenario-8-merging-branches" class="md-nav__link">
+  <a href="#scenario-5-using-gitlab-runner" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Scenario 8: Merging Branches
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scenario-9-handling-merge-conflicts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Scenario 9: Handling Merge Conflicts
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scenario-10-stashing-changes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Scenario 10: Stashing Changes
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scenario-11-undoing-a-commit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Scenario 11: Undoing a Commit
+        Scenario 5: Using GitLab Runner
       
     </span>
   </a>
@@ -1005,22 +955,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#advanced-level-master-git-workflows" class="md-nav__link">
+  <a href="#advanced-level-advanced-gitlab-features" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ADVANCED LEVEL: Master Git Workflows
+        ADVANCED LEVEL: Advanced GitLab Features
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="ADVANCED LEVEL: Master Git Workflows">
+    <nav class="md-nav" aria-label="ADVANCED LEVEL: Advanced GitLab Features">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#scenario-12-interactive-rebase" class="md-nav__link">
+  <a href="#scenario-6-using-gitlab-merge-requests" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Scenario 12: Interactive Rebase
+        Scenario 6: Using GitLab Merge Requests
       
     </span>
   </a>
@@ -1028,43 +978,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#scenario-13-cherry-picking" class="md-nav__link">
+  <a href="#scenario-7-gitlab-security-scanning" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Scenario 13: Cherry-Picking
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scenario-14-git-bisect-debugging" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Scenario 14: Git Bisect Debugging
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scenario-15-working-with-submodules" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Scenario 15: Working with Submodules
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scenario-16-git-hooks-automation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Scenario 16: Git Hooks Automation
+        Scenario 7: GitLab Security Scanning
       
     </span>
   </a>
@@ -1096,39 +1013,29 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Pro Tips for All Levels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#happy-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Happy coding!🚀
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../gitlab/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Gitlab
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1342,585 +1249,195 @@
   
 
 
-<h1 id="git-complete-master-guide">Git Complete Master Guide<a class="headerlink" href="#git-complete-master-guide" title="Permanent link">&para;</a></h1>
-<p>Git is a distributed version control system that tracks changes in your code, enables collaboration, and maintains project history.</p>
-<hr />
+<h1 id="gitlab-master-guide">GitLab Master Guide<a class="headerlink" href="#gitlab-master-guide" title="Permanent link">&para;</a></h1>
+<p>GitLab is a web-based Git repository manager with wiki and issue tracking features. It provides a comprehensive platform for version control, continuous integration, and continuous deployment (CI/CD). This guide will walk you through the installation process and various scenarios for using GitLab, tailored for beginners, intermediate users, and advanced users.</p>
 <h2 id="installation-guide">Installation Guide<a class="headerlink" href="#installation-guide" title="Permanent link">&para;</a></h2>
-<h3 id="windows"><strong>Windows</strong><a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
-<p>Download and install from <a href="https://git-scm.com/download/win">git-scm.com</a> or use winget:
-<div class="highlight"><pre><span></span><code>winget<span class="w"> </span>install<span class="w"> </span>--id<span class="w"> </span>Git.Git<span class="w"> </span>-e<span class="w"> </span>--source<span class="w"> </span>winget
+<h3 id="using-docker-recommended">Using Docker (Recommended)<a class="headerlink" href="#using-docker-recommended" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Install Docker</strong>: Follow the installation instructions for your operating system from <a href="https://docs.docker.com/get-docker/">Docker's official website</a>.</p>
+</li>
+<li>
+<p><strong>Run GitLab via Docker</strong>:
+   <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>--detach<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--hostname<span class="w"> </span>gitlab.example.com<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--publish<span class="w"> </span><span class="m">443</span>:443<span class="w"> </span>--publish<span class="w"> </span><span class="m">80</span>:80<span class="w"> </span>--publish<span class="w"> </span><span class="m">22</span>:22<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--name<span class="w"> </span>gitlab<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--restart<span class="w"> </span>always<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--volume<span class="w"> </span>/srv/gitlab/config:/etc/gitlab<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--volume<span class="w"> </span>/srv/gitlab/logs:/var/log/gitlab<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--volume<span class="w"> </span>/srv/gitlab/data:/var/opt/gitlab<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>gitlab/gitlab-ce:latest
 </code></pre></div></p>
-<h3 id="macos"><strong>macOS</strong><a class="headerlink" href="#macos" title="Permanent link">&para;</a></h3>
-<p>Install using Homebrew:
-<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>git
+</li>
+<li>
+<p><strong>Access GitLab</strong>: Open your web browser and navigate to <code>http://gitlab.example.com</code>. Follow the initial setup instructions.</p>
+</li>
+</ol>
+<h3 id="on-ubuntu">On Ubuntu<a class="headerlink" href="#on-ubuntu" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Add GitLab Repository</strong>:
+   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>curl
+curl<span class="w"> </span>https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>bash
 </code></pre></div></p>
-<h3 id="linux-ubuntudebian"><strong>Linux (Ubuntu/Debian)</strong><a class="headerlink" href="#linux-ubuntudebian" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
-sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>-y
+</li>
+<li>
+<p><strong>Install GitLab</strong>:
+   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>gitlab-ce
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Configure GitLab</strong>: Edit the <code>/etc/gitlab/gitlab.rb</code> file to configure GitLab settings.</p>
+</li>
+<li>
+<p><strong>Reconfigure GitLab</strong>:
+   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>gitlab-ctl<span class="w"> </span>reconfigure
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Access GitLab</strong>: Open your web browser and navigate to <code>http://your-server-ip</code>.</p>
+</li>
+</ol>
+<h2 id="beginner-level-first-steps-with-gitlab">BEGINNER LEVEL: First Steps with GitLab<a class="headerlink" href="#beginner-level-first-steps-with-gitlab" title="Permanent link">&para;</a></h2>
+<h3 id="scenario-1-setting-up-gitlab-for-the-first-time">Scenario 1: Setting Up GitLab for the First Time<a class="headerlink" href="#scenario-1-setting-up-gitlab-for-the-first-time" title="Permanent link">&para;</a></h3>
+<p>Unlocking GitLab and installing essential plugins.</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Developer
+    participant GitLab Server
+    Developer-&gt;&gt;GitLab Server: Access GitLab URL
+    GitLab Server-&gt;&gt;Developer: Show initial setup page
+    Developer-&gt;&gt;GitLab Server: Set root password
+    GitLab Server-&gt;&gt;Developer: Redirect to login page
+    Developer-&gt;&gt;GitLab Server: Login with root credentials
+    GitLab Server-&gt;&gt;Developer: Show dashboard</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># Access GitLab URL in your browser</span>
+<span class="c1"># Set root password when prompted</span>
+<span class="c1"># Login with root user and the set password</span>
 </code></pre></div>
-<p>Verify installation:
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>--version
-</code></pre></div></p>
-<hr />
-<h2 id="beginner-level-first-steps-with-git">BEGINNER LEVEL: First Steps with Git<a class="headerlink" href="#beginner-level-first-steps-with-git" title="Permanent link">&para;</a></h2>
-<h3 id="scenario-1-initial-setup-configuration"><strong>Scenario 1: Initial Setup &amp; Configuration</strong><a class="headerlink" href="#scenario-1-initial-setup-configuration" title="Permanent link">&para;</a></h3>
-<p><em>Setting up your identity before using Git</em></p>
+<h3 id="scenario-2-creating-your-first-project">Scenario 2: Creating Your First Project<a class="headerlink" href="#scenario-2-creating-your-first-project" title="Permanent link">&para;</a></h3>
+<p>Creating a new project and adding a file.</p>
 <pre class="mermaid"><code>sequenceDiagram
-    participant Developer as You
-    participant Git as Git System
-    Developer-&gt;&gt;Git: Configure username
-    Git--&gt;&gt;Developer: Username saved globally
-    Developer-&gt;&gt;Git: Configure email
-    Git--&gt;&gt;Developer: Email saved globally
-    Developer-&gt;&gt;Git: Check configuration
-    Git--&gt;&gt;Developer: Show all settings</code></pre>
-<p><strong>Code:</strong>
-<div class="highlight"><pre><span></span><code><span class="c1"># Set your name (will appear in commits)</span>
-git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Your Full Name&quot;</span>
-
-<span class="c1"># Set your email (must match GitHub/GitLab)</span>
-git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;your.email@example.com&quot;</span>
-
-<span class="c1"># Verify your configuration</span>
-git<span class="w"> </span>config<span class="w"> </span>--list
-
-<span class="c1"># Set default branch name to &quot;main&quot;</span>
-git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>init.defaultBranch<span class="w"> </span>main
-</code></pre></div></p>
-<hr />
-<h3 id="scenario-2-starting-a-brand-new-repository"><strong>Scenario 2: Starting a Brand New Repository</strong><a class="headerlink" href="#scenario-2-starting-a-brand-new-repository" title="Permanent link">&para;</a></h3>
-<p><em>Creating your first Git repository from scratch</em></p>
+    participant Developer
+    participant GitLab Server
+    Developer-&gt;&gt;GitLab Server: Click "New Project"
+    GitLab Server-&gt;&gt;Developer: Show project creation form
+    Developer-&gt;&gt;GitLab Server: Fill project details
+    GitLab Server-&gt;&gt;Developer: Create project
+    Developer-&gt;&gt;GitLab Server: Add README.md
+    GitLab Server-&gt;&gt;Developer: Commit file</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create a new project via GitLab UI</span>
+<span class="c1"># Add a README.md file via GitLab UI</span>
+<span class="c1"># Commit the file</span>
+</code></pre></div>
+<h3 id="scenario-3-cloning-a-project">Scenario 3: Cloning a Project<a class="headerlink" href="#scenario-3-cloning-a-project" title="Permanent link">&para;</a></h3>
+<p>Cloning a project to your local machine.</p>
 <pre class="mermaid"><code>sequenceDiagram
-    participant Dev as Developer
-    participant Folder as Project Folder
-    participant Git as Git Repository
-    participant File as README.md
-    Dev-&gt;&gt;Folder: Create project folder
-    Dev-&gt;&gt;Folder: Navigate into it
-    Dev-&gt;&gt;Git: git init
-    Git--&gt;&gt;Folder: Initialize .git directory
-    Dev-&gt;&gt;File: Create README.md
-    Dev-&gt;&gt;Git: git add README.md
-    Dev-&gt;&gt;Git: git commit -m "Initial commit"
-    Git--&gt;&gt;Dev: First commit created!</code></pre>
-<p><strong>Code:</strong>
-<div class="highlight"><pre><span></span><code><span class="c1"># Create a new project folder</span>
-mkdir<span class="w"> </span>my-awesome-project
-<span class="nb">cd</span><span class="w"> </span>my-awesome-project
-
-<span class="c1"># Initialize git repository</span>
-git<span class="w"> </span>init
-
-<span class="c1"># Create your first file</span>
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;# My Project&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>README.md
-
-<span class="c1"># Check status (shows untracked files)</span>
-git<span class="w"> </span>status
-
-<span class="c1"># Stage the file for commit</span>
-git<span class="w"> </span>add<span class="w"> </span>README.md
-<span class="c1"># Or stage all files: git add .</span>
-
-<span class="c1"># Commit with a descriptive message</span>
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial commit: Add README with project description&quot;</span>
-
-<span class="c1"># View commit history</span>
-git<span class="w"> </span>log
-</code></pre></div></p>
-<hr />
-<h3 id="scenario-3-cloning-an-existing-repository"><strong>Scenario 3: Cloning an Existing Repository</strong><a class="headerlink" href="#scenario-3-cloning-an-existing-repository" title="Permanent link">&para;</a></h3>
-<p><em>Getting a remote project onto your computer</em></p>
+    participant Developer
+    participant GitLab Server
+    Developer-&gt;&gt;GitLab Server: Get project URL
+    Developer-&gt;&gt;GitLab Server: Clone project
+    GitLab Server-&gt;&gt;Developer: Download project files</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># Get the project URL from GitLab</span>
+git<span class="w"> </span>clone<span class="w"> </span>http://gitlab.example.com/your-project.git
+<span class="nb">cd</span><span class="w"> </span>your-project
+</code></pre></div>
+<h2 id="intermediate-level-working-with-gitlab-cicd">INTERMEDIATE LEVEL: Working with GitLab CI/CD<a class="headerlink" href="#intermediate-level-working-with-gitlab-cicd" title="Permanent link">&para;</a></h2>
+<h3 id="scenario-4-setting-up-cicd-pipeline">Scenario 4: Setting Up CI/CD Pipeline<a class="headerlink" href="#scenario-4-setting-up-cicd-pipeline" title="Permanent link">&para;</a></h3>
+<p>Creating a <code>.gitlab-ci.yml</code> file for CI/CD.</p>
 <pre class="mermaid"><code>sequenceDiagram
-    participant Dev as Developer
-    participant Remote as GitHub/GitLab
-    participant Local as Your Computer
-    Dev-&gt;&gt;Remote: Find repository URL
-    Dev-&gt;&gt;Local: git clone &lt;URL&gt;
-    Remote--&gt;&gt;Local: Download all files &amp; history
-    Local--&gt;&gt;Dev: Repository ready to use!</code></pre>
-<p><strong>Code:</strong>
-<div class="highlight"><pre><span></span><code><span class="c1"># Clone a public repository</span>
-git<span class="w"> </span>clone<span class="w"> </span>https://github.com/user/repository.git
+    participant Developer
+    participant GitLab Server
+    Developer-&gt;&gt;GitLab Server: Create .gitlab-ci.yml
+    GitLab Server-&gt;&gt;Developer: Detect CI/CD configuration
+    Developer-&gt;&gt;GitLab Server: Push changes
+    GitLab Server-&gt;&gt;Developer: Trigger pipeline
+    GitLab Server-&gt;&gt;Developer: Run jobs</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># .gitlab-ci.yml</span>
+<span class="nt">stages</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span>
 
-<span class="c1"># Clone into a specific folder name</span>
-git<span class="w"> </span>clone<span class="w"> </span>https://github.com/user/repository.git<span class="w"> </span>my-folder-name
+<span class="nt">build_job</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;Building the project&quot;</span>
 
-<span class="c1"># Clone only the latest commit (faster)</span>
-git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="w"> </span><span class="m">1</span><span class="w"> </span>https://github.com/user/repository.git
+<span class="nt">test_job</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;Running tests&quot;</span>
 
-<span class="c1"># View remote connections</span>
-git<span class="w"> </span>remote<span class="w"> </span>-v
-</code></pre></div></p>
-<hr />
-<h3 id="scenario-4-making-changes-and-committing"><strong>Scenario 4: Making Changes and Committing</strong><a class="headerlink" href="#scenario-4-making-changes-and-committing" title="Permanent link">&para;</a></h3>
-<p><em>The daily workflow of saving your work</em></p>
+<span class="nt">deploy_job</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;Deploying the project&quot;</span>
+</code></pre></div>
+<h3 id="scenario-5-using-gitlab-runner">Scenario 5: Using GitLab Runner<a class="headerlink" href="#scenario-5-using-gitlab-runner" title="Permanent link">&para;</a></h3>
+<p>Setting up GitLab Runner for CI/CD.</p>
 <pre class="mermaid"><code>sequenceDiagram
-    participant Dev as Developer
-    participant WD as Working Directory
-    participant SA as Staging Area
-    participant Repo as Repository
-    Dev-&gt;&gt;WD: Edit files
-    Dev-&gt;&gt;WD: git status (check changes)
-    WD--&gt;&gt;Dev: Shows modified files
-    Dev-&gt;&gt;SA: git add &lt;file&gt;
-    Dev-&gt;&gt;SA: git commit -m "message"
-    SA-&gt;&gt;Repo: Create commit snapshot
-    Repo--&gt;&gt;Dev: Changes permanently saved!</code></pre>
-<p><strong>Code:</strong>
-<div class="highlight"><pre><span></span><code><span class="c1"># Edit your files (use any text editor)</span>
-<span class="c1"># For example, edit README.md</span>
+    participant Developer
+    participant GitLab Server
+    Developer-&gt;&gt;GitLab Server: Install GitLab Runner
+    Developer-&gt;&gt;GitLab Server: Register Runner
+    GitLab Server-&gt;&gt;Developer: Runner ready</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install GitLab Runner</span>
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>gitlab-runner
 
-<span class="c1"># Check what changed (CRITICAL STEP)</span>
-git<span class="w"> </span>status
-
-<span class="c1"># Stage specific file</span>
-git<span class="w"> </span>add<span class="w"> </span>README.md
-
-<span class="c1"># Stage all changes in current directory</span>
-git<span class="w"> </span>add<span class="w"> </span>.
-
-<span class="c1"># Commit with meaningful message</span>
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Update README with installation instructions&quot;</span>
-
-<span class="c1"># Check status again (should be clean)</span>
-git<span class="w"> </span>status
-
-<span class="c1"># View your commit</span>
-git<span class="w"> </span>log<span class="w"> </span>--oneline
-</code></pre></div></p>
-<hr />
-<h3 id="scenario-5-pushing-to-remote-repository"><strong>Scenario 5: Pushing to Remote Repository</strong><a class="headerlink" href="#scenario-5-pushing-to-remote-repository" title="Permanent link">&para;</a></h3>
-<p><em>Uploading your local commits to GitHub/GitLab</em></p>
+<span class="c1"># Register Runner</span>
+sudo<span class="w"> </span>gitlab-runner<span class="w"> </span>register
+</code></pre></div>
+<h2 id="advanced-level-advanced-gitlab-features">ADVANCED LEVEL: Advanced GitLab Features<a class="headerlink" href="#advanced-level-advanced-gitlab-features" title="Permanent link">&para;</a></h2>
+<h3 id="scenario-6-using-gitlab-merge-requests">Scenario 6: Using GitLab Merge Requests<a class="headerlink" href="#scenario-6-using-gitlab-merge-requests" title="Permanent link">&para;</a></h3>
+<p>Creating and managing merge requests.</p>
 <pre class="mermaid"><code>sequenceDiagram
-    participant Dev as Developer
-    participant Local as Local Repository
-    participant Remote as GitHub/GitLab
-    Dev-&gt;&gt;Local: git commit (changes ready)
-    Dev-&gt;&gt;Remote: git push origin main
-    Local--&gt;&gt;Remote: Upload commits
-    Remote--&gt;&gt;Dev: Changes live online!</code></pre>
-<p><strong>Code:</strong>
-<div class="highlight"><pre><span></span><code><span class="c1"># First, link to remote repository (if not cloned)</span>
-git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/your-username/repo.git
+    participant Developer
+    participant GitLab Server
+    Developer-&gt;&gt;GitLab Server: Create new branch
+    Developer-&gt;&gt;GitLab Server: Push changes
+    Developer-&gt;&gt;GitLab Server: Create merge request
+    GitLab Server-&gt;&gt;Developer: Review and merge</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create a new branch</span>
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/new-feature
 
-<span class="c1"># Verify remote</span>
-git<span class="w"> </span>remote<span class="w"> </span>-v
+<span class="c1"># Push changes</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>feature/new-feature
 
-<span class="c1"># Push to main branch</span>
-git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
-<span class="c1"># Older repositories might use &#39;master&#39; instead of &#39;main&#39;</span>
-
-<span class="c1"># Push current branch (Git 2.0+)</span>
-git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
-
-<span class="c1"># For subsequent pushes (after -u)</span>
-git<span class="w"> </span>push
-
-<span class="c1"># Force push (USE WITH CAUTION!)</span>
-git<span class="w"> </span>push<span class="w"> </span>--force-with-lease<span class="w"> </span>origin<span class="w"> </span>main
-</code></pre></div></p>
-<hr />
-<h3 id="scenario-6-pulling-latest-changes"><strong>Scenario 6: Pulling Latest Changes</strong><a class="headerlink" href="#scenario-6-pulling-latest-changes" title="Permanent link">&para;</a></h3>
-<p><em>Getting updates from your team</em></p>
+<span class="c1"># Create a merge request via GitLab UI</span>
+</code></pre></div>
+<h3 id="scenario-7-gitlab-security-scanning">Scenario 7: GitLab Security Scanning<a class="headerlink" href="#scenario-7-gitlab-security-scanning" title="Permanent link">&para;</a></h3>
+<p>Setting up security scanning for your project.</p>
 <pre class="mermaid"><code>sequenceDiagram
-    participant Dev as Developer
-    participant Remote as GitHub
-    participant Local as Your Copy
-    Dev-&gt;&gt;Remote: git pull origin main
-    Remote--&gt;&gt;Local: Download new commits
-    Local--&gt;&gt;Dev: Merge changes automatically
-    Note over Local: Your code is now up-to-date!</code></pre>
-<p><strong>Code:</strong>
-<div class="highlight"><pre><span></span><code><span class="c1"># Pull latest changes and merge</span>
-git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
+    participant Developer
+    participant GitLab Server
+    Developer-&gt;&gt;GitLab Server: Add security scan job
+    Developer-&gt;&gt;GitLab Server: Push changes
+    GitLab Server-&gt;&gt;Developer: Run security scan
+    GitLab Server-&gt;&gt;Developer: Report vulnerabilities</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># .gitlab-ci.yml</span>
+<span class="nt">stages</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">security</span>
 
-<span class="c1"># Fetch changes without merging (review first)</span>
-git<span class="w"> </span>fetch<span class="w"> </span>origin
+<span class="nt">build_job</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;Building the project&quot;</span>
 
-<span class="c1"># See what changed</span>
-git<span class="w"> </span>log<span class="w"> </span>origin/main<span class="w"> </span>--oneline
+<span class="nt">test_job</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;Running tests&quot;</span>
 
-<span class="c1"># Merge fetched changes</span>
-git<span class="w"> </span>merge<span class="w"> </span>origin/main
-
-<span class="c1"># Pull with rebase (cleaner history)</span>
-git<span class="w"> </span>pull<span class="w"> </span>--rebase<span class="w"> </span>origin<span class="w"> </span>main
-
-<span class="c1"># Check for conflicts after pull</span>
-git<span class="w"> </span>status
-</code></pre></div></p>
-<hr />
-<h2 id="intermediate-level-branching-collaboration">INTERMEDIATE LEVEL: Branching &amp; Collaboration<a class="headerlink" href="#intermediate-level-branching-collaboration" title="Permanent link">&para;</a></h2>
-<h3 id="scenario-7-creating-and-switching-branches"><strong>Scenario 7: Creating and Switching Branches</strong><a class="headerlink" href="#scenario-7-creating-and-switching-branches" title="Permanent link">&para;</a></h3>
-<p><em>Isolating features from main code</em></p>
-<pre class="mermaid"><code>sequenceDiagram
-    participant Dev as Developer
-    participant Main as Main Branch
-    participant Feature as Feature Branch
-    Dev-&gt;&gt;Main: Currently on main
-    Dev-&gt;&gt;Feature: git checkout -b new-feature
-    Main-&gt;&gt;Feature: Create branch snapshot
-    Dev-&gt;&gt;Feature: Now working on feature
-    Note over Feature: Safe to experiment here!</code></pre>
-<p><strong>Code:</strong>
-<div class="highlight"><pre><span></span><code><span class="c1"># Create and switch to new branch</span>
-git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature-login-system
-
-<span class="c1"># Equivalent to:</span>
-git<span class="w"> </span>branch<span class="w"> </span>feature-login-system
-git<span class="w"> </span>checkout<span class="w"> </span>feature-login-system
-
-<span class="c1"># Switch to existing branch</span>
-git<span class="w"> </span>checkout<span class="w"> </span>main
-
-<span class="c1"># List all local branches</span>
-git<span class="w"> </span>branch
-
-<span class="c1"># List all branches (including remote)</span>
-git<span class="w"> </span>branch<span class="w"> </span>-a
-
-<span class="c1"># Rename current branch</span>
-git<span class="w"> </span>branch<span class="w"> </span>-m<span class="w"> </span>better-branch-name
-</code></pre></div></p>
-<hr />
-<h3 id="scenario-8-merging-branches"><strong>Scenario 8: Merging Branches</strong><a class="headerlink" href="#scenario-8-merging-branches" title="Permanent link">&para;</a></h3>
-<p><em>Combining your feature back into main</em></p>
-<pre class="mermaid"><code>sequenceDiagram
-    participant Dev as Developer
-    participant Main as Main Branch
-    participant Feature as Feature Branch
-    Dev-&gt;&gt;Feature: Complete work
-    Dev-&gt;&gt;Main: git checkout main
-    Dev-&gt;&gt;Main: git merge feature
-    Feature-&gt;&gt;Main: Apply changes
-    Note over Main: Feature integrated!</code></pre>
-<p><strong>Code:</strong>
-<div class="highlight"><pre><span></span><code><span class="c1"># Complete your feature work and commit</span>
-git<span class="w"> </span>add<span class="w"> </span>.
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add complete login functionality&quot;</span>
-
-<span class="c1"># Switch to main branch</span>
-git<span class="w"> </span>checkout<span class="w"> </span>main
-
-<span class="c1"># Ensure main is up-to-date</span>
-git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
-
-<span class="c1"># Merge your feature branch</span>
-git<span class="w"> </span>merge<span class="w"> </span>feature-login-system
-
-<span class="c1"># If no conflicts: automatic merge!</span>
-<span class="c1"># If conflicts: manual resolution needed</span>
-
-<span class="c1"># After successful merge, delete feature branch</span>
-git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>feature-login-system
-
-<span class="c1"># Push merged changes</span>
-git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
-</code></pre></div></p>
-<hr />
-<h3 id="scenario-9-handling-merge-conflicts"><strong>Scenario 9: Handling Merge Conflicts</strong><a class="headerlink" href="#scenario-9-handling-merge-conflicts" title="Permanent link">&para;</a></h3>
-<p><em>When Git can't automatically merge</em></p>
-<pre class="mermaid"><code>sequenceDiagram
-    participant Dev as Developer
-    participant Git as Git
-    participant Files as Conflict Files
-    Dev-&gt;&gt;Git: git merge feature
-    Git-&gt;&gt;Files: Mark conflict areas
-    Git--&gt;&gt;Dev: CONFLICT! Manual fix needed
-    Dev-&gt;&gt;Files: Edit &amp; resolve markers
-    Dev-&gt;&gt;Git: git add &lt;resolved-files&gt;
-    Dev-&gt;&gt;Git: git commit
-    Git--&gt;&gt;Dev: Merge complete!</code></pre>
-<p><strong>Code:</strong>
-<div class="highlight"><pre><span></span><code><span class="c1"># Attempt merge that causes conflict</span>
-git<span class="w"> </span>merge<span class="w"> </span>another-feature
-
-<span class="c1"># Check which files have conflicts</span>
-git<span class="w"> </span>status
-
-<span class="c1"># Open conflicted file(s), see markers:</span>
-<span class="c1"># &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
-<span class="c1"># Your changes</span>
-<span class="c1"># =======</span>
-<span class="c1"># Their changes</span>
-<span class="c1"># &gt;&gt;&gt;&gt;&gt;&gt;&gt; branch-name</span>
-
-<span class="c1"># Edit file manually, keep desired code</span>
-<span class="c1"># Remove all &lt;&lt;&lt;&lt;&lt;, =====, &gt;&gt;&gt;&gt;&gt; markers</span>
-
-<span class="c1"># After fixing all conflicts:</span>
-git<span class="w"> </span>add<span class="w"> </span>README.md
-git<span class="w"> </span>add<span class="w"> </span>other-conflicted-file.js
-
-<span class="c1"># Complete the merge</span>
-git<span class="w"> </span>commit
-<span class="c1"># Editor opens - save default merge message</span>
-
-<span class="c1"># If merge is too messy, abort:</span>
-git<span class="w"> </span>merge<span class="w"> </span>--abort
-
-<span class="c1"># Verify merge</span>
-git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>--graph
-</code></pre></div></p>
-<hr />
-<h3 id="scenario-10-stashing-changes"><strong>Scenario 10: Stashing Changes</strong><a class="headerlink" href="#scenario-10-stashing-changes" title="Permanent link">&para;</a></h3>
-<p><em>Temporarily saving incomplete work</em></p>
-<pre class="mermaid"><code>sequenceDiagram
-    participant Dev as Developer
-    participant WIP as Work in Progress
-    participant Stash as Stash Storage
-    participant Main as Main Branch
-    Dev-&gt;&gt;WIP: Unfinished changes
-    Dev-&gt;&gt;Stash: git stash push -m "WIP"
-    WIP-&gt;&gt;Stash: Store temporarily
-    Dev-&gt;&gt;Main: Switch branches freely
-    Dev-&gt;&gt;Stash: git stash pop
-    Stash-&gt;&gt;WIP: Restore changes</code></pre>
-<p><strong>Code:</strong>
-<div class="highlight"><pre><span></span><code><span class="c1"># Save uncommitted changes</span>
-git<span class="w"> </span>stash<span class="w"> </span>push<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Work in progress on login form&quot;</span>
-
-<span class="c1"># View stashed items</span>
-git<span class="w"> </span>stash<span class="w"> </span>list
-
-<span class="c1"># Apply most recent stash (keeps it in stash)</span>
-git<span class="w"> </span>stash<span class="w"> </span>apply
-
-<span class="c1"># Apply and remove from stash</span>
-git<span class="w"> </span>stash<span class="w"> </span>pop
-
-<span class="c1"># Apply specific stash</span>
-git<span class="w"> </span>stash<span class="w"> </span>apply<span class="w"> </span>stash@<span class="o">{</span><span class="m">1</span><span class="o">}</span>
-
-<span class="c1"># Drop a stash</span>
-git<span class="w"> </span>stash<span class="w"> </span>drop<span class="w"> </span>stash@<span class="o">{</span><span class="m">0</span><span class="o">}</span>
-
-<span class="c1"># Clear all stashes</span>
-git<span class="w"> </span>stash<span class="w"> </span>clear
-</code></pre></div></p>
-<hr />
-<h3 id="scenario-11-undoing-a-commit"><strong>Scenario 11: Undoing a Commit</strong><a class="headerlink" href="#scenario-11-undoing-a-commit" title="Permanent link">&para;</a></h3>
-<p><em>Fixing mistakes in your recent history</em></p>
-<pre class="mermaid"><code>sequenceDiagram
-    participant Dev as Developer
-    participant Repo as Repository
-    participant Old as Bad Commit
-    participant New as New Commit
-    Dev-&gt;&gt;Repo: Oops! Wrong commit message
-    Dev-&gt;&gt;Old: git reset --soft HEAD~1
-    Old-&gt;&gt;Repo: Move pointer back
-    Repo--&gt;&gt;Dev: Changes staged &amp; ready
-    Dev-&gt;&gt;New: git commit -m "Correct message"
-    New-&gt;&gt;Repo: New commit created</code></pre>
-<p><strong>Code:</strong>
-<div class="highlight"><pre><span></span><code><span class="c1"># FIX LAST COMMIT MESSAGE (keeps changes)</span>
-git<span class="w"> </span>commit<span class="w"> </span>--amend<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Correct commit message&quot;</span>
-
-<span class="c1"># CANCEL LAST COMMIT but keep changes staged</span>
-git<span class="w"> </span>reset<span class="w"> </span>--soft<span class="w"> </span>HEAD~1
-
-<span class="c1"># CANCEL LAST COMMIT and unstage changes</span>
-git<span class="w"> </span>reset<span class="w"> </span>--mixed<span class="w"> </span>HEAD~1
-
-<span class="c1"># DANGER: Completely delete last commit</span>
-git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> </span>HEAD~1
-
-<span class="c1"># Create a &quot;revert commit&quot; (safe for shared branches)</span>
-git<span class="w"> </span>revert<span class="w"> </span>HEAD
-<span class="c1"># This creates a NEW commit that undoes changes</span>
-</code></pre></div></p>
-<hr />
-<h2 id="advanced-level-master-git-workflows">ADVANCED LEVEL: Master Git Workflows<a class="headerlink" href="#advanced-level-master-git-workflows" title="Permanent link">&para;</a></h2>
-<h3 id="scenario-12-interactive-rebase"><strong>Scenario 12: Interactive Rebase</strong><a class="headerlink" href="#scenario-12-interactive-rebase" title="Permanent link">&para;</a></h3>
-<p><em>Rewriting history for clean commits</em></p>
-<pre class="mermaid"><code>sequenceDiagram
-    participant Dev as Developer
-    participant Git as Git History
-    participant Commits as 3 Messy Commits
-    participant Clean as 1 Clean Commit
-    Dev-&gt;&gt;Git: Start interactive rebase
-    Dev-&gt;&gt;Commits: pick, squash, reword
-    Commits-&gt;&gt;Clean: Combine &amp; clean
-    Git--&gt;&gt;Dev: Polished history ready!
-    Note over Git: Never rebase shared branches!</code></pre>
-<p><strong>Code:</strong>
-<div class="highlight"><pre><span></span><code><span class="c1"># Start interactive rebase for last 3 commits</span>
-git<span class="w"> </span>rebase<span class="w"> </span>-i<span class="w"> </span>HEAD~3
-
-<span class="c1"># Editor opens - change commands:</span>
-<span class="c1"># pick a1b2c3d First commit</span>
-<span class="c1"># squash d4e5f6a Second commit</span>
-<span class="c1"># squash g7h8i9b Third commit</span>
-
-<span class="c1"># Save and close - editor reopens for final message</span>
-
-<span class="c1"># Reword a commit message</span>
-git<span class="w"> </span>rebase<span class="w"> </span>-i<span class="w"> </span>HEAD~2
-<span class="c1"># Change &#39;pick&#39; to &#39;reword&#39; on target commit</span>
-
-<span class="c1"># Abort rebase if something goes wrong</span>
-git<span class="w"> </span>rebase<span class="w"> </span>--abort
-
-<span class="c1"># Continue after resolving conflicts</span>
-git<span class="w"> </span>rebase<span class="w"> </span>--continue
-</code></pre></div></p>
-<hr />
-<h3 id="scenario-13-cherry-picking"><strong>Scenario 13: Cherry-Picking</strong><a class="headerlink" href="#scenario-13-cherry-picking" title="Permanent link">&para;</a></h3>
-<p><em>Applying specific commits to another branch</em></p>
-<pre class="mermaid"><code>sequenceDiagram
-    participant Dev as Developer
-    participant Source as Source Branch
-    participant Target as Target Branch
-    participant Commit as Specific Commit
-    Dev-&gt;&gt;Source: Find commit hash
-    Dev-&gt;&gt;Target: Switch to target branch
-    Dev-&gt;&gt;Target: git cherry-pick a1b2c3d
-    Commit-&gt;&gt;Target: Apply only this commit
-    Target--&gt;&gt;Dev: Specific change merged!</code></pre>
-<p><strong>Code:</strong>
-<div class="highlight"><pre><span></span><code><span class="c1"># Find commit hash to cherry-pick</span>
-git<span class="w"> </span>log<span class="w"> </span>--oneline
-
-<span class="c1"># Switch to target branch</span>
-git<span class="w"> </span>checkout<span class="w"> </span>target-branch
-
-<span class="c1"># Apply specific commit</span>
-git<span class="w"> </span>cherry-pick<span class="w"> </span>a1b2c3d4
-
-<span class="c1"># Cherry-pick multiple commits</span>
-git<span class="w"> </span>cherry-pick<span class="w"> </span>a1b2c3d..f5e6d7c
-
-<span class="c1"># Abort if conflicts occur</span>
-git<span class="w"> </span>cherry-pick<span class="w"> </span>--abort
-
-<span class="c1"># Continue after fixing conflicts</span>
-git<span class="w"> </span>cherry-pick<span class="w"> </span>--continue
-</code></pre></div></p>
-<hr />
-<h3 id="scenario-14-git-bisect-debugging"><strong>Scenario 14: Git Bisect Debugging</strong><a class="headerlink" href="#scenario-14-git-bisect-debugging" title="Permanent link">&para;</a></h3>
-<p><em>Find the commit that introduced a bug</em></p>
-<pre class="mermaid"><code>sequenceDiagram
-    participant Dev as Developer
-    participant Bisect as Git Bisect
-    participant Good as Good Commit
-    participant Bad as Bad Commit
-    participant Bug as Bug Introducer
-    Dev-&gt;&gt;Good: Mark as good
-    Dev-&gt;&gt;Bad: Mark as bad
-    Bisect-&gt;&gt;Dev: Checkout middle commit
-    loop Check Each Commit
-        Dev-&gt;&gt;Bisect: Test &amp; mark good/bad
-        Bisect-&gt;&gt;Dev: Next commit to test
-    end
-    Bug-&gt;&gt;Dev: Bug found!</code></pre>
-<p><strong>Code:</strong>
-<div class="highlight"><pre><span></span><code><span class="c1"># Start bisect session</span>
-git<span class="w"> </span>bisect<span class="w"> </span>start
-
-<span class="c1"># Mark current commit as bad</span>
-git<span class="w"> </span>bisect<span class="w"> </span>bad
-
-<span class="c1"># Mark earlier commit as good</span>
-git<span class="w"> </span>bisect<span class="w"> </span>good<span class="w"> </span>a1b2c3d
-
-<span class="c1"># Git checks out middle commit</span>
-<span class="c1"># Test your code...</span>
-
-<span class="c1"># If bug exists:</span>
-git<span class="w"> </span>bisect<span class="w"> </span>bad
-
-<span class="c1"># If bug is gone:</span>
-git<span class="w"> </span>bisect<span class="w"> </span>good
-
-<span class="c1"># Repeat until Git identifies culprit</span>
-<span class="c1"># Output: &quot;first bad commit is: [hash]&quot;</span>
-
-<span class="c1"># End bisect session</span>
-git<span class="w"> </span>bisect<span class="w"> </span>reset
-</code></pre></div></p>
-<hr />
-<h3 id="scenario-15-working-with-submodules"><strong>Scenario 15: Working with Submodules</strong><a class="headerlink" href="#scenario-15-working-with-submodules" title="Permanent link">&para;</a></h3>
-<p><em>Managing repositories inside repositories</em></p>
-<pre class="mermaid"><code>sequenceDiagram
-    participant Main as Main Project
-    participant Git as Git
-    participant Sub as Submodule Repo
-    participant Local as Local Copy
-    Main-&gt;&gt;Git: git submodule add &lt;URL&gt;
-    Git-&gt;&gt;Sub: Register submodule
-    Sub-&gt;&gt;Local: Clone submodule content
-    Local--&gt;&gt;Main: Submodule ready
-    Note over Main: Main project tracks submodule commit</code></pre>
-<p><strong>Code:</strong>
-<div class="highlight"><pre><span></span><code><span class="c1"># Add a submodule to your project</span>
-git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>https://github.com/user/library.git<span class="w"> </span>libs/super-lib
-
-<span class="c1"># Initialize submodules after clone</span>
-git<span class="w"> </span>submodule<span class="w"> </span>init
-
-<span class="c1"># Update submodule content</span>
-git<span class="w"> </span>submodule<span class="w"> </span>update
-
-<span class="c1"># Clone with submodules recursively</span>
-git<span class="w"> </span>clone<span class="w"> </span>--recurse-submodules<span class="w"> </span>https://github.com/user/main-project.git
-
-<span class="c1"># Pull updates for submodules</span>
-git<span class="w"> </span>submodule<span class="w"> </span>update<span class="w"> </span>--remote
-
-<span class="c1"># Commit submodule changes (points to new commit)</span>
-<span class="nb">cd</span><span class="w"> </span>libs/super-lib
-git<span class="w"> </span>checkout<span class="w"> </span>v2.0
-<span class="nb">cd</span><span class="w"> </span>../..
-git<span class="w"> </span>add<span class="w"> </span>libs/super-lib
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Update super-lib to v2.0&quot;</span>
-</code></pre></div></p>
-<hr />
-<h3 id="scenario-16-git-hooks-automation"><strong>Scenario 16: Git Hooks Automation</strong><a class="headerlink" href="#scenario-16-git-hooks-automation" title="Permanent link">&para;</a></h3>
-<p><em>Running scripts automatically</em></p>
-<pre class="mermaid"><code>sequenceDiagram
-    participant Dev as Developer
-    participant Git as Git Action
-    participant Hook as Hook Script
-    participant Test as Tests
-    Dev-&gt;&gt;Git: git commit
-    Git-&gt;&gt;Hook: Execute pre-commit hook
-    Hook-&gt;&gt;Test: Run test suite
-    alt Tests Pass
-        Test--&gt;&gt;Hook: Success
-        Hook--&gt;&gt;Git: Continue commit
-    else Tests Fail
-        Test--&gt;&gt;Hook: Failure
-        Hook--&gt;&gt;Git: Block commit
-        Git--&gt;&gt;Dev: Commit rejected
-    end</code></pre>
-<p><strong>Code:</strong>
-<div class="highlight"><pre><span></span><code><span class="c1"># Go to your repository&#39;s hooks directory</span>
-<span class="nb">cd</span><span class="w"> </span>.git/hooks
-
-<span class="c1"># Create a pre-commit hook</span>
-cat<span class="w"> </span>&gt;<span class="w"> </span>pre-commit<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
-<span class="s">#!/bin/bash</span>
-<span class="s"># Run tests before allowing commit</span>
-<span class="s">echo &quot;Running pre-commit tests...&quot;</span>
-<span class="s">npm test</span>
-
-<span class="s"># If tests fail, block commit</span>
-<span class="s">if [ $? -ne 0 ]; then</span>
-<span class="s">  echo &quot;Tests failed! Commit blocked.&quot;</span>
-<span class="s">  exit 1</span>
-<span class="s">fi</span>
-<span class="s">EOF</span>
-
-<span class="c1"># Make it executable</span>
-chmod<span class="w"> </span>+x<span class="w"> </span>pre-commit
-
-<span class="c1"># Common hook types:</span>
-<span class="c1"># pre-commit: Before commit is created</span>
-<span class="c1"># commit-msg: Validate commit message</span>
-<span class="c1"># pre-push: Before pushing to remote</span>
-<span class="c1"># post-merge: After successful merge</span>
-</code></pre></div></p>
-<hr />
+<span class="nt">security_scan</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">security</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;Running security scan&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gitlab-sast</span>
+</code></pre></div>
 <h2 id="quick-reference-essential-commands">Quick Reference: Essential Commands<a class="headerlink" href="#quick-reference-essential-commands" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1932,94 +1449,57 @@ chmod<span class="w"> </span>+x<span class="w"> </span>pre-commit
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><code>git init</code></td>
-<td style="text-align: left;">Initialize new repository</td>
-<td style="text-align: left;">Beginner</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>git clone &lt;url&gt;</code></td>
-<td style="text-align: left;">Copy remote repository</td>
-<td style="text-align: left;">Beginner</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>git add .</code></td>
-<td style="text-align: left;">Stage all changes</td>
-<td style="text-align: left;">Beginner</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>git commit -m "msg"</code></td>
-<td style="text-align: left;">Save changes</td>
+<td style="text-align: left;"><code>git clone</code></td>
+<td style="text-align: left;">Clone a repository</td>
 <td style="text-align: left;">Beginner</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>git push</code></td>
-<td style="text-align: left;">Upload to remote</td>
+<td style="text-align: left;">Push changes to remote</td>
 <td style="text-align: left;">Beginner</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>git pull</code></td>
-<td style="text-align: left;">Download &amp; merge</td>
+<td style="text-align: left;">Pull changes from remote</td>
 <td style="text-align: left;">Beginner</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>git checkout -b &lt;branch&gt;</code></td>
-<td style="text-align: left;">Create &amp; switch branch</td>
+<td style="text-align: left;"><code>git checkout</code></td>
+<td style="text-align: left;">Switch branches</td>
 <td style="text-align: left;">Intermediate</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>git merge &lt;branch&gt;</code></td>
+<td style="text-align: left;"><code>git merge</code></td>
 <td style="text-align: left;">Merge branches</td>
 <td style="text-align: left;">Intermediate</td>
 </tr>
 <tr>
+<td style="text-align: left;"><code>git rebase</code></td>
+<td style="text-align: left;">Rebase branch</td>
+<td style="text-align: left;">Advanced</td>
+</tr>
+<tr>
 <td style="text-align: left;"><code>git stash</code></td>
-<td style="text-align: left;">Temporarily save work</td>
+<td style="text-align: left;">Stash changes</td>
 <td style="text-align: left;">Intermediate</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>git reset --soft HEAD~1</code></td>
-<td style="text-align: left;">Undo last commit</td>
-<td style="text-align: left;">Intermediate</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>git rebase -i HEAD~3</code></td>
-<td style="text-align: left;">Rewrite history</td>
-<td style="text-align: left;">Advanced</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>git cherry-pick &lt;hash&gt;</code></td>
-<td style="text-align: left;">Apply specific commit</td>
-<td style="text-align: left;">Advanced</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>git bisect</code></td>
-<td style="text-align: left;">Find bug-introducing commit</td>
-<td style="text-align: left;">Advanced</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>git submodule</code></td>
-<td style="text-align: left;">Manage nested repositories</td>
+<td style="text-align: left;">Find bad commit</td>
 <td style="text-align: left;">Advanced</td>
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="pro-tips-for-all-levels">Pro Tips for All Levels<a class="headerlink" href="#pro-tips-for-all-levels" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Always pull before pushing</strong> to avoid unnecessary merge conflicts</li>
-<li><strong>Write meaningful commit messages</strong>: "Fix login bug" &gt; "Update stuff"</li>
-<li><strong>Commit early, commit often</strong> - small commits are easier to manage</li>
-<li><strong>Never <code>git reset --hard</code> on shared branches</strong> - it rewrites history</li>
-<li><strong>Use branches for every feature</strong> - keep main branch clean</li>
-<li><strong>Review before committing</strong>: <code>git diff --staged</code> shows what you're about to commit</li>
-<li><strong>Configure helpful aliases</strong>:
-   <div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.co<span class="w"> </span>checkout
-git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.br<span class="w"> </span>branch
-git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.ci<span class="w"> </span>commit
-git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.st<span class="w"> </span>status
-</code></pre></div></li>
+<li><strong>Use descriptive commit messages</strong>: "Fix login bug" &gt; "Update stuff".</li>
+<li><strong>Commit early, commit often</strong>: Small commits are easier to manage.</li>
+<li><strong>Never <code>git reset --hard</code> on shared branches</strong>: It rewrites history.</li>
+<li><strong>Use branches for every feature</strong>: Keep the main branch clean.</li>
+<li><strong>Review before committing</strong>: <code>git diff --staged</code> shows what you're about to commit.</li>
+<li><strong>Configure helpful aliases</strong>: <code>git config --global alias.co checkout</code>.</li>
 </ol>
-<p>Happy coding! 🚀</p>
+<h3 id="happy-coding">Happy coding!🚀<a class="headerlink" href="#happy-coding" title="Permanent link">&para;</a></h3>
 
 
 
